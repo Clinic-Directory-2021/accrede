@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css">
+    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+    <script src="https://cdn.metroui.org.ua/v4.3.2/js/metro.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    li{
+        padding: 15px;
+    }
+    .sidenav-m3{
+        width: 300px;
+    }
+</style>
+<body style="display: flex;">
+    <ul class="sidenav-m3">
+        <div class="sidebar-header" style="background-color: #ADCE74;">
+            <div class="avatar">
+                <img data-role="gravatar" data-email="sergey@pimenov.com.ua">
+            </div>
+            <span class="title">Admin</span>
+        </div>
+        <li class="active"><a href="{%  url 'homepage' %}"><span class="mif-home icon"></span>Home</a></li>
+        <li class="stick-left">
+            <a class="dropdown-toggle" href="#"><span class="mif-folder icon"></span>File Manager</a>
+            <ul class="d-menu" data-role="dropdown" style="display: none; background-color: #ADCE74;">
+                <li><a href="{%  url 'storage_drive' %}"><span class="mif-folder icon"></span> Storage Drive</a></li>
+                <li><a href="{%  url 'activity_logs' %}"><span class="mif-document-file-doc icon"></span> Activity Logs</a></li>
+                <li><a href="{%  url 'recycle_bin' %}"><span class="mif-bin icon"></span> Recycle Bin</a></li>
+            </ul>
+        </li>
+        <li class="active"><a href="#"><span class="mif-document-file-pdf icon"></span>Templates</a></li>
+        <li class="stick-left">
+            <a class="dropdown-toggle" href="#"><span class="mif-assignment icon"></span>Subjects Deliverable</a>
+            <ul class="d-menu" data-role="dropdown" style="display: none; background-color: #ADCE74;">
+                <li><a href=""><span class="mif-folder icon"></span> IT Department</a></li>
+                <li><a href=""><span class="mif-folder icon"></span> HM and TM Department</a></li>
+                <li><a href=""><span class="mif-folder icon"></span> Education Department</a></li>
+            </ul>
+        </li>
+        <li class="stick-left">
+            <a class="dropdown-toggle" href="#"><span class="mif-list icon"></span>Document Checklist</a>
+            <ul class="d-menu" data-role="dropdown" style="display: none; background-color: #ADCE74;">
+                <li><a href=""><span class="mif-folder icon"></span> IT Department</a></li>
+                <li><a href=""><span class="mif-folder icon"></span> HM and TM Department</a></li>
+                <li><a href=""><span class="mif-folder icon"></span> Education Department</a></li>
+            </ul>
+        </li>
+        <li class="active"><a href="#"><span class="mif-exit icon"></span>Logout</a></li>
+    </ul>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

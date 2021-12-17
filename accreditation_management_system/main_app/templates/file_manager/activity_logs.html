@@ -1,0 +1,35 @@
+{% include 'home_base.html' %}
+{% block content %}
+<div class="content" style="background-color: gainsboro;">
+    <header class="h-20" style="width: 90vw; height: 67px; text-align: center; background-color: #61B15A;">
+        <h1>Accreditation Management System</h1>
+    </header>
+    <br>
+    <br>
+    <h1 class="m-5">Activity Logs</h1>
+    <div class="p-5 w-75">
+        <table class="table bg-white">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th class="sortable-column sort-asc">Date and Time</th>
+                <th >Name</th>
+                <th >Email</th>
+                <th>Activity</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>January 1, 2022</td>
+                <td>Juan Dela Cruz</td>
+                <td>Example@gmail.com</td>
+                <td>Upload A1_PA_SYS_Mission.jpg</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</div>
+
+{% endblock %}

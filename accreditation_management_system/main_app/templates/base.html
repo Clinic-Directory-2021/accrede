@@ -1,0 +1,41 @@
+{%  load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css">
+    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+    <script src="https://cdn.metroui.org.ua/v4.3.2/js/metro.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div data-role="appbar" data-expand-point="md" style="background-color: #61B15A;">
+        <a href="#" class="brand no-hover">
+            <!-- <span style="width: 55px;" class="p-2 border bd-dark border-radius">
+                m<sup>4</sup>
+            </span> -->
+            <img src="../static/images/bulsu.png" alt="" width="50" height="50">
+        </a>
+    
+        <!-- <ul class="app-bar-menu">
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#" class="dropdown-toggle">Products</a>
+                <ul class="d-menu" data-role="dropdown">
+                    <li><a href="#">Windows 10</a></li>
+                    <li><a href="#">Office 365</a></li>
+                    <li class="divider bg-lightGray"></li>
+                    <li><a href="#">Skype</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacts</a></li>
+        </ul> -->
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

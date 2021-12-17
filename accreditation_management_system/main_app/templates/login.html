@@ -1,0 +1,87 @@
+{% include 'base.html' %}
+{% block content %}
+<br>
+<br>
+
+<div class="grid">
+    <div class="row">
+        <div class="cell">
+            <div class="welcome p-5 flex-self-center">
+                <h1 align="center">Accreditation Management System of BulSU Hagonoy Campus</h1>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="w-100"
+                data-role="carousel" 
+                data-cls-bullet="bullet-big"
+                data-auto-start="true"
+                data-cls-controls="fg-white"
+                data-bullets-position="right"
+                data-control-next="<span class='mif-chevron-right fg-cyan'></span>"
+                data-control-prev="<span class='mif-chevron-left fg-cyan'></span>">
+                <div class="slide p-2 pl-10 pr-10">
+                    <div class="row flex-align-center h-100">
+                        <div class="cell-md-4 text-center">
+                            <img src="../static/images/bulsu.png" class="img-fluid">
+                        </div>
+                        <div class="cell-md-8">
+                            <h1 class="text-light">Pumba</h1>
+                            <p class="mt-4 mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting...</p>
+                            <button class="button alert">Show more...</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide" data-cover="../static/images/bulsu.png"></div>
+
+                <div class="slide p-2 pl-10 pr-10" data-cover="images/bg-4.jpg">
+                    <div class="row flex-align-center h-100">
+                        <div class="cell-md-8">
+                            <p class="indent-letter">Lorem Ipsum is simply dummy text of the printing and typesetting...</p>
+                        </div>
+                        <div class="cell-md-4 text-center">
+                            <div class="img-container drop-shadow">
+                                <img src="../static/images/bulsu.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="cell">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <form class="p-10">
+                <h3>Login here</h3>
+                <br>
+                <br>
+                <div class="form-group">
+                    <input type="text" data-role="input" data-prepend="<span class='mif-user'> Email</span>">
+                </div>
+                <div class="form-group">
+                    <input type="text" data-role="input" data-prepend="<span class='mif-lock'> Password</span>">
+                </div>
+                <div class="form-group">
+                    <button class="button success">Submit data</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="content p-5" style="display: flex;">
+<div class="form w-50 p-5" style="height: 100vh;">
+    
+</div>
+
+</div> -->
+{% endblock %}
