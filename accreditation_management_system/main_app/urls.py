@@ -23,4 +23,5 @@ urlpatterns = [
     path('storage_drive/', views.storage_drive, name = "storage_drive"),
     path('activity_logs/', views.activity_logs, name = "activity_logs"),
     path('recycle_bin/', views.recycle_bin, name = "recycle_bin"),
+    path('generate_template/', views.generate_template, name = "generate_template"),
 ]

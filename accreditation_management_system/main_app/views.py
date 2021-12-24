@@ -54,3 +54,5 @@ def activity_logs(request):
 
 def recycle_bin(request):
     return render(request,'file_manager/recycle_bin.html')
+def generate_template(request):
+    return render(request,'file_manager/generate_template.html')

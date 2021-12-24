@@ -9,7 +9,7 @@
     <h1 class="m-5">Storage Drive</h1>
     <div class="p-10">
         <button class="mif-sort-asc icon" style="width: 50px; height: 50px;"></button>
-        <button class="button primary" style="float: right; height: 50px; width: 200px;">Upload</button>
+        <button class="button primary" style="float: right; height: 50px; width: 200px;"  onclick="Metro.dialog.open('#demoDialog1')">Upload</button>
     </div>
 <div class="folders p-5">
     
@@ -21,7 +21,7 @@
         <div class="icon">
             <span class="mif-chart-bars"></span>
         </div>
-        <a href="#" class="more fg-black"> Open <span class="mif-arrow-right"></span></a>
+        <a href="{% url 'generate_template'  %}" class="more fg-black"> Open <span class="mif-arrow-right"></span></a>
     </div>
 
     <div class="more-info-box bg-white fg-black w-25 m-5" style="float: left;">
@@ -49,4 +49,42 @@
 </div>
 </div>
 
+<!--Modal for upload-->
+<div class="dialog w-25" data-role="dialog" id="demoDialog1">
+    <div class="dialog-title">UPLOAD FILE</div>
+    <div class="dialog-content">
+        <input type="file" data-role="file" data-mode="drop">
+        <hr>
+        Area:
+        <select data-role="select">
+                <option value="Area 1">Area 1</option>
+                <option value="Area 2">Area 2</option>
+                <option value="Area 3">Area 3</option>     
+        </select>
+        <hr>
+        Parameter:
+        <select data-role="select">
+            <option value="Parameter A">Parameter A</option>
+            <option value="Parameter B">Parameter B</option>
+            <option value="Parameter C">Parameter C</option>     
+        </select>
+        <hr>
+        Category:
+        <select data-role="select">
+            <option value="System - Inputs and Process">System - Inputs and Process</option>
+        </select>
+        <hr>
+        Year:
+        <select data-role="select">
+            <option value="2020">2020</option>
+        </select>
+        <hr>
+        <p>Auto Generated Filename Preview:</p>
+        <input type="text" data-role="input" readonly placeholder="Auto Generated Filename Preview">
+    </div>
+    <div class="dialog-actions">
+        <button class="button js-dialog-close">Cancel</button>
+        <button class="button primary js-dialog-close">Upload</button>
+    </div>
+</div>
 {% endblock %}
