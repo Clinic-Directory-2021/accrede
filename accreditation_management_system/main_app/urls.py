@@ -23,5 +23,12 @@ urlpatterns = [
     path('storage_drive/', views.storage_drive, name = "storage_drive"),
     path('activity_logs/', views.activity_logs, name = "activity_logs"),
     path('recycle_bin/', views.recycle_bin, name = "recycle_bin"),
+<<<<<<< HEAD
     path('generate_template/', views.generate_template, name = "generate_template"),
+=======
+
+    path('login_validation/', views.login_validation, name="login_validation"),
+
+    path('logout/', views.logout, name="logout"),
+>>>>>>> 90f7b927460c665339f83d46b53e110bb2f6f6dc
 ]

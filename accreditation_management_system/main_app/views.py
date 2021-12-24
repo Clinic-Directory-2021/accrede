@@ -41,7 +41,25 @@ storage = firebase.storage()
 
 # Create your views here.
 def login(request):
-    return render(request,'login.html')
+    if 'user_id' in request.session:
+        return redirect('/homepage')
+    else:
+        return render(request,'login.html')
+    
+
+def login_validation(request):
+    if request.method == 'POST':
+        try:
+            email = request.POST.get('login_email')
+            password = request.POST.get('login_password')
+
+            user = auth_pyrebase.sign_in_with_email_and_password(email, password)
+
+            request.session['user_id'] = user['localId']
+
+            return HttpResponse('Success!')
+        except:
+            return HttpResponse('Invalid Email or Password!')    
 
 def homepage(request):
     return render(request, 'homepage.html')
@@ -54,5 +72,15 @@ def activity_logs(request):
 
 def recycle_bin(request):
     return render(request,'file_manager/recycle_bin.html')
+<<<<<<< HEAD
 def generate_template(request):
     return render(request,'file_manager/generate_template.html')
+=======
+
+def logout(request):
+    try:
+        del request.session['user_id']
+    except:
+        return redirect('/')
+    return redirect('/')
+>>>>>>> 90f7b927460c665339f83d46b53e110bb2f6f6dc
