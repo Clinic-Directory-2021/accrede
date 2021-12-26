@@ -72,10 +72,11 @@ def activity_logs(request):
 
 def recycle_bin(request):
     return render(request,'file_manager/recycle_bin.html')
-<<<<<<< HEAD
+
+def area(request):
+    return render(request,'file_manager/area.html')
 def generate_template(request):
     return render(request,'file_manager/generate_template.html')
-=======
 
 def logout(request):
     try:
@@ -83,4 +84,3 @@ def logout(request):
     except:
         return redirect('/')
     return redirect('/')
->>>>>>> 90f7b927460c665339f83d46b53e110bb2f6f6dc
