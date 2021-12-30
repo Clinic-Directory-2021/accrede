@@ -28,4 +28,6 @@ urlpatterns = [
     path('login_validation/', views.login_validation, name="login_validation"),
 
     path('logout/', views.logout, name="logout"),
+
+    path('upload_storage_drive/', views.upload_storage_drive, name="upload_storage_drive"),
 ]

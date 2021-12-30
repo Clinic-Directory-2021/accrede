@@ -67,6 +67,34 @@ def homepage(request):
 def storage_drive(request):
     return render(request, 'file_manager/storage_drive.html')
 
+def upload_storage_drive(request):
+    if request.method == 'POST':
+        drive_upload =  request.FILES['drive_upload']
+        selectArea = request.POST.get('selectArea')
+        selectParameter = request.POST.get('selectParameter')
+        selectCategory = request.POST.get('selectCategory')
+        selectDate = request.POST.get('selectDate')
+        fileName = request.POST.get('fileName')
+
+        fileDirectory = selectArea+"/"+selectParameter+"/"+selectCategory+"/"+fileName
+
+        doc_ref = firestoreDB.collection('storage_drive').document()
+        
+        #upload to firebase storage
+        storage.child(fileDirectory).put(drive_upload)
+
+        doc_ref.set({
+            'storage_file_id': doc_ref.id,
+            'storage_file_url' : storage.child(fileDirectory).get_url(None),
+            'area': selectArea,
+            'parameter': selectParameter,
+            'category': selectCategory,
+            'date': selectDate,
+            'file_name': fileName,
+        })
+
+        return redirect('storage_drive')
+
 def activity_logs(request):
     return render(request,'file_manager/activity_logs.html')
 
