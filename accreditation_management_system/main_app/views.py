@@ -19,6 +19,9 @@ from io import BytesIO
 from django.core.files import File
 from django.conf import settings
 
+import pytz
+from datetime import datetime
+
 config = {
   'apiKey': "AIzaSyAh_oOakDenknpcWt5oucsLODSDiheWxps",
   'authDomain': "accreditation-management.firebaseapp.com",
@@ -56,6 +59,8 @@ def login_validation(request):
             user = auth_pyrebase.sign_in_with_email_and_password(email, password)
 
             request.session['user_id'] = user['localId']
+
+            request.session['user_email'] = email
 
             return HttpResponse('Success!')
         except:
@@ -95,6 +100,21 @@ def upload_storage_drive(request):
             'date': selectDate,
             'file_name': fileName,
         })
+
+        tz = pytz.timezone('Asia/Hong_Kong')
+        philippines_current_datetime = datetime.now(tz)
+
+        doc_ref2 = firestoreDB.collection('activity_logs_storage_drive').document()
+
+        doc_ref2.set({
+            'activity_log_id': doc_ref2.id,
+            'user_email': request.session['user_email'],
+            'user_id': request.session['user_id'],
+            'info': "uploaded " + fileName,
+            'date': philippines_current_datetime,
+        })
+
+
 
         return redirect('storage_drive')
 
