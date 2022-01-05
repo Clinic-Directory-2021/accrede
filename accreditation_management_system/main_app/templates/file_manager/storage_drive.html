@@ -51,40 +51,51 @@
 
 <!--Modal for upload-->
 <div class="dialog w-25" data-role="dialog" id="demoDialog1">
+    <form action="/upload_storage_drive/" method="post" enctype="multipart/form-data" id="drive_form">
+        {% csrf_token %}
     <div class="dialog-title">UPLOAD FILE</div>
     <div class="dialog-content">
-        <input type="file" data-role="file" data-mode="drop">
+        <input type="file" data-role="file" data-mode="drop" name="drive_upload" id="drive_upload" required>
+        <hr>
+        Level:
+        <select data-role="select" name="selectLevel" id="selectLevel" form="drive_form">
+                <option value="Level 1">Level 1</option>
+                <option value="Level 2">Level 2</option>
+                <option value="Level 3">Level 3</option>     
+                <option value="Level 4">Level 4</option> 
+        </select>
         <hr>
         Area:
-        <select data-role="select">
+        <select data-role="select" name="selectArea" id="selectArea" form="drive_form">
                 <option value="Area 1">Area 1</option>
                 <option value="Area 2">Area 2</option>
                 <option value="Area 3">Area 3</option>     
         </select>
         <hr>
         Parameter:
-        <select data-role="select">
+        <select data-role="select" name="selectParameter" id="selectParameter" form="drive_form" required>
             <option value="Parameter A">Parameter A</option>
             <option value="Parameter B">Parameter B</option>
             <option value="Parameter C">Parameter C</option>     
         </select>
         <hr>
         Category:
-        <select data-role="select">
+        <select data-role="select" name="selectCategory" id="selectCategory" form="drive_form" required>
             <option value="System - Inputs and Process">System - Inputs and Process</option>
         </select>
         <hr>
         Year:
-        <select data-role="select">
+        <select data-role="select" name="selectDate" id="selectDate" form="drive_form" required>
             <option value="2020">2020</option>
         </select>
         <hr>
         <p>Auto Generated Filename Preview:</p>
-        <input type="text" data-role="input" readonly placeholder="Auto Generated Filename Preview">
+        <input type="text" name="fileName" id="fileName" data-role="input" readonly placeholder="Auto Generated Filename Preview" required>
     </div>
     <div class="dialog-actions">
         <button class="button js-dialog-close">Cancel</button>
-        <button class="button primary js-dialog-close">Upload</button>
+        <button type="submit">Upload</button>
     </div>
+</form>
 </div>
 {% endblock %}
