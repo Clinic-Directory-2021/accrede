@@ -1,0 +1,66 @@
+{% include 'superadmin_base.html' %}
+{% block content %}
+<br>
+<br>
+
+<div  class="content" style="background-color: gainsboro;">
+    <header class="h-20" style="width: 90vw; height: 67px; text-align: center; background-color: #61B15A;">
+        <h1>Accreditation Management System</h1>
+    </header>
+    <h1 class="m-5">Department Name</h1>
+    
+    <div class="p-20">
+        <select data-role="select" class="w-25">
+            <option value="IT">IT Department</option>
+            <option value="HRM">HRM Department</option>
+            <option value="educ">Education Department</option>
+        </select>
+        <br>
+        <button class="button primary" onclick="Metro.dialog.open('#add_account')">Add Account</button>
+        <br>
+        <br>
+        <table class="table striped" data-role="table" data-rows-steps="5, 10" data-rows="5">
+            <thead>
+                <tr>
+                    <th  class="sortable-column sort-asc">Activity Status</th>
+                    <th  class="sortable-column sort-asc">Access Rights</th>
+                    <th class="sortable-column sort-asc">Name</th>
+                    <th  class="sortable-column sort-asc">Email</th>
+                    <th class="sortable-column sort-asc">Password</th>
+                    <th class="sortable-column sort-asc">Contact No.</th>
+                    <th class="sortable-column sort-asc">Address</th>
+                    <th class="sortable-column sort-asc">User Level</th>
+                    <th class="sortable-column sort-asc">Edit</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Active Now</td>
+                        <td class="info">???</td>
+                        <td>Kenneth Galvez</td>
+                        <td>sample@gmail.com</td>
+                        <td>zxayhcnsauqfasd(Encrypted - SHA256)</td>
+                        <td class="info">09293006635</td>
+                        <td>Marilao, Bulacan</td>
+                        <td>Administrator</td>
+                        <td><Button class="button success" >Edit</Button></td>
+                    </tr>
+                </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="dialog" data-role="dialog" id="add_account">
+    <div class="dialog-title">Use Windows location service?</div>
+    <div class="dialog-content">
+        <p>USER LEVEL</p>
+        <input type="radio" data-role="radio" >
+        <input type="radio" data-role="radio" checked>
+    </div>
+    <div class="dialog-actions">
+        <button class="button js-dialog-close">Disagree</button>
+        <button class="button primary js-dialog-close">Agree</button>
+    </div>
+</div>
+
+{% endblock %}

@@ -26,6 +26,6 @@ urlpatterns = [
     path('generate_template/', views.generate_template, name = "generate_template"),
     path('area/', views.area, name="area"),
     path('login_validation/', views.login_validation, name="login_validation"),
-
+    path('manage_accounts/', views.manage_accounts, name="manage_accounts"),
     path('logout/', views.logout, name="logout"),
 ]

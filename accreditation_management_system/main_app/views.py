@@ -84,3 +84,6 @@ def logout(request):
     except:
         return redirect('/')
     return redirect('/')
+
+def manage_accounts(request):
+    return render(request, 'manage_accounts.html')
