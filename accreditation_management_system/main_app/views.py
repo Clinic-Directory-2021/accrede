@@ -137,4 +137,69 @@ def logout(request):
     return redirect('/')
 
 def manage_accounts(request):
-    return render(request, 'manage_accounts.html')
+    if request.method == 'GET':
+        department = request.GET.get('department')
+
+        if department == 'IT':
+            getCollection = firestoreDB.collection('it_department_accounts').get()
+
+            collection_data = []
+
+            for user in getCollection:
+                value = user.to_dict()
+                collection_data.append(value)
+
+            data = {
+                'user_data': collection_data,
+                'department': "IT",
+            }
+            
+            return render(request, 'manage_accounts.html', data)
+        
+        if department == 'HRM':
+            getCollection = firestoreDB.collection('hrm_department_accounts').get()
+
+            collection_data = []
+
+            for user in getCollection:
+                value = user.to_dict()
+                collection_data.append(value)
+
+            data = {
+                'user_data': collection_data,
+                'department': "HRM",
+            }
+            return render(request, 'manage_accounts.html', data)
+
+    department = request.POST.get('department')
+
+    getCollection = firestoreDB.collection('it_department_accounts').get()
+
+    collection_data = []
+
+    for user in getCollection:
+        value = user.to_dict()
+        collection_data.append(value)
+
+    data = {
+        'user_data': collection_data,
+        'department': "IT",
+    }
+    return render(request, 'manage_accounts.html', data)
+
+def changeDepartment(request):
+    if request.method == 'POST':
+        department = request.POST.get('department')
+
+        if department == 'IT':
+            getCollection = firestoreDB.collection('it_department_accounts').get()
+
+            collection_data = []
+
+            for user in getCollection:
+                value = user.to_dict()
+                collection_data.append(value)
+
+        return render(request, 'department_result.html', {
+            'user_data': collection_data,
+        })
