@@ -170,6 +170,36 @@ def manage_accounts(request):
                 'department': "HRM",
             }
             return render(request, 'manage_accounts.html', data)
+        
+        if department == 'TOURISM':
+            getCollection = firestoreDB.collection('tourism_department_accounts').get()
+
+            collection_data = []
+
+            for user in getCollection:
+                value = user.to_dict()
+                collection_data.append(value)
+
+            data = {
+                'user_data': collection_data,
+                'department': "TOURISM",
+            }
+            return render(request, 'manage_accounts.html', data)
+        
+        if department == 'EDUC':
+            getCollection = firestoreDB.collection('educ_department_accounts').get()
+
+            collection_data = []
+
+            for user in getCollection:
+                value = user.to_dict()
+                collection_data.append(value)
+
+            data = {
+                'user_data': collection_data,
+                'department': "EDUC",
+            }
+            return render(request, 'manage_accounts.html', data)
 
     department = request.POST.get('department')
 
@@ -187,19 +217,20 @@ def manage_accounts(request):
     }
     return render(request, 'manage_accounts.html', data)
 
-def changeDepartment(request):
+
+def addAccount(request):
     if request.method == 'POST':
-        department = request.POST.get('department')
+        access_rights = request.POST.get('access_rights')
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        confirm_password = request.POST.get('confirm_password')
+        contact = request.POST.get('contact')
+        address = request.POST.get('address')
+        user_level = request.POST.get('user_level')
 
-        if department == 'IT':
-            getCollection = firestoreDB.collection('it_department_accounts').get()
+        if password != confirm_password:
+            return HttpResponse("Password Do Not Match!")
+        else:
+            return HttpResponse("Success!")
 
-            collection_data = []
-
-            for user in getCollection:
-                value = user.to_dict()
-                collection_data.append(value)
-
-        return render(request, 'department_result.html', {
-            'user_data': collection_data,
-        })

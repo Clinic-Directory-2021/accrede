@@ -31,6 +31,6 @@ urlpatterns = [
 
     path('upload_storage_drive/', views.upload_storage_drive, name="upload_storage_drive"),
 
-    path('changeDepartment/', views.changeDepartment, name="changeDepartment"),
+    path('addAccount/', views.addAccount, name="addAccount"),
     
 ]
