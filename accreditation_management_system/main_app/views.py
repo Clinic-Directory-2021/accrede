@@ -221,16 +221,103 @@ def manage_accounts(request):
 def addAccount(request):
     if request.method == 'POST':
         access_rights = request.POST.get('access_rights')
-        name = request.POST.get('name')
+        firstname = request.POST.get('firstname')
+        middlename = request.POST.get('middlename')
+        lastname = request.POST.get('lastname')
         email = request.POST.get('email')
         password = request.POST.get('password')
         confirm_password = request.POST.get('confirm_password')
         contact = request.POST.get('contact')
         address = request.POST.get('address')
         user_level = request.POST.get('user_level')
+        birthdate = request.POST.get('birthdate')
 
         if password != confirm_password:
             return HttpResponse("Password Do Not Match!")
         else:
-            return HttpResponse("Success!")
+            try:
+                #register email and password to firebase auth
+                user = auth_pyrebase.create_user_with_email_and_password(email, password)
 
+                if access_rights == 'IT':
+                    doc_ref = firestoreDB.collection('it_department_accounts').document(user['localId'])
+                elif access_rights == 'HRM':
+                    doc_ref = firestoreDB.collection('hrm_department_accounts').document(user['localId'])
+                elif access_rights == 'TOURISM':
+                    doc_ref = firestoreDB.collection('tourism_department_accounts').document(user['localId'])    
+                elif access_rights == 'EDUC':
+                    doc_ref = firestoreDB.collection('educ_department_accounts').document(user['localId']) 
+                
+
+                doc_ref.set({
+                    'user_id': doc_ref.id,
+                    'firstname': firstname,
+                    'middlename': middlename,
+                    'lastname': lastname,
+                    'email': email,
+                    'contact': contact,
+                    'address': address,
+                    'user_level': user_level,
+                    'birthdate': birthdate,
+                    'access_rights': access_rights,
+
+                })
+                return HttpResponse("Success!")
+            except requests.HTTPError as e:
+                error_json = e.args[1]
+                error = json.loads(error_json)['error']['message']
+                if error == "EMAIL_EXISTS":
+                    return HttpResponse('Email Already Exists!')
+            
+
+
+def editAccount(request):
+    if request.method == 'POST':
+        firstname = request.POST.get('firstname')
+        middlename = request.POST.get('middlename')
+        lastname = request.POST.get('lastname')
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        confirm_password = request.POST.get('confirm_password')
+        contact = request.POST.get('contact')
+        address = request.POST.get('address')
+        user_level = request.POST.get('user_level')
+        birthdate = request.POST.get('birthdate')
+
+        user_id = request.POST.get('user_id')
+        access_rights = request.POST.get('access_rights')
+
+        if password != confirm_password:
+            return HttpResponse("Password Do Not Match!")
+        else:
+            try:
+
+                if access_rights == 'IT':
+                    doc_ref = firestoreDB.collection('it_department_accounts').document(user_id)
+                elif access_rights == 'HRM':
+                    doc_ref = firestoreDB.collection('hrm_department_accounts').document(user_id)
+                elif access_rights == 'TOURISM':
+                    doc_ref = firestoreDB.collection('tourism_department_accounts').document(user_id)    
+                elif access_rights == 'EDUC':
+                    doc_ref = firestoreDB.collection('educ_department_accounts').document(user_id) 
+                
+
+                doc_ref.update({
+                    'user_id': doc_ref.id,
+                    'firstname': firstname,
+                    'middlename': middlename,
+                    'lastname': lastname,
+                    'email': email,
+                    'contact': contact,
+                    'address': address,
+                    'user_level': user_level,
+                    'birthdate': birthdate,
+                    'access_rights': access_rights,
+
+                })
+                return HttpResponse("Success!")
+            except requests.HTTPError as e:
+                error_json = e.args[1]
+                error = json.loads(error_json)['error']['message']
+                if error == "EMAIL_EXISTS":
+                    return HttpResponse('Email Already Exists!')

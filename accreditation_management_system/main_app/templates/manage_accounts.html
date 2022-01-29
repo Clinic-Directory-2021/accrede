@@ -54,26 +54,24 @@
                     <th  class="sortable-column sort-asc">Access Rights</th>
                     <th class="sortable-column sort-asc">Name</th>
                     <th  class="sortable-column sort-asc">Email</th>
-                    <th class="sortable-column sort-asc">Password</th>
                     <th class="sortable-column sort-asc">Contact No.</th>
                     <th class="sortable-column sort-asc">Address</th>
                     <th class="sortable-column sort-asc">User Level</th>
                     <th class="sortable-column sort-asc">Edit</th>
                 </tr>
                 </thead>
-                <div class="account_data_modal">
+                <tbody>
+                <!-- <div class="account_data_modal"> -->
                     {% for user in user_data %}
-
                     <tr>
-                        <td>{{user.active_status}}</td>
-                        <td class="info">???</td>
-                        <td>{{user.full_name}}</td>
+                        <td>{{user.active_status}}<s/td>
+                        <td class="info">{{user.access_rights}}</td>
+                        <td>{{user.firstname}} {{user.middlename}} {{user.lastname}}</td>
                         <td>{{user.email}}</td>
-                        <td>{{user.password}}</td>
                         <td class="info">{{user.contact}}</td>
                         <td>{{user.address}}</td>
                         <td>{{user.user_level}}</td>
-                        <td><Button class="button success" >Edit</Button></td>
+                        <td><button class="button success" onclick="Metro.dialog.open('#edit_account'), editModal('{{user.user_id}}','{{user.firstname}}','{{user.middlename}}','{{user.lastname}}','{{user.email}}','{{user.contact}}','{{user.address}}')">Edit</button></td>
                     </tr>
                 
                     {% endfor %}
@@ -90,7 +88,8 @@
                         </tr> -->
                     
                  
-                </div>
+                <!-- </div> -->
+            </tbody>
         </table>
     </div>
 </div>
@@ -98,11 +97,30 @@
 <div class="dialog" data-role="dialog" id="add_account">
     <form id="addAccountForm" method="post">
      {% csrf_token %}
-        <div class="dialog-title">Use Windows location service?</div>
+        <div class="dialog-title"></div>
         <div class="dialog-content">
             <p>USER LEVEL</p>
-            <input type="radio" data-role="radio" >
-            <input type="radio" data-role="radio" checked>
+            <input type="radio" data-role="radio" name="access_rights" id="admin" value="Admin"> Admin
+            <input type="radio" data-role="radio" checked name="access_rights" id="user" value="User"> User
+            <br>
+            <label for="first name">First Name:</label>
+            <input type="text" data-role="input" name="firstname" id="firstname" required>
+            <label for="first name">Middle Name:</label>
+            <input type="text" data-role="input" name="middlename" id="middlename" required>
+            <label for="first name">Last Name:</label>
+            <input type="text" data-role="input" name="lastname" id="lastname" required>
+            <label for="first name">Email:</label>
+            <input type="email" data-role="input" name="email" id="email" required>
+            <label for="first name">Password :</label>
+            <input type="password" data-role="input" data-reveal-button="true" name="password" id="password" required>
+            <label for="first name">Confirm password:</label>
+            <input type="password" data-role="input" data-reveal-button="true" name="confirm_password" id="confirm_password" required>
+            <label for="first name">Contact No::</label>
+            <input type="number" data-role="input" data-prepend="+63" name="contact" id="contact" required>
+            <label for="first name">Address:</label>
+            <input type="text" data-role="input" name="address" id="address" required>
+            <label for="first name">Date of Birth:</label>
+            <input type="date" id="birthdate" data-role="input" required>
         </div>
         <div class="dialog-actions">
             <button type="button" class="button js-dialog-close">Cancel</button>
@@ -111,4 +129,36 @@
     </form>
 </div>
 
+<div class="dialog" data-role="dialog" id="edit_account">
+    <form id="edit_addAccountForm" method="post">
+     {% csrf_token %}
+        <div class="dialog-title"></div>
+        <div class="dialog-content">
+            <p>USER LEVEL</p>
+            <input type="radio" data-role="radio" name="edit_access_rights" id="edit_admin" value="Admin"> Admin
+            <input type="radio" data-role="radio" checked name="edit_access_rights" id="edit_user" value="User"> User
+            <br>
+            <label for="first name">First Name:</label>
+            <input type="text" data-role="input" name="edit_firstname" id="edit_firstname" required>
+            <label for="first name">Middle Name:</label>
+            <input type="text" data-role="input" name="edit_middlename" id="edit_middlename" required>
+            <label for="first name">Last Name:</label>
+            <input type="text" data-role="input" name="edit_lastname" id="edit_lastname" required>
+            <label for="first name">Email:</label>
+            <input type="email" data-role="input" name="edit_email" id="edit_email" readonly required>
+            <label for="first name">Contact No::</label>
+            <input type="number" data-role="input" data-prepend="+63" name="edit_contact" id="edit_contact" required>
+            <label for="first name">Address:</label>
+            <input type="text" data-role="input" name="edit_address" id="edit_address" required>
+            <label for="first name">Date of Birth:</label>
+            <input type="date" id="edit_birthdate" data-role="input" required>
+
+            <input type="hidden" id="edit_user_id" >
+        </div>
+        <div class="dialog-actions">
+            <button type="button" class="button js-dialog-close">Cancel</button>
+            <button type="submit" class="button primary js-dialog-close" id="edit_addAccountBtn">Save</button>
+        </div>
+    </form>
+</div>
 {% endblock %}
