@@ -137,85 +137,88 @@ def logout(request):
     return redirect('/')
 
 def manage_accounts(request):
-    if request.method == 'GET':
-        department = request.GET.get('department')
+    if 'user_id' not in request.session:
+        return render(request,'login.html')
+    else:
+        if request.method == 'GET':
+            department = request.GET.get('department')
 
-        if department == 'IT':
-            getCollection = firestoreDB.collection('it_department_accounts').get()
+            if department == 'IT':
+                getCollection = firestoreDB.collection('it_department_accounts').get()
 
-            collection_data = []
+                collection_data = []
 
-            for user in getCollection:
-                value = user.to_dict()
-                collection_data.append(value)
+                for user in getCollection:
+                    value = user.to_dict()
+                    collection_data.append(value)
 
-            data = {
-                'user_data': collection_data,
-                'department': "IT",
-            }
+                data = {
+                    'user_data': collection_data,
+                    'department': "IT",
+                }
+                
+                return render(request, 'manage_accounts.html', data)
             
-            return render(request, 'manage_accounts.html', data)
-        
-        if department == 'HRM':
-            getCollection = firestoreDB.collection('hrm_department_accounts').get()
+            if department == 'HRM':
+                getCollection = firestoreDB.collection('hrm_department_accounts').get()
 
-            collection_data = []
+                collection_data = []
 
-            for user in getCollection:
-                value = user.to_dict()
-                collection_data.append(value)
+                for user in getCollection:
+                    value = user.to_dict()
+                    collection_data.append(value)
 
-            data = {
-                'user_data': collection_data,
-                'department': "HRM",
-            }
-            return render(request, 'manage_accounts.html', data)
-        
-        if department == 'TOURISM':
-            getCollection = firestoreDB.collection('tourism_department_accounts').get()
+                data = {
+                    'user_data': collection_data,
+                    'department': "HRM",
+                }
+                return render(request, 'manage_accounts.html', data)
+            
+            if department == 'TOURISM':
+                getCollection = firestoreDB.collection('tourism_department_accounts').get()
 
-            collection_data = []
+                collection_data = []
 
-            for user in getCollection:
-                value = user.to_dict()
-                collection_data.append(value)
+                for user in getCollection:
+                    value = user.to_dict()
+                    collection_data.append(value)
 
-            data = {
-                'user_data': collection_data,
-                'department': "TOURISM",
-            }
-            return render(request, 'manage_accounts.html', data)
-        
-        if department == 'EDUC':
-            getCollection = firestoreDB.collection('educ_department_accounts').get()
+                data = {
+                    'user_data': collection_data,
+                    'department': "TOURISM",
+                }
+                return render(request, 'manage_accounts.html', data)
+            
+            if department == 'EDUC':
+                getCollection = firestoreDB.collection('educ_department_accounts').get()
 
-            collection_data = []
+                collection_data = []
 
-            for user in getCollection:
-                value = user.to_dict()
-                collection_data.append(value)
+                for user in getCollection:
+                    value = user.to_dict()
+                    collection_data.append(value)
 
-            data = {
-                'user_data': collection_data,
-                'department': "EDUC",
-            }
-            return render(request, 'manage_accounts.html', data)
+                data = {
+                    'user_data': collection_data,
+                    'department': "EDUC",
+                }
+                return render(request, 'manage_accounts.html', data)
 
-    department = request.POST.get('department')
+        department = request.POST.get('department')
 
-    getCollection = firestoreDB.collection('it_department_accounts').get()
+        getCollection = firestoreDB.collection('it_department_accounts').get()
 
-    collection_data = []
+        collection_data = []
 
-    for user in getCollection:
-        value = user.to_dict()
-        collection_data.append(value)
+        for user in getCollection:
+            value = user.to_dict()
+            collection_data.append(value)
 
-    data = {
-        'user_data': collection_data,
-        'department': "IT",
-    }
-    return render(request, 'manage_accounts.html', data)
+        data = {
+            'user_data': collection_data,
+            'department': "IT",
+        }
+        return render(request, 'manage_accounts.html', data)
 
 
 def addAccount(request):
