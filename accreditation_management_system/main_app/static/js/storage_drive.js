@@ -126,6 +126,46 @@ else if(levelValue == 'Level 1' && areaValue == 'Area 1' && parameterValue == 'P
 '</div>';
 }
 
+else if(levelValue == 'Level 1' && areaValue == 'Area 2' && parameterValue == 'Parameter A' && categoryValue == 'Implementation'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="I.1.1">I.1.1. Instruction</option>' +
+  '<option value="I.1.2">I.1.2. Research</option>' +
+  '<option value="I.1.3">I.1.3. Extension</option>' +
+  '<option value="I.1.4">I.1.4. Production</option>' +
+  '<option value="I.1.5">I.1.5. Consultancy and Expert Service</option>' +
+  '<option value="I.1.6">I.1.6. Publication Creative and Scholarly Works</option>' +
+  '<option value="I.2">I.2. Faculty pursue graduate degrees related to the program and/or allied fields from reputable institutions (with at least Level II Accreditation Status or World/ Asian Rank</option>' +
+  '</select>'+
+'</div>';
+}
+
+else if(levelValue == 'Level 1' && areaValue == 'Area 2' && parameterValue == 'Parameter A' && categoryValue == 'Outcomes'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="O.1">O.1. The institution has qualified and competent faculty</option>' +
+  '</select>'+
+'</div>';
+}
+
+else if(levelValue == 'Level 1' && areaValue == 'Area 2' && parameterValue == 'Parameter A' && categoryValue == 'System'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="S.1">S.1. The required number of faculty possess graduate degrees appropriate and relevant to the program or any of the allied fields.</option>' +
+  '<option value="S.2.1">S.2.1. related professional experience</option>' +
+  '<option value="S.2.2">S.2.2. Licensure (if Applicable)</option>' +
+  '<option value="S.2.3">S.2.3. Specialization</option>' +
+  '<option value="S.2.4">S.2.4. Technical/Pedagogical Skills And Competence</option>' +
+  '<option value="S.2.5">S.2.5. Special abilities, computer literacy, research productivity</option>' +
+  '<option value="S.3">S.3. Faculty handling OJT/ practicum courses have at least three (3) years of teaching and industry - based  experience in the field, if applicable.</option>' +
+  '<option value="S.4">S.4 At least 50% of the faculty are Graduate Degree holders</option>' +
+'</select>'+
+'</div>';
+}
+
 
   $(".appendedField").remove();
   $( ".appendHere" ).append( html );
