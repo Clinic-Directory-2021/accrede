@@ -209,7 +209,7 @@ else if(levelValue == 'Level 1' && areaValue == 'Area 2' && parameterValue == 'P
 '</div>';
 }
 
-// AREA 2 PARAMETER C 
+// AREA 2 PARAMETER C IMPLEMENTATION
 else if(levelValue == 'Level 1' && areaValue == 'Area 2' && parameterValue == 'Parameter C' && categoryValue == 'Implementation'){
   var html = 
   '<div class="appendedField">'+
@@ -225,6 +225,25 @@ else if(levelValue == 'Level 1' && areaValue == 'Area 2' && parameterValue == 'P
   '<option value="I.9">I.9. Consultation,  tutorial, remedial  classes, expert  services and other instruction -  related activities  are given credits in consonance with  faculty workload guidelines</option>' +
   '<option value="I.10">I.10. Workload assignments  and number of  preparations follow existing workload guidelines</option>' +
   '</select>'+
+'</div>';
+}
+
+// AREA 2 PARAMETER C OUTCOMES
+else if(levelValue == 'Level 1' && areaValue == 'Area 2' && parameterValue == 'Parameter C' && categoryValue == 'Outcomes'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="O.1">O.1. The faculty  are efficient and  effective, with  sufficient time for instruction,  research,  extension,  production and  other assigned tasks</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 2 PARAMETER C System
+else if(levelValue == 'Level 1' && areaValue == 'Area 2' && parameterValue == 'Parameter B' && categoryValue == 'System'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="S.1">S.1. There is an institutional Human Resource Development Plan/ Program designed for faculty recruitment.</option>' +
 '</div>';
 }
 
