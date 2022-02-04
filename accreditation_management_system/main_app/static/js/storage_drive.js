@@ -475,6 +475,329 @@ else if(levelValue == 'Level 1' && areaValue == 'Area 2' && parameterValue == 'P
 '</div>';
 }
 
+// AREA 3 PARAMETER A System
+else if(levelValue == 'Level 1' && areaValue == 'Area 3' && parameterValue == 'Parameter A' && categoryValue == 'System'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="S.1">S.1. The curriculum provides for the development of the following professional competencies:</option>' +
+  '<option value="S.1.1">S.1.1. acquisition of knowledge and theories based on the field of specialization/discipline;</option>' +
+  '<option value="S.1.2">S.1.2. application of the theories to real problems in the field;</option>' +
+  '<option value="S.1.3">S.1.3. demonstration of skills in applying different strategies in the actual work setting.</option>' +
+  '<option value="S.2">S.2. There is a system of validation of subjects taken from other schools.</option>' +
+'</div>';
+}
+
+// AREA 3 PARAMETER A IMPLEMENTATION
+else if(levelValue == 'Level 1' && areaValue == 'Area 3' && parameterValue == 'Parameter A' && categoryValue == 'Implementation'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="I.1">I.1. The curriculum/program of study meets the requirements and standards of CHED.</option>' +
+  '<option value="I.2">I.2. The subjects are logically sequenced and prerequisite courses are identified.</option>' +
+  '<option value="I.3">I.3. The curricular content is responsive to the needs of the country and recent development in the profession.</option>' +
+  '<option value="I.4">I.4. The curricular content covers the extent of the professional and technical preparation required of its graduates.</option>' +
+  '<option value="I.5">I.5. The curriculum integrates values, reflective of national customs, culture and tradition in cases where applicable.</option>' +
+  '<option value="I.6">I.6. Opportunities for participation in hands-on activities, such as immersion/practical training and field study are maintained in the curriculum.</option>' +
+  '<option value="I.7.1.1">I.7.1.1. administration;</option>' +
+  '<option value="I.7.1.2">I.7.1.2. faculty;</option>' +
+  '<option value="I.7.1.3">I.7.1.3. students;</option>' +
+  '<option value="I.7.1.4">I.7.1.4. alumni;</option>' +
+  '<option value="I.7.1.5">I.7.1.5. representatives from the industry/sector;</option>' +
+  '<option value="I.7.1.6">I.7.1.6. others (please specify)</option>' +
+  '<option value="I.7.2">I.7.2. periodic view, assessment, updating and approval of the curriculum by the Academic Council;</option>' +
+  '<option value="I.7.3">I.7.3. confirmation of the curriculum by the Board of Regents/Trustees (BOR/BOT).</option>' +
+  '<option value="I.7.4">I.7.4. others (please specify).</option>' +
+  '<option value="I.8">I.8. The program of study allows the accommodation of students with special needs and assists them to finish the degree.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 3 PARAMETER A OUTCOMES
+else if(levelValue == 'Level 1' && areaValue == 'Area 3' && parameterValue == 'Parameter A' && categoryValue == 'Outcomes'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="O.1">O.1. The curriculum is responsive and relevant to the demands of the times.</option>' +
+  '<option value="O.2">O.2. There is a passing average performance in the Licensure Examination (if applicable).</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 3 PARAMETER B System
+else if(levelValue == 'Level 1' && areaValue == 'Area 3' && parameterValue == 'Parameter B' && categoryValue == 'System'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="S.1">S.1. There is an institutional outcomes-based standard format in the preparation of course syllabi.</option>' +
+  '<option value="S.2">S.2. The syllabus includes a list of suggested readings and references of print and electronic resources within the last ten (10) years.</option>' +
+  '<option value="S.3">S.3. Copies of all course syllabi during the term are available at the Dean\'s office or in any other appropriate repository.</option>' +
+  '<option value="S.4">S.4. Copies of all course syllabi in previous terms are filed for reference purposes.</option>' +
+  '<option value="S.5">S.5. There is provision for remedial measures to strengthen the basic skills in Mathematics, English, and other “tool” subjects.</option>' +
+  '<option value="S.6">S.6. There is a mechanism to facilitate the teaching-learning process.</option>' +
+'</div>';
+}
+
+// AREA 3 PARAMETER B IMPLEMENTATION
+else if(levelValue == 'Level 1' && areaValue == 'Area 3' && parameterValue == 'Parameter B' && categoryValue == 'Implementation'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="I.1">I.1. The Dean or official concerned approves the updated syllabus for each subject.</option>' +
+  '<option value="I.2">I.2. The faculty prepares syllabi with comprehensive contents.</option>' +
+  '<option value="I.3">I.3. The faculty revise and enhances the syllabi preferably every two (2) years and as needed.</option>' +
+  '<option value="I.4">I.4. The faculty distributes a copy of the syllabus to each student.</option>' +
+  '<option value="I.5">I.5. Teaching strategies stimulate the development of the students\' higher-order thinking skills (HOTS) such as critical thinking, analytical thinking, creative thinking and problem solving.</option>' +
+  '<option value="I.6.1">I.6.1. symposia, seminars, workshops, professional lectures;</option>' +
+  '<option value="I.6.2">I.6.2. educational tours/learning visits/other co- curricular activities;</option>' +
+  '<option value="I.6.3">I.6.3. peer teaching/cooperative learning; and</option>' +
+  '<option value="I.6.4">I.6.4. computer-assisted instruction (CAI) and computer-assisted learning (CAL).</option>' +
+  '<option value="I.7.1">I.7.1. group/individual projects;</option>' +
+  '<option value="I.7.2">I.7.2. group/individual reports;</option>' +
+  '<option value="I.7.3">I.7.3. group/individual term papers;</option>' +
+  '<option value="I.7.4">I.7.4. performance activities;</option>' +
+  '<option value="I.7.5">I.7.5. learning contact;</option>' +
+  '<option value="I.7.6">I.7.6. portfolio;</option>' +
+  '<option value="I.7.7">I.7.7. research study;</option>' +
+  '<option value="I.7.8">I.7.8. learning modules; and</option>' +
+  '<option value="I.7.9">I.7.9. others (please specify)</option>' +
+  '<option value="I.8.1">I.8.1. film showing;</option>' +
+  '<option value="I.8.2">I.8.2. projects;</option>' +
+  '<option value="I.8.3">I.8.3. group dynamics;</option>' +
+  '<option value="I.8.4">I.8.4. case study;</option>' +
+  '<option value="I.8.5">I.8.5. workshops;</option>' +
+  '<option value="I.8.6">I.8.6. simulations;</option>' +
+  '<option value="I.8.7">I.8.7. dimensional question approach;</option>' +
+  '<option value="I.8.8">I.8.8. brainstorming;</option>' +
+  '<option value="I.8.9">I.8.9. buzz sessions;</option>' +
+  '<option value="I.8.10">I.8.10. informal creative groups;</option>' +
+  '<option value="I.8.11">I.8.11. interactive learning;</option>' +
+  '<option value="I.8.12">I.8.12. team teaching;</option>' +
+  '<option value="I.8.13">I.8.13. micro teaching;</option>' +
+  '<option value="I.8.14">I.8.14. macro teaching;</option>' +
+  '<option value="I.8.15">I.8.15. tandem teaching;</option>' +
+  '<option value="I.8.16">I.8.16. peer teaching;</option>' +
+  '<option value="I.8.17">I.8.17. multi-media/courseware/teach ware;</option>' +
+  '<option value="I.8.18">I.8.18. experiments;</option>' +
+  '<option value="I.8.19">I.8.19. problem-solving;</option>' +
+  '<option value="I.8.20">I.8.20. type study methods;</option>' +
+  '<option value="I.8.21">I.8.21. reporting;</option>' +
+  '<option value="I.8.22">I.8.22. panel discussion; and</option>' +
+  '<option value="I.8.23">I.8.23. others (please specify)</option>' +
+  '<option value="I.9">I.9. Instructional strategies provide for student individual needs and the development of multiple intelligence;</option>' +
+  '<option value="I.10.1">I.10.1. submission of approved and updated syllabus for every subject/course;</option>' +
+  '<option value="I.10.2">I.10.2. regular classroom observation/supervision;</option>' +
+  '<option value="I.10.3">I.10.3. regular faculty meetings with the College/Academic Dean/Department Chair;</option>' +
+  '<option value="I.10.4">I.10.4. regular faculty performance evaluation;</option>' +
+  '<option value="I.10.5">I.10.5. attendance/participation of faculty in in- service training;</option>' +
+  '<option value="I.10.6">I.10.6. conduct of experimental classes.</option>' +
+  '<option value="I.10.7">I.10.7. adoption of alternative instructional delivery modes such as modules, e-learning and online study.</option>' +
+  '<option value="I.11">I.11. Instructional materials (IMs) are reviewed and recommended by an Instructional Materials Committee (IMC).</option>' +
+  '<option value="I.12">I.12. Varied, multi-sensory materials and computer programs are utilized.</option>' +
+  '<option value="I.13">I.13. The College/Academic Unit maintains consortia and linkages with other learning institutions for academic exchange of instructional material.</option>' +
+  '<option value="I.14">I.14. The faculty are encouraged to produce their own instructional materials such as modules, software, visual aids, manuals and textbooks.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 3 PARAMETER B OUTCOMES
+else if(levelValue == 'Level 1' && areaValue == 'Area 3' && parameterValue == 'Parameter B' && categoryValue == 'Outcomes'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="O.1">O.1. Course syllabi are updated and approved by concerned authorities.</option>' +
+  '<option value="O.2">O.2. Varied teaching strategies are efficiently and effectively used.</option>' +
+  '<option value="O.3">O.3. Instructional Materials produced by the faculty are copyrighted/patented.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 3 PARAMETER C System
+else if(levelValue == 'Level 1' && areaValue == 'Area 3' && parameterValue == 'Parameter C' && categoryValue == 'System'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="S.1.1">S.1.1. formative tests such as quizzes, unit tests;</option>' +
+  '<option value="S.1.2">S.1.2. summative tests such as mid-term and final examinations;</option>' +
+  '<option value="S.1.3">S.1.3. project and term papers;</option>' +
+  '<option value="S.1.4">S.1.4. practicum and performance tests;</option>' +
+  '<option value="S.1.5">S.1.5. other course requirements.</option>' +
+  '<option value="S.2.1">S.2.1. comprehensive enough to test the different levels of cognitive skills and knowledge of content</option>' +
+  '<option value="S.2.2">S.2.2. based on well-designed Table of Specifications (TOS).</option>' +
+'</div>';
+}
+
+// AREA 3 PARAMETER C IMPLEMENTATION
+else if(levelValue == 'Level 1' && areaValue == 'Area 3' && parameterValue == 'Parameter C' && categoryValue == 'Implementation'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="I.1.1">I.1.1. portfolio;</option>' +
+  '<option value="I.1.2">I.1.2. rubric assessment;</option>' +
+  '<option value="I.1.3">I.1.3. skills demonstration;</option>' +
+  '<option value="I.1.4">I.1.4. paper and pencil tests;</option>' +
+  '<option value="I.1.5">I.1.5. oral examinations;</option>' +
+  '<option value="I.1.6">I.1.6. group/individual reports</option>' +
+  '<option value="I.1.7">I.1.7. groups/individual projects;</option>' +
+  '<option value="I.1.8">I.1.8. others (please specify)</option>' +
+  '<option value="I.2">I.2. Evaluation tools/instruments are reviewed and revised periodically.</option>' +
+  '<option value="I.3">I.3. The faculty are trained how to assess student performance properly.</option>' +
+  '<option value="I.4">I.4. The College/Academic Unit encourages and supports assessment for multiple intelligences.</option>' +
+  '<option value="I.5">I.5. Course and test requirements are returned to students after results are checked, recorded and analyzed.</option>' +
+  '<option value="I.6.1">I.6.1. students;</option>' +
+  '<option value="I.6.2">I.6.2. faculty;</option>' +
+  '<option value="I.6.3">I.6.3. academic administrators</option>' +
+  '<option value="I.6.4">I.6.4. parents/guardians.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 3 PARAMETER C OUTCOMES
+else if(levelValue == 'Level 1' && areaValue == 'Area 3' && parameterValue == 'Parameter C' && categoryValue == 'Outcomes'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="O.1">O.1. The student\'s academic performance is commendable</option>' +
+  '<option value="O.2">O.2. Retention rate of students is on the average.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 3 PARAMETER D System
+else if(levelValue == 'Level 1' && areaValue == 'Area 3' && parameterValue == 'Parameter D' && categoryValue == 'System'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="S.1.1">S.1.1. student\'s attendance in class and other academic activities;</option>' +
+  '<option value="S.1.2">S.1.2. schedule of classes;</option>' +
+  '<option value="S.1.3">S.1.3. student\'s discipline;</option>' +
+  '<option value="S.1.4">S.1.4. maintenance of cleanliness and orderliness.</option>' +
+'</div>';
+}
+
+// AREA 3 PARAMETER D IMPLEMENTATION
+else if(levelValue == 'Level 1' && areaValue == 'Area 3' && parameterValue == 'Parameter D' && categoryValue == 'Implementation'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="I.1">I.1. The policies on management of learning are enforced.;</option>' +
+  '<option value="I.2">I.2. Student activities are well-planned and implemented.</option>' +
+  '<option value="I.3">I.3. assignments are designed to reinforced teaching which result in student\'s maximum learning.</option>' +
+  '<option value="I.4">I.4. The maximum class size of 50 for undergraduate courses enforced.</option>' +
+  '<option value="I.5">I.5. Classroom discipline is maintained in accordance with democratic practices.</option>' +
+  '<option value="I.6">I.6. The class officers and assigned students assists in maintaining cleanliness of classroom, laboratories, corridors and the school campus.</option>' +
+  '<option value="I.7.1">I.7.1. case studies/reports;</option>' +
+  '<option value="I.7.2">I.7.2. thesis;</option>' +
+  '<option value="I.7.3">I.7.3. others (please specify)</option>' +
+  '<option value="I.8">I.8. In practicum courses (field study, OJT, practice teaching, etc.) the number of trainees supervised by each coordinator does not exceed to 50.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 3 PARAMETER D OUTCOMES
+else if(levelValue == 'Level 1' && areaValue == 'Area 3' && parameterValue == 'Parameter D' && categoryValue == 'Outcomes'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="O.1">O.1. Learning is efficiently and effectively managed.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 3 PARAMETER E System
+else if(levelValue == 'Level 1' && areaValue == 'Area 3' && parameterValue == 'Parameter E' && categoryValue == 'System'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="S.1">S.1. There is a policy on graduation requirements.</option>' +
+'</div>';
+}
+
+
+// AREA 3 PARAMETER E IMPLEMENTATION
+else if(levelValue == 'Level 1' && areaValue == 'Area 3' && parameterValue == 'Parameter E' && categoryValue == 'Implementation'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="I.1">I.1. The students are regularly informed of the academic requirements of their respective courses.</option>' +
+  '<option value="I.2">I.2. The College/Academic Unit implements the system for student returnees and transferees to meet the residence and other graduation requirements.</option>' +
+  '<option value="I.3">I.3. Graduating students conduct research and/or undergo practicum/OJT or other activities prescribed in their respective curricula.</option>' +
+  '<option value="I.4">I.4. The College/Academic Unit assist the graduating students with academic deficiencies, disciplinary cases, and other problems which hinder issuance of clearances.</option>' +
+  '<option value="I.5">I.5. A clearance from academic and financial accountabilities and responsibilities is required before graduation.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 3 PARAMETER E OUTCOMES
+else if(levelValue == 'Level 1' && areaValue == 'Area 3' && parameterValue == 'Parameter E' && categoryValue == 'Outcomes'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="O.1">O.1. At least 60% of the students enrolled in the program are able to graduate within the regular time frame.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 3 PARAMETER F System
+else if(levelValue == 'Level 1' && areaValue == 'Area 3' && parameterValue == 'Parameter F' && categoryValue == 'System'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="S.1">S.1. The institution has policies on:</option>' +
+  '<option value="S.1.1">S.1.1. substitution or special arrangements whenever a faculty is on leave or absent;</option>' +
+  '<option value="S.1.2">S.1.2. giving awards and/or recognition for faculty and students with outstanding achievements;</option>' +
+  '<option value="S.1.3">S.1.3. supervision/monitoring and evaluation of faculty performance.</option>' +
+'</div>';
+}
+
+// AREA 3 PARAMETER F IMPLEMENTATION
+else if(levelValue == 'Level 1' && areaValue == 'Area 3' && parameterValue == 'Parameter F' && categoryValue == 'Implementation'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="I.1">I.1. The institution implements rules on the attendance of the faculty in their respective classes and other academic related activities.</option>' +
+  '<option value="I.2.1">I.2.1. faculty;</option>' +
+  '<option value="I.2.2">I.2.2. students</option>' +
+  '<option value="I.3.1">I.3.1. conducting seminars/workshop on syllabi making;</option>' +
+  '<option value="I.3.2">I.3.2. holding workshops on test construction and the corresponding table of specifications;</option>' +
+  '<option value="I.3.3">I.3.3. Conducting of competencies assessment;</option>' +
+  '<option value="I.3.4">I.3.4. conducting supervisory visit of classes and providing assistance if necessary;</option>' +
+  '<option value="I.3.5">I.3.5. holding of regular faculty meetings;</option>' +
+  '<option value="I.3.6">I.3.6. requiring consultations between students and faculty;</option>' +
+  '<option value="I.3.7">I.3.7. conducting studies on academic performance of students</option>' +
+  '<option value="I.3.8">I.3.8. providing opportunities for the participation of the faculty in in-service training activities.</option>' +
+  '<option value="I.4.1">I.4.1. the Dean/Academic Head/Department Chair;</option>' +
+  '<option value="I.4.2">I.4.2. the students;</option>' +
+  '<option value="I.4.3">I.4.3. the faculty member himself/herself;</option>' +
+  '<option value="I.4.4">I.4.4. peers;</option>' +
+  '<option value="I.4.5">I.4.5. others (please specify)</option>' +
+  '<option value="I.5">I.5. The results of the performance evaluation are used to improve the performance/competencies of the faculty.</option>' +
+  '<option value="I.6">I.6. Students are given recognition for exemplary academic and non-academic performances.</option>' +
+  '<option value="I.7">I.7. Outstanding achievement of students is recognized and encouraged through the following:</option>' +
+  '<option value="I.7.1">I.7.1. inclusion in the honor roll, Dean\'s list, etc.;</option>' +
+  '<option value="I.7.2">I.7.2. grant of tuition scholarships;</option>' +
+  '<option value="I.7.3">I.7.3. award of honor medals and merit certificate;</option>' +
+  '<option value="I.7.4">I.7.4. membership in honor societies/honor class/sections, etc.; </option>' +
+  '<option value="I.7.5">I.7.5. grant of special privileges such as opportunities for leadership and others (excluding exemption for major exams on all professional business subjects);</option>' +
+  '<option value="I.7.6">I.7.6. grant of awards and recognition for outstanding academic accomplishments, e.g., Best Thesis, Student Researcher of the Year, etc.</option>' +
+  '<option value="I.8.1">I.8.1. analysis of performance of graduates in the Licensure Examination; if applicable</option>' +
+  '<option value="I.8.2">I.8.2. Employability of graduates;</option>' +
+  '<option value="I.8.3">I.8.3. feedback from employers regarding performance of graduates.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 3 PARAMETER F OUTCOMES
+else if(levelValue == 'Level 1' && areaValue == 'Area 3' && parameterValue == 'Parameter F' && categoryValue == 'Outcomes'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="O.1">O.1. The faculty and students have commendable performance as a result of administrative support.</option>' +
+  '<option value="O.2">O.2. The graduates of the program are employable.</option>' +
+  '</select>'+
+'</div>';
+}
+
   $(".appendedField").remove();
   $( ".appendHere" ).append( html );
  }
