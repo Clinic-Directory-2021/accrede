@@ -1441,6 +1441,85 @@ else if(levelValue == 'Level 1' && areaValue == 'Area 6' && parameterValue == 'P
 '</div>';
 } 
 
+
+
+if(levelValue == 'Level 1' && areaValue == 'Area 1'){
+  var parameterOption = 
+  '<div class="appendedFieldParameter">'+
+  '<select data-role="select" name="selectParameter" id="selectParameter" form="drive_form" onchange="dynamicFields()" required>'+
+  '<option value="Parameter A">Parameter A</option>'+
+  '<option value="Parameter B">Parameter B</option>'+
+  '</select>'+
+  '</div>';
+}
+else if (levelValue == 'Level 1' && areaValue == 'Area 2'){
+  var parameterOption = 
+  '<div class="appendedFieldParameter">'+
+  '<select data-role="select" name="selectParameter" id="selectParameter" form="drive_form" onchange="dynamicFields()" required>'+
+  '<option value="Parameter A">Parameter A</option>' +
+  '<option value="Parameter B">Parameter B</option>' +
+  '<option value="Parameter C">Parameter C</option>' +
+  '<option value="Parameter D">Parameter D</option>' +
+  '<option value="Parameter E">Parameter E</option>' +
+  '<option value="Parameter F">Parameter F</option>' +
+  '<option value="Parameter G">Parameter G</option>' +
+  '<option value="Parameter H">Parameter H</option>' +
+  '</select>'+
+  '</div>';
+}
+else if (levelValue == 'Level 1' && areaValue == 'Area 3'){
+  var parameterOption = 
+  '<div class="appendedFieldParameter">'+
+  '<select data-role="select" name="selectParameter" id="selectParameter" form="drive_form" onchange="dynamicFields()" required>'+
+  '<option value="Parameter A">Parameter A</option>' +
+  '<option value="Parameter B">Parameter B</option>' +
+  '<option value="Parameter C">Parameter C</option>' +
+  '<option value="Parameter D">Parameter D</option>' +
+  '<option value="Parameter E">Parameter E</option>' +
+  '<option value="Parameter F">Parameter F</option>' +
+  '</select>'+
+  '</div>';
+}
+else if (levelValue == 'Level 1' && areaValue == 'Area 4'){
+  var parameterOption = 
+  '<div class="appendedFieldParameter">'+
+  '<select data-role="select" name="selectParameter" id="selectParameter" form="drive_form" onchange="dynamicFields()" required>'+
+  '<option value="Parameter A">Parameter A</option>' +
+  '<option value="Parameter B">Parameter B</option>' +
+  '<option value="Parameter C">Parameter C</option>' +
+  '<option value="Parameter D">Parameter D</option>' +
+  '<option value="Parameter E">Parameter E</option>' +
+  '</select>'+
+  '</div>';
+}
+else if (levelValue == 'Level 1' && areaValue == 'Area 5'){
+  var parameterOption = 
+  '<div class="appendedFieldParameter">'+
+  '<select data-role="select" name="selectParameter" id="selectParameter" form="drive_form" onchange="dynamicFields()" required>'+
+  '<option value="Parameter A">Parameter A</option>' +
+  '<option value="Parameter B">Parameter B</option>' +
+  '<option value="Parameter C">Parameter C</option>' +
+  '<option value="Parameter D">Parameter D</option>' +
+  '</select>'+
+  '</div>';
+}
+else if (levelValue == 'Level 1' && areaValue == 'Area 6'){
+  var parameterOption = 
+  '<div class="appendedFieldParameter">'+
+  '<select data-role="select" name="selectParameter" id="selectParameter" form="drive_form" onchange="dynamicFields()" required>'+
+  '<option value="Parameter A">Parameter A</option>' +
+  '<option value="Parameter B">Parameter B</option>' +
+  '<option value="Parameter C">Parameter C</option>' +
+  '<option value="Parameter D">Parameter D</option>' +
+  '</select>'+
+  '</div>';
+}
+
+$(".appendedFieldParameter").remove();
+$( ".appendHereParameter" ).append( parameterOption );
+
+
+
   $(".appendedField").remove();
   $( ".appendHere" ).append( html );
  }
