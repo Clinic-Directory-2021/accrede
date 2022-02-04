@@ -206,6 +206,7 @@ else if(levelValue == 'Level 1' && areaValue == 'Area 2' && parameterValue == 'P
   '<div class="appendedField">'+
   '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
   '<option value="S.1">S.1. There is an institutional Human Resource Development Plan/ Program designed for faculty recruitment.</option>' +
+  '</select>'+
 '</div>';
 }
 
@@ -244,6 +245,7 @@ else if(levelValue == 'Level 1' && areaValue == 'Area 2' && parameterValue == 'P
   '<div class="appendedField">'+
   '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
   '<option value="S.1">S.1. There is an institutional Human Resource Development Plan/ Program designed for faculty recruitment.</option>' +
+  '</select>'+
 '</div>';
 }
 
@@ -281,6 +283,7 @@ else if(levelValue == 'Level 1' && areaValue == 'Area 2' && parameterValue == 'P
   '<option value="S.1">S.1. The institution has a system of promotion in rank and tenure based on official issuance</option>' +
   '<option value="S.2">S.2. The institution has a policy on probationary status of employment</option>' +
   '<option value="S.3">S.3. At least 50%  of the full - time  faculty teaching  the professional  courses under permanent/ regular status</option>' +
+  '</select>'+
 '</div>';
 }
 
@@ -335,6 +338,7 @@ else if(levelValue == 'Level 1' && areaValue == 'Area 2' && parameterValue == 'P
   '<option value="S.2">S.2. There are  policies on faculty academic  recognition and grant of scholarships/ fellowships and awards</option>' +
   '<option value="S.3">S.3. Every faculty member has at  least one active  membership in  professional/ scientific  organization or honor society relevant to his/her assignment and field of specialization</option>' +
   '<option value="S.4">S.4. The budget allocation for faculty  development is adequate</option>' +
+  '</select>'+
 '</div>';
 }
 
@@ -381,6 +385,7 @@ else if(levelValue == 'Level 1' && areaValue == 'Area 2' && parameterValue == 'P
   '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
   '<option value="S.1.1">S.1.1. professional  performance</option>' +
   '<option value="S.1.2">S.1.2. scholarly works</option>' +
+  '</select>'+
 '</div>';
 }
 
@@ -429,6 +434,7 @@ else if(levelValue == 'Level 1' && areaValue == 'Area 2' && parameterValue == 'P
   '<div class="appendedField">'+
   '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
   '<option value="S.1">S.1. The institution has a system of compensation and rewards to its faculty and staff</option>' +
+  '</select>'+
 '</div>';
 }
 
@@ -472,6 +478,7 @@ else if(levelValue == 'Level 1' && areaValue == 'Area 2' && parameterValue == 'P
   '<div class="appendedField">'+
   '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
   '<option value="S.1">S.1. There are  approved SUC Code and SUC Faculty  Manual that defines the policies,  guidelines, rules  and regulations affecting the faculty.</option>' +
+  '</select>'+
 '</div>';
 }
 
@@ -485,6 +492,7 @@ else if(levelValue == 'Level 1' && areaValue == 'Area 3' && parameterValue == 'P
   '<option value="S.1.2">S.1.2. application of the theories to real problems in the field;</option>' +
   '<option value="S.1.3">S.1.3. demonstration of skills in applying different strategies in the actual work setting.</option>' +
   '<option value="S.2">S.2. There is a system of validation of subjects taken from other schools.</option>' +
+  '</select>'+
 '</div>';
 }
 
@@ -535,6 +543,7 @@ else if(levelValue == 'Level 1' && areaValue == 'Area 3' && parameterValue == 'P
   '<option value="S.4">S.4. Copies of all course syllabi in previous terms are filed for reference purposes.</option>' +
   '<option value="S.5">S.5. There is provision for remedial measures to strengthen the basic skills in Mathematics, English, and other “tool” subjects.</option>' +
   '<option value="S.6">S.6. There is a mechanism to facilitate the teaching-learning process.</option>' +
+  '</select>'+
 '</div>';
 }
 
@@ -624,6 +633,7 @@ else if(levelValue == 'Level 1' && areaValue == 'Area 3' && parameterValue == 'P
   '<option value="S.1.5">S.1.5. other course requirements.</option>' +
   '<option value="S.2.1">S.2.1. comprehensive enough to test the different levels of cognitive skills and knowledge of content</option>' +
   '<option value="S.2.2">S.2.2. based on well-designed Table of Specifications (TOS).</option>' +
+  '</select>'+
 '</div>';
 }
 
@@ -672,6 +682,7 @@ else if(levelValue == 'Level 1' && areaValue == 'Area 3' && parameterValue == 'P
   '<option value="S.1.2">S.1.2. schedule of classes;</option>' +
   '<option value="S.1.3">S.1.3. student\'s discipline;</option>' +
   '<option value="S.1.4">S.1.4. maintenance of cleanliness and orderliness.</option>' +
+  '</select>'+
 '</div>';
 }
 
@@ -710,6 +721,7 @@ else if(levelValue == 'Level 1' && areaValue == 'Area 3' && parameterValue == 'P
   '<div class="appendedField">'+
   '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
   '<option value="S.1">S.1. There is a policy on graduation requirements.</option>' +
+  '</select>'+
 '</div>';
 }
 
@@ -747,6 +759,7 @@ else if(levelValue == 'Level 1' && areaValue == 'Area 3' && parameterValue == 'P
   '<option value="S.1.1">S.1.1. substitution or special arrangements whenever a faculty is on leave or absent;</option>' +
   '<option value="S.1.2">S.1.2. giving awards and/or recognition for faculty and students with outstanding achievements;</option>' +
   '<option value="S.1.3">S.1.3. supervision/monitoring and evaluation of faculty performance.</option>' +
+  '</select>'+
 '</div>';
 }
 
@@ -794,6 +807,323 @@ else if(levelValue == 'Level 1' && areaValue == 'Area 3' && parameterValue == 'P
   '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
   '<option value="O.1">O.1. The faculty and students have commendable performance as a result of administrative support.</option>' +
   '<option value="O.2">O.2. The graduates of the program are employable.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 4 PARAMETER A IMPLEMENTATION
+else if(levelValue == 'Level 1' && areaValue == 'Area 4' && parameterValue == 'Parameter A' && categoryValue == 'Implementation'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="I.1">I.1. The objectives of the SAS are disseminated to and understood by the students, faculty, staff and administrators.</option>' +
+  '<option value="I.2">I.2. The SAS plans, implements, monitors and coordinates programs and services for student welfare and development.</option>' +
+  '<option value="I.3">I.3. Prompt, courteous and efficient services in the handling of business transactions with students are evident.</option>' +
+  '<option value="I.4">I.4. The SAS staffs receive salaries on time.</option>' +
+  '<option value="I.5">I.5. The SAS is represented in the policy and decision - making body of the institution.</option>' +
+  '<option value="I.6">I.6. The projects and activities of the SAS Unit are recognized and implemented.</option>' +
+  '<option value="I.7">I.7. There is a continuous and systematic evaluation of the effectiveness of the programs and services for student welfare and development.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 4 PARAMETER A OUTCOMES
+else if(levelValue == 'Level 1' && areaValue == 'Area 4' && parameterValue == 'Parameter A' && categoryValue == 'Outcomes'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="O.1">O.1. The students are satisfied with the Student Services Program</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 4 PARAMETER A System
+else if(levelValue == 'Level 1' && areaValue == 'Area 4' && parameterValue == 'Parameter A' && categoryValue == 'System'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="S.1">S.1. The institution has Student Services Program (SSP).</option>' +
+  '<option value="S.2">S.2. The Student Affairs Services (SAS) program is consistent with the vision and mission of the Institution, goals of the College/Academic Unit and objectives of the Program.</option>' +
+  '<option value="S.3">S.3. The objectives of the SAS are clearly defined.</option>' +
+  '<option value="S.4">S.4. The objectives of the SAS are in accordance with CMO No. 9 series of 2013.</option>' +
+  '<option value="S.5.1">S.5.1. student welfare programs;</option>' +
+  '<option value="S.5.2">S.5.2. student development programs and services;</option>' +
+  '<option value="S.6.1">S.6.1. Student Welfare;</option>' +
+  '<option value="S.6.1.1">S.6.1.1. Information and Orientation Services;</option>' +
+  '<option value="S.6.1.2">S.6.1.2. Guidance and Counseling Services;</option>' +
+  '<option value="S.6.1.3">S.6.1.3. Career and Job Placement Services;</option>' +
+  '<option value="S.6.1.4">S.6.1.4. Economic Enterprise Development;</option>' +
+  '<option value="S.6.1.5">S.6.1.5. Student Handbook Development.</option>' +
+  '<option value="S.6.2.1">S.6.2.1. Student Activities;</option>' +
+  '<option value="S.6.2.2">S.6.2.2. Student Organizations and Activities;</option>' +
+  '<option value="S.6.2.3">S.6.2.3. Leadership Training ;</option>' +
+  '<option value="S.6.2.4">S.6.2.4. Student Council/Government;</option>' +
+  '<option value="S.6.2.5">S.6.2.5. Student Discipline;</option>' +
+  '<option value="S.6.2.6">S.6.2.6. Student Publication/Yearbook.</option>' +
+  '<option value="S.6.3.1">S.6.3.1. Admission Services;</option>' +
+  '<option value="S.6.3.2">S.6.3.2. Scholarships and Financial Assistance (SFA);</option>' +
+  '<option value="S.6.3.3">S.6.3.3. Food Services;</option>' +
+  '<option value="S.6.3.4">S.6.3.4. Health and Wellness Services;</option>' +
+  '<option value="S.6.3.5">S.6.3.5. Safety and Security Services;</option>' +
+  '<option value="S.6.3.6">S.6.3.6. Student Housing and Residential Services;</option>' +
+  '<option value="S.6.3.7">S.6.3.7. Multi-faith and Inter-faith Services;</option>' +
+  '<option value="S.6.3.8">S.6.3.8. Foreign/ International Students Services (whenever applicable);</option>' +
+  '<option value="S.6.3.9">S.6.3.9. Services for students with Special Needs;</option>' +
+  '<option value="S.6.3.10">S.6.3.10. Culture and Arts Programs;</option>' +
+  '<option value="S.6.3.11">S.6.3.11. Sports and Development Programs;</option>' +
+  '<option value="S.6.3.12">S.6.3.12. Social and Community Involvement Programs;</option>' +
+  '<option value="S.6.3.13">S.6.3.13. others (please specify)</option>' +
+  '<option value="S.7">S.7. There is a SAS Unit that manages student affairs development and welfare programs.</option>' +
+  '<option value="S.8">S.8. The SAS Unit has an organizational structure indicating its relationship with other units.</option>' +
+  '<option value="S.9">S.9. The SAS Unit is headed by a qualified official.</option>' +
+  '<option value="S.10">S.10. The SAS Unit is staffed with qualified personnel.</option>' +
+  '<option value="S.11">S.11. The various student services are provided with adequate staff, physical facilities, equipment and materials (e.g. one (1) guidance counselor for every 1,000 students, etc.)</option>' +
+  '<option value="S.12">S.12. There is sufficient budget allocation for the Student Affairs and Services of the institution.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 4 PARAMETER B IMPLEMENTATION
+else if(levelValue == 'Level 1' && areaValue == 'Area 4' && parameterValue == 'Parameter B' && categoryValue == 'Implementation'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="I.1">I.1. The ratio of a  Guidance  Counselor to student  population is 1:1000.</option>' +
+  '<option value="I.2">I.2. Counseling  and other  student  records are  maintained  and kept  confidential.</option>' +
+  '<option value="I.3">I.3. Appropriate  intervention  programs and  services are  adopted to  promote and enhance  student welfare and  development.</option>' +
+  '<option value="I.4">I.4. The Guidance office  maintains an updated  inventory of student  cumulative  records.</option>' +
+  '<option value="I.5">I.5. The  Psychological tests are  administered,  scored and  interpreted by  qualified staff and the  results are kept  confidential.</option>' +
+  '<option value="I.6">I.6. The test  results are  disseminated  to concerned parties.</option>' +
+  '<option value="I.7">I.7. Test  results are  utilized in  designing  activities to  meet student needs.</option>' +
+  '<option value="I.8">I.8. A scheme for  appropriate  follow-up  and referrals  to utilized.</option>' +
+  '<option value="I.9">I.9. The  Guidance  office prepares  valid appraisal data of  students for  career and job  placement.</option>' +
+  '<option value="I.10">I.10. Student Placement is regularly monitored and followed up.</option>' +
+  '<option value="I.11">I.11. The institution maintains active networking with the schools, the communities, alumni, and other concerned agencies for career and job placements of students.</option>' +
+  '<option value="I.12">I.12. Career counseling is provided to enable students to choose appropriate major/field of specialization.</option>' +
+  '<option value="I.13">I.13. Information materials on career and job opportunities are made accessible.</option>' +
+  '<option value="I.14.1">I.14.1. awards received;</option>' +
+  '<option value="I.14.2">I.14.2. key positions in private and/ or government agencies; and</option>' +
+  '<option value="I.14.3">I.14.3. status of the enterprise, if applicable.</option>' +
+  '<option value="I.15">I.15. Skills development programs are conducted.</option>' +
+  '<option value="I.16">I.16. The students are given assistance in career and job placement.</option>' +
+  '<option value="I.17.1">I.17.1. student laboratory cooperatives;</option>' +
+  '<option value="I.17.2">I.17.2. entrepreneurial activities / projects</option>' +
+  '<option value="I.17.3">I.17.3. savings; </option>' +
+  '<option value="I.17.4">I.17.4. others (please specify)</option>' +
+  '<option value="I.18">I.18. Updated information on student welfare and development are accessible and disseminated.</option>' +
+  '<option value="I.19">I.19. The student body is involved in the development and revision of Student Handbook.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 4 PARAMETER B OUTCOMES
+else if(levelValue == 'Level 1' && areaValue == 'Area 3' && parameterValue == 'Parameter B' && categoryValue == 'Outcomes'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="O.1">O.1 Quality Student Welfare Services are available</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 4 PARAMETER B System
+else if(levelValue == 'Level 1' && areaValue == 'Area 4' && parameterValue == 'Parameter B' && categoryValue == 'System'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="S.1">S.1. The  institution has a Student  Handbook  containing  comprehensive  information on  programs and  services for  student welfare and  development.</option>' +
+  '<option value="S.2">S.2. A regular and  comprehensive  Orientation  Program is held for new,  returning and  continuing  students.</option>' +
+  '<option value="S.3.1">S.3.1.The 3.1. R.A. 9262 or  Anti-Violence Against  Women and  Children Act;</option>' +
+  '<option value="S.3.2">S.3.2. Anti-  Bullying Act;</option>' +
+  '<option value="S.3.3">S.3.3. Guidelines  on drug  abuse  prevention  and control;</option>' +
+  '<option value="S.3.4">S.3.4. R.A. 7877 or  the Anti-  Sexual  Harassment  Act of 1995;</option>' +
+  '<option value="S.3.5">S.3.5. HIV AIDS awareness</option>' +
+  '<option value="S.3.6">S.3.6. Self-  care and  healthy  lifestyles; and</option>' +
+  '<option value="S.3.7">S.3.7. R.A. 9442,  particularly on  the provision on public  ridicule and  vilification against  persons with  disability.</option>' +
+  '<option value="S.4.1">S.4.1. Information  and Inventory</option>' +
+  '<option value="S.4.2">S.4.2. Counseling;</option>' +
+  '<option value="S.4.3">S.4.3. Appraisal and testing;</option>' +
+  '<option value="S.4.4">S.4.4. Placement and follow- up; and</option>' +
+  '<option value="S.4.5">S.4.5. Referral.</option>' +
+  '<option value="S.5">S.5. Gender- sensitive  individual and group  counseling is  provided;</option>' +
+  '<option value="S.6">S.6. Counseling services  consider cultural differences.</option>' +
+  '<option value="S.7">S.7. The Guidance Program is  headed by a licensed  Guidance  Counselor with at least a  master\'s degree  in Guidance and  Counseling.</option>' +
+  '<option value="S.8">S.8. All the Guidance  Counselors are licensed.</option>' +
+  '<option value="S.9">S.9. The Guidance Program is supported  by qualified staff.</option>' +
+  '<option value="S.11">S.11. A counseling room is  provided for students  including  those with  special needs.</option>' +
+  '<option value="S.12">S.12. There is  a well-planned  assessment  program for  students with  appropriate  standardized  psychological tests.</option>' +
+  '<option value="S.13">S.13. Career seminars and job  placement  services are  available for  the students.</option>' +
+  '<option value="S.14">S.14. There is a mechanism  to establish  partnership and  collaboration  with other  institutions,  agencies and  industry.</option>' +
+  '<option value="S.15">S.15.There is  a mechanism  for storing and  achieving  student  records for  reference  purposes.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 4 PARAMETER C IMPLEMENTATION
+else if(levelValue == 'Level 1' && areaValue == 'Area 4' && parameterValue == 'Parameter C' && categoryValue == 'Implementation'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="I.1">I.1. Requirements  and procedures  for recognition/  accreditation of student  organizations  are widely  disseminated</option>' +
+  '<option value="I.2">I.2. The Constitution and  by-laws of student organizations incorporate participation and  advocacy in social  action activities.</option>' +
+  '<option value="I.3">I.3. The  institution conducts leadership training.</option>' +
+  '<option value="I.4.1">I.4.1. Govern themselves as a  student body;</option>' +
+  '<option value="I.4.2">I.4.2. Be transparent and  accountable to  their constituents; and</option>' +
+  '<option value="I.4.3">I.4.3. be represented in various for a while the students need  to be consulted.</option>' +
+  '<option value="I.5">I.5. The institution ensures transparency in  the development/ revision of guidelines and procedures for  the student council/ government.</option>' +
+  '<option value="I.6">I.6. The institution implements gender and disability  sensitive rules and regulations  published in a  Student Handbook/ Manual acceptable to students.</option>' +
+  '<option value="I.7">I.7. Sanctions are enforces for  misconduct such as but  not limited to acts of  vandalism, hazing,  bullying, libelous  statements and other  negative acts that  threaten peace and  order inside and  outside the school premises.</option>' +
+  '<option value="I.8">I.8. Grievance Committee is established to ensure due process  in dealing with students  misconduct.</option>' +
+  '<option value="I.9">I.9. The institution supports the  establishment and  implementation of  student publication as  provided for in R.A. 7079, otherwise knows as  "Campus Journalism  Act of 1991" and other media forms.</option>' +
+  '<option value="I.10">I.10. The production/ publication of a  yearbook is  encouraged.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 4 PARAMETER C OUTCOMES
+else if(levelValue == 'Level 1' && areaValue == 'Area 4' && parameterValue == 'Parameter C' && categoryValue == 'Outcomes'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="O.1">O.1. Quality student  development  services are assured.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 4 PARAMETER C System
+else if(levelValue == 'Level 1' && areaValue == 'Area 4' && parameterValue == 'Parameter C' && categoryValue == 'System'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="S.1">S.1. The institution has a system of  accreditation, monitoring and evaluation of student  organizations.</option>' +
+  '<option value="S.2">S.2. The institution provides adequate office space and  other forms of support to accredit student  organizations.</option>' +
+  '<option value="S.3">S.3. There is coordination between the school  administration and SAS  concerning  students with  drug and other related problems.</option>' +
+  '<option value="S.4">S.4. A mechanism to address student grievance is in place.</option>' +
+  '<option value="S.5">S.5. Programs and opportunities to develop and enhance leadership among students are provided.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 4 PARAMETER D IMPLEMENTATION
+else if(levelValue == 'Level 1' && areaValue == 'Area 4' && parameterValue == 'Parameter D' && categoryValue == 'Implementation'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="I.1">I.1. The faculty and students are properly informed of the admission guidelines and retention policies.</option>' +
+  '<option value="I.2">I.2. The policies and procedures on selection, admission and retention of students are implemented.</option>' +
+  '<option value="I.3.1">I.3.1. enrollment trends;</option>' +
+  '<option value="I.3.2">I.3.2. drop-out rate;</option>' +
+  '<option value="I.3.3">I.3.3. Licensure examination results and passing percentage;</option>' +
+  '<option value="I.3.4">I.3.4. employability of graduates;</option>' +
+  '<option value="I.3.5">I.3.5. student transferees; and</option>' +
+  '<option value="I.3.6">I.3.6. student classification by specialization.</option>' +
+  '<option value="I.4">I.4. Retention policies are approved by the Academic Council and confirmed by the Board of Regents/ Trustees.</option>' +
+  '<option value="I.5">I.5. The list of tuition and other school fees is posted conspicuously.</option>' +
+  '<option value="I.6">I.6. The institution provides access to scholarship and financial assistance.</option>' +
+  '<option value="I.7">I.7. Guidelines on scholarship and financial assistance are widely and promptly disseminated.</option>' +
+  '<option value="I.8">I.8. Criteria for safety, sanitation and food choices in the school canteen/ cafeteria are enforced.</option>' +
+  '<option value="I.9">I.9. The institution coordinates with the local government for the safety and sanitation of food service outside the school premises.</option>' +
+  '<option value="I.10">I.10. The institution periodically inspects foods outlets for sanitation and hygiene. The sanitary permit is displayed in a prominent area of the food outlet.</option>' +
+  '<option value="I.11">I.11. The primary health care services are administered to all students by licensed medical, dental and allied professionals.</option>' +
+  '<option value="I.12">I.12. Facilities for keeping health care and updated health records of students are adequate and well-maintained.</option>' +
+  '<option value="I.13">I.13. Policies and procedures in the selection of student athletes, performers, writers, etc. are implemented.</option>' +
+  '<option value="I.14">I.14. Health and related laws, rules and regulations are enforced.</option>' +
+  '<option value="I.16">I.16. Earthquake and fire drills involving students, faculty and administrative staff are conducted regularly.</option>' +
+  '<option value="I.17">I.17. The institution establishes programs for the students to help in crime prevention, cleanliness and orderliness, observance of a clean and green environment, safety and security of the school premises.</option>' +
+  '<option value="I.18">I.18. The institution provides assistance to students on accessible, affordable, clean, and conducive to learning, dormitories and housing facilities.</option>' +
+  '<option value="I.19">I.19. The institution ensures that the students right to practice his/her religion is respected.</option>' +
+  '<option value="I.20">I.20. Submission of required reports on foreign students right</option>' +
+  '<option value="I.21">I.21. The Code of Conduct for foreign students with special needs.</option>' +
+  '<option value="I.22">I.22. The institution accommodates students with special needs</option>' +
+  '<option value="I.23">I.23. There is a regular submission of the list of students with special needs to the CHEDRO describing the Institutions intervention programs.</option>' +
+  '<option value="I.24">I.24. Sports development programs are regularly conducted.</option>' +
+  '<option value="I.25">I.25. The institution ensures opportunities for students to participate in socio and civic action activities.</option>' +
+  '<option value="I.26">I.26. The students are covered with Life and Accident Insurance.</option>' +
+  '<option value="I.27">I.27. the institution rewards SAS staff for exceptional job performance.</option>' +
+  '<option value="I.28">I.28. The institution informs the students and others stakeholders on other related programs and services not cited in CMO NO.9 s, 2013.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 4 PARAMETER D OUTCOMES
+else if(levelValue == 'Level 1' && areaValue == 'Area 4' && parameterValue == 'Parameter D' && categoryValue == 'Outcomes'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="O.1">O.1. The institutional programs and services develop student potentials to the fullest.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 4 PARAMETER D System
+else if(levelValue == 'Level 1' && areaValue == 'Area 4' && parameterValue == 'Parameter D' && categoryValue == 'System'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="S.1">S.1. There is a system of student recruitment, selection, admission and retention.</option>' +
+  '<option value="S.2">S.2. Admission requirements and procedures of persons with disabilities as stipulated in R.A. 7277 are in place.</option>' +
+  '<option value="S.3">S.3. Scholarships and financial assistance in various forms are available to students.</option>' +
+  '<option value="S.4">S.4. Policies and guidelines are institutionalized for students from marginalized sector of the country.</option>' +
+  '<option value="S.5">S.5. There is a policy on wellness and healthy lifestyle.</option>' +
+  '<option value="S.6">S.6. Buildings and facilities which conform with government standards are provided with accessible and safe amenities for persons with disabilities.</option>' +
+  '<option value="S.7">S.7. There is a disaster risk reduction and management program in compliance with R.A. 10121, otherwise known as the “Philippine Disaster Risk Reduction and Management Act of 2010.”</option>' +
+  '<option value="S.8">S.8. Policies on the use of student facilities are in place.</option>' +
+  '<option value="S.9">S.9. An integrated service program that cares to the various needs of foreign students are available, whenever applicable.</option>' +
+  '<option value="S.10">S.10. A liaison officer is available to assist foreign students in their transactions with concerned government agencies, whenever applicable.</option>' +
+  '<option value="S.11">S.11. There are programs for life skills training (e.g. conflict and stress management, harassment, etc.) counseling, testing and referrals for students with special needs.</option>' +
+  '<option value="S.12">S.12. The institution provides opportunities for promotion and appreciation of culture and arts.</option>' +
+  '<option value="S.13">S.13. The institution has well equipped offices for:</option>' +
+  '<option value="S.13.1">S.13.1. Culture and the Arts;</option>' +
+  '<option value="S.13.3">S.13.3. Student Publications;</option>' +
+  '<option value="S.13.4">S.13.4. Medical-Dental Clinic.</option>' +
+  '<option value="S.14">S.14. There is a well-furnished medical-dental clinic.</option>' +
+  '<option value="S.15.1">S.15.1. diagnostic purposes;</option>' +
+  '<option value="S.15.3">S.15.3. prevention and prophylaxis;</option>' +
+  '<option value="S.15.4">S.15.4. physical-dental exam.</option>' +
+  '<option value="S.16">S.16. An updated information on student health condition is available to parents/guardians.</option>' +
+  '<option value="S.17">S.17. There are mechanism to promote national, sectoral and cultural sports activities and development in coordination with concerned agencies.</option>' +
+  '<option value="S.18.1">S.18.1. educational loans;</option>' +
+  '<option value="S.18.2">S.18.2. student assistantship;</option>' +
+  '<option value="S.18.3">S.18.3. attendance to seminars, training (sports, leadership, etc.;</option>' +
+  '<option value="S.18.4">S.18.4. grants-in-aid; </option>' +
+  '<option value="S.18.5">S.18.5. others (please specify)</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 4 PARAMETER E IMPLEMENTATION
+else if(levelValue == 'Level 1' && areaValue == 'Area 4' && parameterValue == 'Parameter E' && categoryValue == 'Implementation'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="I.1">I.1. Researches  on student  affairs and  services are conducted.</option>' +
+  '<option value="I.2">I.2. Research results and outputs are disseminated and  utilized.</option>' +
+  '<option value="I.3">I.3. Regular  monitoring and evaluation on the implementation of student services are conducted.</option>' +
+  '<option value="I.4">I.4. Monitoring and evaluation instruments are developed, reviewed, and continuously improved.</option>' +
+  '<option value="I.5">I.5. Reports are filed and submitted regularly to CHEDRO.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 4 PARAMETER E OUTCOMES
+else if(levelValue == 'Level 1' && areaValue == 'Area 4' && parameterValue == 'Parameter E' && categoryValue == 'Outcomes'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="O.1">O.1. Research outputs are presented and published.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 4 PARAMETER E System
+else if(levelValue == 'Level 1' && areaValue == 'Area 4' && parameterValue == 'Parameter E' && categoryValue == 'System'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="S.1">S.1. The institution  has a research  program on student  affairs and  services.</option>' +
+  '<option value="S.2">S.2. There is mechanism for monitoring and evaluation of SAS programs.</option>' +
+  '<option value="S.3">S.3. Monitoring and evaluation instruments are available.</option>' +
+  '<option value="S.4">S.4. There is adequate funding for the conduct of SAS researches and  monitoring and evaluation.</option>' +
   '</select>'+
 '</div>';
 }
