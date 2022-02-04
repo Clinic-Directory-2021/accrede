@@ -1128,6 +1128,128 @@ else if(levelValue == 'Level 1' && areaValue == 'Area 4' && parameterValue == 'P
 '</div>';
 }
 
+// AREA 5 PARAMETER A IMPLEMENTATION
+else if(levelValue == 'Level 1' && areaValue == 'Area 5' && parameterValue == 'Parameter A' && categoryValue == 'Implementation'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="I.1">I.1. The approved  Research Agenda  is implemented.</option>' +
+  '<option value="I.2.1">I.2.1. Administrators;</option>' +
+  '<option value="I.2.2">I.2.2. Faculty;</option>' +
+  '<option value="I.2.3">I.2.3. Students;</option>' +
+  '<option value="I.2.4">I.2.4. government agency representatives  (DOST, CHED, NEDA, etc.); and</option>' +
+  '<option value="I.2.5">I.2.5. other stakeholders (alumni, parents, etc.)</option>' +
+  '<option value="I.3">I.3. Action researches to test theory in practice  are conducted by faculty and students.</option>' +
+  '<option value="I.4">I.4. Team/ collaborative and  interdisciplinary research is  encouraged.</option>' +
+  '<option value="I.5">I.5. Research outputs are published in refereed national and/or  international journals</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 5 PARAMETER A OUTCOMES
+else if(levelValue == 'Level 1' && areaValue == 'Area 5' && parameterValue == 'Parameter A' && categoryValue == 'Outcomes'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="O.1">O.1. Priority researches are identified and conducted.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 5 PARAMETER A System
+else if(levelValue == 'Level 1' && areaValue == 'Area 5' && parameterValue == 'Parameter A' && categoryValue == 'System'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="S.1">S.1. The Institution\'s  research agenda is  in consonance with institutional,  regional and  national priorities  concerned such as  DOST, CHED- National Higher  Education Research  Agenda, NEDA, etc.</option>' +
+  '<option value="S.2">S.2. The institution  has an approved  Research Manual.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 5 PARAMETER B IMPLEMENTATION
+else if(levelValue == 'Level 1' && areaValue == 'Area 5' && parameterValue == 'Parameter B' && categoryValue == 'Implementation'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="I.1">I.1. Allocates adequate funds for the conduct of faculty and student research.</option>' +
+  '<option value="I.2">I.2. Establishes linkages with the local / national / international agencies for funding support and assistance.</option>' +
+  '<option value="I.3">I.3. Maintains a functional and long-range program of faculty/ staff development to enhance research capability and competence.</option>' +
+  '<option value="I.2.3">I.2.3. Students;</option>' +
+  '<option value="I.2.4">I.2.4. government agency representatives  (DOST, CHED, NEDA, etc.); and</option>' +
+  '<option value="I.2.5">I.2.5. other stakeholders (alumni, parents, etc.)</option>' +
+  '<option value="I.3">I.3. Action researches to test theory in practice  are conducted by faculty and students.</option>' +
+  '<option value="I.4">I.4. Encourages the conduct of externally funded researches.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 5 PARAMETER B OUTCOMES
+else if(levelValue == 'Level 1' && areaValue == 'Area 5' && parameterValue == 'Parameter B' && categoryValue == 'Outcomes'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="O.1">O.1. The Research Program is adequately funded.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 5 PARAMETER B System
+else if(levelValue == 'Level 1' && areaValue == 'Area 5' && parameterValue == 'Parameter B' && categoryValue == 'System'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="S.1">S.1. The institution has an approved and adequate budget for research.</option>' +
+  '<option value="S.2.1">S.2.1. Facilities  and equipment  such as Internet, Statistical Software, and other ICT resources;</option>' +
+  '<option value="S.2.2">S.2.2. Research staff;</option>' +
+  '<option value="S.2.3">S.2.3. Supplies and  materials; and</option>' +
+  '<option value="S.2.4">S.2.4. Workplace</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 5 PARAMETER C IMPLEMENTATION
+else if(levelValue == 'Level 1' && areaValue == 'Area 5' && parameterValue == 'Parameter C' && categoryValue == 'Implementation'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="I.1">I.1. The institution/ College/Academic Unit has a Research Unit managed by  competent staff.</option>' +
+  '<option value="I.2">I.2. The Research Manual provides guidelines and procedures for the administration and conduct of research.</option>' +
+  '<option value="I.4">I.4. The institution provides incentives to faculty  researchers such as  honoraria, service credits, deloading, etc.</option>' +
+  '<option value="I.5">I.5. The College/ Academic Unit  requires its  students to conduct research as a  course requirement (whenever applicable).</option>' +
+  '<option value="I.6">I.6. The Institution provides  opportunities for  advanced studies and/or training to enhance faculty/ staff research competence.</option>' +
+  '<option value="I.7">I.7. Completed and  on-going research studies are  periodically  monitored and evaluated in local  and regional in- house reviews.</option>' +
+  '<option value="I.8.1">I.8.1. institutional development</option>' +
+  '<option value="I.8.2">I.8.2. the improvement of instructional processes;</option>' +
+  '<option value="I.8.3">I.8.3. the transfer of generated technology / knowledge to the community</option>' +
+  '<option value="I.9">I.9. Packaged technologies and  new information are  disseminated to the  target clientele through  appropriate  delivery system.</option>' +
+  '<option value="I.10.1">I.10.1. Research outputs are  protected by IPR laws; and</option>' +
+  '<option value="I.10.2">I.10.2. Faculty and students observe research ethics to avoid malpractices like plagiarism, fabrication of data, etc.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 5 PARAMETER C OUTCOMES
+else if(levelValue == 'Level 1' && areaValue == 'Area 5' && parameterValue == 'Parameter C' && categoryValue == 'Outcomes'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="O.1">O.1. Implementation, Monitoring, Evaluation and Research utilization of Outputs are Effective.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 5 PARAMETER C System
+else if(levelValue == 'Level 1' && areaValue == 'Area 5' && parameterValue == 'Parameter C' && categoryValue == 'System'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="S.1">S.1. There is a system of implementation, monitoring, evaluation and utilization of research outputs.</option>' +
+  '<option value="S.2">S.2. The institution has a policy on Intellectual Property Rights (IPR).</option>' +
+  '</select>'+
+'</div>';
+}
+
   $(".appendedField").remove();
   $( ".appendHere" ).append( html );
  }
