@@ -1250,6 +1250,53 @@ else if(levelValue == 'Level 1' && areaValue == 'Area 5' && parameterValue == 'P
 '</div>';
 }
 
+// AREA 5 PARAMETER D IMPLEMENTATION
+else if(levelValue == 'Level 1' && areaValue == 'Area 5' && parameterValue == 'Parameter D' && categoryValue == 'Implementation'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="I.1">I.1. The institution provides  opportunities for  the dissemination of research results in  fora, conferences, seminars, and other related means.</option>' +
+  '<option value="I.2">I.2. The institution regularly publishes  a research journal.</option>' +
+  '<option value="I.3">I.3. Library  exchange of  research  publications with  other HEI\'s and agencies is  maintained.</option>' +
+  '<option value="I.4">I.4. Research manuscripts / technical reports  are well-written, and edited  following the  institutional format.</option>' +
+  '<option value="I.5.1">I.5.1. Instructional Materials  Development;</option>' +
+  '<option value="I.5.2">I.5.2. Paper presentations, journal publication,  classroom lectures  and other similar activities;</option>' +
+  '<option value="I.5.3">I.5.3. Editorship/ writing in  academic, scientific  and professional journals;</option>' +
+  '<option value="I.5.4">I.5.4. Thesis/ Dissertation  Advising; and</option>' +
+  '<option value="I.5.5">I.5.5. Patenting of Research Outputs.</option>' +
+  '<option value="I.7">I.7. Research results are disseminated to the target clientele.</option>' +
+  '<option value="I.8">I.8. The College / Academic Unit  generates income  from patents, licenses, copyrights, and other research outputs.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 5 PARAMETER D OUTCOMES
+else if(levelValue == 'Level 1' && areaValue == 'Area 5' && parameterValue == 'Parameter D' && categoryValue == 'Outcomes'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="O.1">O.1. Research outputs are published in refereed journals.</option>' +
+  '<option value="O.2">O.2. Research outputs are utilized.</option>' +
+  '<option value="O.3">O.3. Patented and copyrighted research outputs are commercialized.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 5 PARAMETER D System
+else if(levelValue == 'Level 1' && areaValue == 'Area 5' && parameterValue == 'Parameter D' && categoryValue == 'System'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="S.1">S.1 The institution has an approved and copyrighted Research Journal</option>' +
+  '<option value="S.2">S.2 The institution has incentives for:</option>' +
+  '<option value="S.2.1">S.2.1 paper presentations;</option>' +
+  '<option value="S.2.2">S.2.2 journal publication;</option>' +
+  '<option value="S.2.3">S.2.3 outstanding research related performance;</option>' +
+  '<option value="S.2.4">S.2.4 patented outputs.</option>' +
+  '</select>'+
+'</div>';
+}
+
   $(".appendedField").remove();
   $( ".appendHere" ).append( html );
  }
