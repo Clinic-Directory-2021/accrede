@@ -1282,20 +1282,164 @@ else if(levelValue == 'Level 1' && areaValue == 'Area 5' && parameterValue == 'P
 '</div>';
 }
 
-// AREA 5 PARAMETER D System
-else if(levelValue == 'Level 1' && areaValue == 'Area 5' && parameterValue == 'Parameter D' && categoryValue == 'System'){
+// AREA 6 PARAMETER A System
+else if(levelValue == 'Level 1' && areaValue == 'Area 6' && parameterValue == 'Parameter A' && categoryValue == 'System'){
   var html = 
   '<div class="appendedField">'+
   '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
-  '<option value="S.1">S.1 The institution has an approved and copyrighted Research Journal</option>' +
-  '<option value="S.2">S.2 The institution has incentives for:</option>' +
-  '<option value="S.2.1">S.2.1 paper presentations;</option>' +
-  '<option value="S.2.2">S.2.2 journal publication;</option>' +
-  '<option value="S.2.3">S.2.3 outstanding research related performance;</option>' +
-  '<option value="S.2.4">S.2.4 patented outputs.</option>' +
+  '<option value="S.1">S.1. The extension agenda is in consonance of local, regional and national development thrusts and priorities.</option>' +
+  '<option value="S.2">S.2. The College/ Academic Unit has a benchmark survey of the problems, needs priorities and resources of the community.</option>' +
+  '<option value="S.3">S.3. The extension program reflects the VMGO.</option>' +
+  '<option value="S.4">S.4. There is a pool of consultants/ experts from various disciplines to serve in extension projects and activities.</option>' +
+  '<option value="S.5">S.5. The institution has an approved and copyrighted Extension Manual.</option>' +
   '</select>'+
 '</div>';
 }
+
+// AREA 6 PARAMETER A IMPLEMENTATION
+else if(levelValue == 'Level 1' && areaValue == 'Area 6' && parameterValue == 'Parameter A' && categoryValue == 'Implementation'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="I.1">I.1. The extension projects and activities implemented are based on the results of the benchmark survey.</option>' +
+  '<option value="I.2">I.2. The extension projects and activities complement the curriculum of the program under review.</option>' +
+  '<option value="I.3">I.3. A mutual exchange of resources and services between the College/ Academic Unit and the community is evident.</option>' +
+  '<option value="I.4">I.4. Linkages with local, national, foreign and non-governmental agencies are institutionalized.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 6 PARAMETER A OUTCOMES
+else if(levelValue == 'Level 1' && areaValue == 'Area 6' && parameterValue == 'Parameter A' && categoryValue == 'Outcomes'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="O.1">O.1. Priority and relevant extension projects and activities are conducted.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 6 PARAMETER B System
+else if(levelValue == 'Level 1' && areaValue == 'Area 6' && parameterValue == 'Parameter B' && categoryValue == 'System'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="S.1">S.1. There is a distinct office that manages the Extension Program.</option>' +
+  '<option value="S.2">S.2. Instruments for monitoring and evaluation are available.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 6 PARAMETER B IMPLEMENTATION
+else if(levelValue == 'Level 1' && areaValue == 'Area 6' && parameterValue == 'Parameter B' && categoryValue == 'Implementation'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="I.1">I.1. The administration, faculty, students and other stakeholders of the College/ Academic Unit participate in the planning and organization of Extension Program.</option>' +
+  '<option value="I.2">I.2. The administration, faculty and students are involved in the implementation and dissemination of extension programs.</option>' +
+  '<option value="I.3">I.3. The extension projects and activities serve varied clientele.</option>' +
+  '<option value="I.4">I.4. The conduct of extension projects and activities is sustainable.</option>' +
+  '<option value="I.5">I.5. Technologies/ new knowledge are disseminated to the target clientele through appropriate extension delivery systems.</option>' +
+  '<option value="I.6">I.6. The extension activities are documented in the form of:</option>' +
+  '<option value="I.6.1">I.6.1. pamphlets;</option>' +
+  '<option value="I.6.2">I.6.2. flyers;</option>' +
+  '<option value="I.6.3">I.6.3. bulletin;</option>' +
+  '<option value="I.6.4">I.6.4. newsletter; </option>' +
+  '<option value="I.6.5">I.6.5. electronic resources.</option>' +
+  '<option value="I.7">I.7. Periodic monitoring and evaluation of extension projects and activities are conducted.</option>' +
+  '<option value="I.8">I.8. Results of monitoring and evaluation are disseminated and discussed with concerned stakeholders.</option>' +
+  '<option value="I.9">I.9. Re-planning of activities based on the feedback is conducted.</option>' +
+  '<option value="I.10">I.10. Accomplishment and terminal reports are filled and submitted on time.</option>' +
+  '</select>'+
+'</div>';
+}
+
+
+// AREA 6 PARAMETER B OUTCOMES
+else if(levelValue == 'Level 1' && areaValue == 'Area 6' && parameterValue == 'Parameter B' && categoryValue == 'Outcomes'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="O.1">O.1. The Extension Program is well - planned, implemented, monitored, evaluated and disseminated.</option>' +
+  '<option value="O.2">O.2. The Extension Program has contributed to the improvement on the quality of life of the target clientele/ beneficiaries.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 6 PARAMETER C System
+else if(levelValue == 'Level 1' && areaValue == 'Area 6' && parameterValue == 'Parameter C' && categoryValue == 'System'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="S.1">S.1. There is an approved and adequate budget for extension.</option>' +
+  '<option value="S.2.1">S.2.1. facilities and equipment such as internet and other ICT resources;</option>' +
+  '<option value="S.2.2">S.2.2. extension staff;</option>' +
+  '<option value="S.2.3">S.2.3. supplies and materials; </option>' +
+  '<option value="S.2.4">S.2.4. workplace</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 6 PARAMETER C IMPLEMENTATION
+else if(levelValue == 'Level 1' && areaValue == 'Area 6' && parameterValue == 'Parameter C' && categoryValue == 'Implementation'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="I.1">I.1. The budget for the extension program is utilized as planned.</option>' +
+  '<option value="I.2">I.2. Honoraria and other incentives (deloading, credit unit equivalent, etc.) to faculty involved in extension work are granted.</option>' +
+  '<option value="I.3">I.3. The College/ Academic Unit sources out the following from other agencies:</option>' +
+  '<option value="I.3.1">I.3.1. additional funding; </option>' +
+  '<option value="I.3.2">I.3.2. technical assistance and service inputs.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 6 PARAMETER C OUTCOMES
+else if(levelValue == 'Level 1' && areaValue == 'Area 6' && parameterValue == 'Parameter C' && categoryValue == 'Outcomes'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="O.1">O.1. The Extension Program is adequately funded.</option>' +
+  '</select>'+
+'</div>';
+} 
+
+// AREA 6 PARAMETER D System
+else if(levelValue == 'Level 1' && areaValue == 'Area 6' && parameterValue == 'Parameter D' && categoryValue == 'System'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="S.1">S.1. There is a strategy for involving the community, government and private agencies in the Extension Program.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 6 PARAMETER D IMPLEMENTATION
+else if(levelValue == 'Level 1' && areaValue == 'Area 6' && parameterValue == 'Parameter D' && categoryValue == 'Implementation'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="I.1.1">I.1.1. initiates and maintains community development projects;</option>' +
+  '<option value="I.1.2">I.1.2. involves the students, faculty, staff administrators in the projects;</option>' +
+  '<option value="I.1.3">I.1.3. coordinates its community programs and services with the target clientele.</option>' +
+  '<option value="I.2.1">I.2.1. planning;</option>' +
+  '<option value="I.2.2">I.2.2. implementation and dissemination;</option>' +
+  '<option value="I.2.3">I.2.3. monitoring and evaluation;</option>' +
+  '<option value="I.2.4">I.2.4. out-sourcing of funds, materials and other service inputs; </option>' +
+  '<option value="I.2.5">I.2.5. utilization of technology, knowledge learned, skills, acquired from the extension projects and activities.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 6 PARAMETER D OUTCOMES
+else if(levelValue == 'Level 1' && areaValue == 'Area 6' && parameterValue == 'Parameter D' && categoryValue == 'Outcomes'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="O.1">O.1. There is wholesome coordination between the Extension Program implementers and the target clientele/ beneficiaries.</option>' +
+  '</select>'+
+'</div>';
+} 
 
   $(".appendedField").remove();
   $( ".appendHere" ).append( html );
