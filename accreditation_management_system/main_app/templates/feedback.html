@@ -1,0 +1,46 @@
+{% include 'superadmin_base.html' %}
+{% block content %}
+<div  class="content" style="background-color: gainsboro;">
+    <header class="h-20" style="width: 90vw; height: 67px; text-align: center; background-color: #61B15A;">
+        <h1>Accreditation Management System</h1>
+    </header>
+    <h1 class="m-5">Feedbacks</h1>
+    <div class="p-20">
+        <br>
+        <table class="table striped" data-role="table" data-rows-steps="5, 10" data-rows="5">
+            <thead>
+                <tr>
+                    <th  class="sortable-column sort-asc">#</th>
+                    <th  class="sortable-column sort-asc">Name</th>
+                    <th class="sortable-column sort-asc">Feedback</th>
+                    <th  class="sortable-column sort-asc">Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- <div class="account_data_modal"> -->
+                    <!-- <tr>
+                        <td>{{user.active_status}}<s/td>
+                        <td class="info">{{user.access_rights}}</td>
+                        <td>{{user.firstname}} {{user.middlename}} {{user.lastname}}</td>
+                        <td>{{user.email}}</td>
+                        <td class="info">{{user.contact}}</td>
+                        <td>{{user.address}}</td>
+                        <td>{{user.user_level}}</td>
+                        <td><button class="button success" onclick="Metro.dialog.open('#edit_account'), editModal('{{user.user_id}}','{{user.firstname}}','{{user.middlename}}','{{user.lastname}}','{{user.email}}','{{user.contact}}','{{user.address}}')">Edit</button></td>
+                    </tr> -->
+                
+                        <tr>
+                            <td>1</td>
+                            <td class="info">Juan Dela Cruz</td>
+                            <td>Sample Feedback 1</td>
+                            <td>January 1, 2020</td>
+                        </tr>
+                    
+                 
+                <!-- </div> -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}
