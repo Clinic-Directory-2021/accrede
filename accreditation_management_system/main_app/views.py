@@ -83,9 +83,11 @@ def upload_storage_drive(request):
         selectDate = request.POST.get('selectDate')
         fileName = request.POST.get('fileName')
 
+        uploadIn = request.POST.get('uploadIn')
+
         fileDirectory = selectLevel+"/"+selectArea+"/"+selectParameter+"/"+selectCategory+"/"+fileName
 
-        doc_ref = firestoreDB.collection('storage_drive').document()
+        doc_ref = firestoreDB.collection(selectLevel+'_'+selectArea+"_"+selectParameter+"_"+selectCategory).document()
         
         #upload to firebase storage
         storage.child(fileDirectory).put(drive_upload)
@@ -99,6 +101,7 @@ def upload_storage_drive(request):
             'category': selectCategory,
             'date': selectDate,
             'file_name': fileName,
+            'uploadIn': uploadIn,
         })
 
         tz = pytz.timezone('Asia/Hong_Kong')
@@ -112,6 +115,7 @@ def upload_storage_drive(request):
             'user_id': request.session['user_id'],
             'info': "uploaded " + fileName,
             'date': philippines_current_datetime,
+            'uploadIn':uploadIn,
         })
 
 
@@ -119,7 +123,19 @@ def upload_storage_drive(request):
         return redirect('storage_drive')
 
 def activity_logs(request):
-    return render(request,'file_manager/activity_logs.html')
+    if 'user_id' in request.session:
+        logs = firestoreDB.collection('activity_logs_storage_drive').get()
+        logs_data = []
+
+        for log in logs:
+            value = log.to_dict()
+            logs_data.append(value)
+
+        return render(request,'file_manager/activity_logs.html',{
+        'logs_data': logs_data,
+        })
+    else:
+        return render(request,'login.html')
 
 def recycle_bin(request):
     return render(request,'file_manager/recycle_bin.html')

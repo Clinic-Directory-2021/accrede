@@ -13,19 +13,20 @@
             <tr>
                 <th>#</th>
                 <th class="sortable-column sort-asc">Date and Time</th>
-                <th >Name</th>
                 <th >Email</th>
                 <th>Activity</th>
             </tr>
             </thead>
             <tbody>
+                
+            {% for log in logs_data %}                  
             <tr>
-                <td>1</td>
-                <td>January 1, 2022</td>
-                <td>Juan Dela Cruz</td>
-                <td>Example@gmail.com</td>
-                <td>Upload A1_PA_SYS_Mission.jpg</td>
+                <td>{{ forloop.counter }}</td>
+                <td>{{log.date}}</td>
+                <td>{{log.user_email}}</td>
+                <td>{{log.info}}</td>
             </tr>
+            {% endfor %}
             </tbody>
         </table>
     </div>
