@@ -603,7 +603,7 @@ def generatelevel1_area1_parameterA(request):
 
             shapes = slide.shapes
             title_shape = shapes.title
-            title_shape.top = Inches(1.2)
+            title_shape.top = Inches(1)
             title_shape.left = Inches(0.1)
             title_shape.width = Inches(2)
             title_shape.text = value['uploadIn']
@@ -620,7 +620,7 @@ def generatelevel1_area1_parameterA(request):
 
             pic = slide.shapes.add_picture(image_data, left, top, height=height)
             
-            bulsuLogo = slide.shapes.add_picture(image_data_bulsu, Inches(0.3), Inches(11.5), height=Inches(1.5))
+            bulsuLogo = slide.shapes.add_picture(image_data_bulsu, Inches(0.3), Inches(10.5), height=Inches(1.5))
 
         prs.save('./ppt/test.pptx')
 
