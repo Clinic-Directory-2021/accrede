@@ -151,7 +151,6 @@ def recycle_bin(request):
 #Level 1 / Area 1
 def level1(request):
     return render(request,'file_manager/level1/level1.html')
-
 def area1(request):
     return render(request,'file_manager/level1/area1/area1.html')
 
@@ -254,6 +253,96 @@ def level1_area2_system_parameterG(request):
 def level1_area2_system_parameterH(request):
     return render(request,'file_manager/level1/area2/system/parameterH.html')
 
+#Level 1 / Area 3
+def area3(request):
+    return render(request,'file_manager/level1/area3/area3.html')
+def level1_area3_parameterA(request):
+    return render(request,'file_manager/level1/area3/parameterA.html')
+def level1_area3_parameterB(request):
+    return render(request,'file_manager/level1/area3/parameterB.html')
+def level1_area3_parameterC(request):
+    return render(request,'file_manager/level1/area3/parameterC.html')
+def level1_area3_parameterD(request):
+    return render(request,'file_manager/level1/area3/parameterD.html')
+def level1_area3_parameterE(request):
+    return render(request,'file_manager/level1/area3/parameterE.html')
+def level1_area3_parameterF(request):
+    return render(request,'file_manager/level1/area3/parameterF.html')
+
+#Level 1 / Area 4
+def area4(request):
+    return render(request,'file_manager/level1/area4/area4.html')
+def level1_area4_implementation(request):
+    return render(request,'file_manager/level1/area4/implementation.html')
+def level1_area4_implementation_parameterA(request):
+    return render(request,'file_manager/level1/area4/implementation/parameterA.html')
+def level1_area4_implementation_parameterB(request):
+    return render(request,'file_manager/level1/area4/implementation/parameterB.html')
+def level1_area4_implementation_parameterC(request):
+    return render(request,'file_manager/level1/area4/implementation/parameterC.html')
+def level1_area4_implementation_parameterD(request):
+    return render(request,'file_manager/level1/area4/implementation/parameterD.html')
+def level1_area4_implementation_parameterE(request):
+    return render(request,'file_manager/level1/area4/implementation/parameterE.html')
+def level1_area4_outcome(request):
+    return render(request,'file_manager/level1/area4/outcome.html')
+def level1_area4_outcome_parameterA(request):
+    return render(request,'file_manager/level1/area4/outcome/parameterA.html')
+def level1_area4_outcome_parameterB(request):
+    return render(request,'file_manager/level1/area4/outcome/parameterB.html')
+def level1_area4_outcome_parameterC(request):
+    return render(request,'file_manager/level1/area4/outcome/parameterC.html')
+def level1_area4_outcome_parameterD(request):
+    return render(request,'file_manager/level1/area4/outcome/parameterD.html')
+def level1_area4_outcome_parameterE(request):
+    return render(request,'file_manager/level1/area4/outcome/parameterE.html')
+def level1_area4_system(request):
+    return render(request,'file_manager/level1/area4/system.html')
+def level1_area4_system_parameterA(request):
+    return render(request,'file_manager/level1/area4/system/parameterA.html')
+def level1_area4_system_parameterB(request):
+    return render(request,'file_manager/level1/area4/system/parameterB.html')
+def level1_area4_system_parameterC(request):
+    return render(request,'file_manager/level1/area4/system/parameterC.html')
+def level1_area4_system_parameterD(request):
+    return render(request,'file_manager/level1/area4/system/parameterD.html')
+def level1_area4_system_parameterE(request):
+    return render(request,'file_manager/level1/area4/system/parameterE.html')
+
+
+#Level 1 / Area 5
+def area5(request):
+    return render(request,'file_manager/level1/area5/area5.html')
+def level1_area5_implementation(request):
+    return render(request,'file_manager/level1/area5/implementation.html')
+def level1_area5_implementation_parameterA(request):
+    return render(request,'file_manager/level1/area5/implementation/parameterA.html')
+def level1_area5_implementation_parameterB(request):
+    return render(request,'file_manager/level1/area5/implementation/parameterB.html')
+def level1_area5_implementation_parameterC(request):
+    return render(request,'file_manager/level1/area5/implementation/parameterC.html')
+def level1_area5_implementation_parameterD(request):
+    return render(request,'file_manager/level1/area5/implementation/parameterD.html')
+def level1_area5_outcome(request):
+    return render(request,'file_manager/level1/area5/outcome.html')
+def level1_area5_outcome_parameterA(request):
+    return render(request,'file_manager/level1/area5/outcome/parameterA.html')
+def level1_area5_outcome_parameterB(request):
+    return render(request,'file_manager/level1/area5/outcome/parameterB.html')
+def level1_area5_outcome_parameterC(request):
+    return render(request,'file_manager/level1/area5/outcome/parameterC.html')
+def level1_area5_outcome_parameterD(request):
+    return render(request,'file_manager/level1/area5/outcome/parameterD.html')
+def level1_area5_system(request):
+    return render(request,'file_manager/level1/area5/system.html')
+def level1_area5_system_parameterA(request):
+    return render(request,'file_manager/level1/area5/system/parameterA.html')
+def level1_area5_system_parameterB(request):
+    return render(request,'file_manager/level1/area5/system/parameterB.html')
+def level1_area5_system_parameterC(request):
+    return render(request,'file_manager/level1/area5/system/parameterC.html')
+def level1_area5_system_parameterD(request):
+    return render(request,'file_manager/level1/area5/system/parameterD.html')
 
 
 
