@@ -23,9 +23,16 @@ function generateFile(){
     confirmButtonText: 'Yes!'
   }).then((result) => {
     if (result.isConfirmed) {
-     
+      var url = "/generatelevel1_area1_parameterA";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
     }
   })
+}
+
+function viewPowerPoint(file_url){
+  document.location.href = file_url;
 }
 
 

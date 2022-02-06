@@ -74,5 +74,9 @@ urlpatterns = [
 
     path('editAccount/', views.editAccount, name="editAccount"),
     
+
+    # generate PPT
+    path('generatelevel1_area1_parameterA/', views.generatelevel1_area1_parameterA, name="generatelevel1_area1_parameterA"),
+    
     
 ]

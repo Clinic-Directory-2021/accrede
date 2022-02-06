@@ -50,14 +50,21 @@
             <thead>
                 <tr>
                     <th>File Name</th>
+                    <th>Date Generated</th>
                     <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
+                
+                {% for powerpoint in generated_data %}
                 <tr>
-                    <td>File Name Sample</td>
-                    <td><button class="button mif-eye icon primary"> View</button></td>
+                    <td>{{powerpoint.file_name}}</td>
+                    <td>{{powerpoint.date}}</td>
+                    <td><button class="button mif-eye icon primary" onclick="viewPowerPoint('{{powerpoint.storage_file_url}}')"> View</button></td>
                 </tr>
+                {% endfor %}
+                    
+               
             </tbody>
         </table>
     </div>

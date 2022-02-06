@@ -23,6 +23,13 @@ from django.conf import settings
 import pytz
 from datetime import datetime
 
+from pptx import Presentation
+from pptx.util import Inches
+
+import time
+
+import os
+
 config = {
   'apiKey': "AIzaSyAh_oOakDenknpcWt5oucsLODSDiheWxps",
   'authDomain': "accreditation-management.firebaseapp.com",
@@ -154,8 +161,11 @@ def level1_area1_parameterA(request):
         implementations = firestoreDB.collection('Level 1_Area 1_Parameter A_Implementation').get()
         outcomes = firestoreDB.collection('Level 1_Area 1_Parameter A_Outcomes').get()
 
+        powerpoints = firestoreDB.collection('generatelevel1_area1_parameterA').get()
+
         uploaded_data = []
         needed_data = []
+        generated_data = []
 
         for system in systems:
             value = system.to_dict()
@@ -171,10 +181,15 @@ def level1_area1_parameterA(request):
             value = outcome.to_dict()
             uploaded_data.append(value)
             needed_data.append(value['uploadIn'])
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
             
         data = {
             'uploaded_data': uploaded_data,
             'needed_datas': needed_data,
+            'generated_data': generated_data,
         }
         
         return render(request,'file_manager/level1/area1/parameterA/parameterA.html', data)
@@ -439,3 +454,59 @@ def editAccount(request):
                 error = json.loads(error_json)['error']['message']
                 if error == "EMAIL_EXISTS":
                     return HttpResponse('Email Already Exists!')
+
+def generatelevel1_area1_parameterA(request):
+    if 'user_id' in request.session:
+        os.remove('./ppt/test.pptx')
+
+        systems = firestoreDB.collection('Level 1_Area 1_Parameter A_System').get()
+        implementations = firestoreDB.collection('Level 1_Area 1_Parameter A_Implementation').get()
+        outcomes = firestoreDB.collection('Level 1_Area 1_Parameter A_Outcomes').get()
+        
+
+        prs = Presentation()
+        bullet_slide_layout = prs.slide_layouts[1]
+
+        slide = prs.slides.add_slide(bullet_slide_layout)
+        shapes = slide.shapes
+
+        title_shape = shapes.title
+        body_shape = shapes.placeholders[1]
+
+        title_shape.text = 'Adding a Bullet Slide'
+
+        tf = body_shape.text_frame
+        tf.text = 'Find the bullet slide layout'
+
+        p = tf.add_paragraph()
+        p.text = 'Use _TextFrame.text for first bullet'
+        p.level = 1
+
+        p = tf.add_paragraph()
+        p.text = 'Use _TextFrame.add_paragraph() for subsequent bullets'
+        p.level = 2
+
+        prs.save('./ppt/test.pptx')
+
+        tz = pytz.timezone('Asia/Hong_Kong')
+        now = datetime.now(tz)
+
+        fileName = "parameterA_"+str(time.time())+".pptx"
+        file_directory = "/ppt/level1/area1/parameterA/"+ fileName
+
+        #upload image
+        storage.child(file_directory).put('./ppt/test.pptx')
+
+        doc_ref = firestoreDB.collection('generatelevel1_area1_parameterA').document()
+
+        doc_ref.set({
+            'storage_file_id': doc_ref.id,
+            'storage_file_url' : storage.child(file_directory).get_url(None),
+            'file_name': fileName,
+            'date': now,
+        })
+
+
+        return HttpResponse("Success!")
+    else:
+        return render(request,'login.html')
