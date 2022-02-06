@@ -13,7 +13,7 @@ function errorGenerate(){
   })
 }
 
-function generateFile(){
+function generateFileArea1ParameterA(){
   Swal.fire({
     title: 'Are you sure?',
     icon: 'question',
@@ -24,6 +24,24 @@ function generateFile(){
   }).then((result) => {
     if (result.isConfirmed) {
       var url = "/generatelevel1_area1_parameterA";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
+function generateFileArea2ImplementationParameterA(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area2_implementation_parameterA";
 
       // Construct the full URL with "id"
       document.location.href = url;

@@ -156,9 +156,15 @@ def recycle_bin(request):
 
 #Level 1 / Area 1
 def level1(request):
-    return render(request,'file_manager/level1/level1.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/level1.html')
+    else:
+        return redirect('/')
 def area1(request):
-    return render(request,'file_manager/level1/area1/area1.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area1/area1.html')
+    else:
+        return redirect('/')    
 
 def level1_area1_parameterA(request):
     if 'user_id' in request.session:
@@ -203,152 +209,420 @@ def level1_area1_parameterA(request):
 
 #Level 1 / Area 2
 def area2(request):
-    return render(request,'file_manager/level1/area2/area2.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area2/area2.html')
+    else:
+        return redirect('/')
+
 def level1_area2_implementation(request):
-    return render(request,'file_manager/level1/area2/implementation.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area2/implementation.html')
+    else:
+        return redirect('/')
+
 def level1_area2_implementation_parameterA(request):
-    return render(request,'file_manager/level1/area2/implementation/parameterA.html')
+    if 'user_id' in request.session:
+        implementations = firestoreDB.collection('Level 1_Area 2_Parameter A_Implementation').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area2_implementation_parameterA').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for implementation in implementations:
+            value = implementation.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area2/implementation/parameterA.html', data)
+    else:
+        return redirect('/')    
+
 def level1_area2_implementation_parameterB(request):
-    return render(request,'file_manager/level1/area2/implementation/parameterB.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area2/implementation/parameterB.html')
+    else:
+        return redirect('/')   
+
 def level1_area2_implementation_parameterC(request):
-    return render(request,'file_manager/level1/area2/implementation/parameterC.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area2/implementation/parameterC.html')
+    else:
+        return redirect('/')   
+
 def level1_area2_implementation_parameterD(request):
-    return render(request,'file_manager/level1/area2/implementation/parameterD.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area2/implementation/parameterD.html')
+    else:
+        return redirect('/')   
+
 def level1_area2_implementation_parameterE(request):
-    return render(request,'file_manager/level1/area2/implementation/parameterE.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area2/implementation/parameterE.html')
+    else:
+        return redirect('/')  
+
 def level1_area2_implementation_parameterF(request):
-    return render(request,'file_manager/level1/area2/implementation/parameterF.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area2/implementation/parameterF.html')
+    else:
+        return redirect('/') 
+
 def level1_area2_implementation_parameterG(request):
-    return render(request,'file_manager/level1/area2/implementation/parameterG.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area2/implementation/parameterG.html')
+    else:
+        return redirect('/') 
+
 def level1_area2_implementation_parameterH(request):
-    return render(request,'file_manager/level1/area2/implementation/parameterH.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area2/implementation/parameterH.html')
+    else:
+        return redirect('/') 
+
 def level1_area2_outcome(request):
-    return render(request,'file_manager/level1/area2/outcome.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area2/outcome.html')
+    else:
+        return redirect('/')
+
 def level1_area2_outcome_parameterA(request):
-    return render(request,'file_manager/level1/area2/outcome/parameterA.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area2/outcome/parameterA.html')
+    else:
+        return redirect('/')
+
 def level1_area2_outcome_parameterB(request):
-    return render(request,'file_manager/level1/area2/outcome/parameterB.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area2/outcome/parameterB.html')
+    else:
+        return redirect('/')
+
 def level1_area2_outcome_parameterC(request):
-    return render(request,'file_manager/level1/area2/outcome/parameterC.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area2/outcome/parameterC.html')
+    else:
+        return redirect('/')
+
 def level1_area2_outcome_parameterD(request):
-    return render(request,'file_manager/level1/area2/outcome/parameterD.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area2/outcome/parameterD.html')
+    else:
+        return redirect('/')
+
 def level1_area2_outcome_parameterE(request):
-    return render(request,'file_manager/level1/area2/outcome/parameterE.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area2/outcome/parameterE.html')
+    else:
+        return redirect('/')
+
 def level1_area2_outcome_parameterF(request):
-    return render(request,'file_manager/level1/area2/outcome/parameterF.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area2/outcome/parameterF.html')
+    else:
+        return redirect('/')
+
 def level1_area2_outcome_parameterG(request):
-    return render(request,'file_manager/level1/area2/outcome/parameterG.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area2/outcome/parameterG.html')
+    else:
+        return redirect('/')
+
 def level1_area2_outcome_parameterH(request):
-    return render(request,'file_manager/level1/area2/outcome/parameterH.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area2/outcome/parameterH.html')
+    else:
+        return redirect('/')
+
 def level1_area2_system(request):
-    return render(request,'file_manager/level1/area2/system.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area2/system.html')
+    else:
+        return redirect('/')
+
 def level1_area2_system_parameterA(request):
-    return render(request,'file_manager/level1/area2/system/parameterA.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area2/system/parameterA.html')
+    else:
+        return redirect('/')
+
 def level1_area2_system_parameterB(request):
-    return render(request,'file_manager/level1/area2/system/parameterB.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area2/system/parameterB.html')
+    else:
+        return redirect('/')
+        
 def level1_area2_system_parameterC(request):
-    return render(request,'file_manager/level1/area2/system/parameterC.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area2/system/parameterC.html')
+    else:
+        return redirect('/')
+
 def level1_area2_system_parameterD(request):
-    return render(request,'file_manager/level1/area2/system/parameterD.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area2/system/parameterD.html')
+    else:
+        return redirect('/')
+
 def level1_area2_system_parameterE(request):
-    return render(request,'file_manager/level1/area2/system/parameterE.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area2/system/parameterE.html')
+    else:
+        return redirect('/')
+
 def level1_area2_system_parameterF(request):
-    return render(request,'file_manager/level1/area2/system/parameterF.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area2/system/parameterF.html')
+    else:
+        return redirect('/')
+
 def level1_area2_system_parameterG(request):
-    return render(request,'file_manager/level1/area2/system/parameterG.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area2/system/parameterG.html')
+    else:
+        return redirect('/')
+
 def level1_area2_system_parameterH(request):
-    return render(request,'file_manager/level1/area2/system/parameterH.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area2/system/parameterH.html')
+    else:
+        return redirect('/')
 
 #Level 1 / Area 3
 def area3(request):
-    return render(request,'file_manager/level1/area3/area3.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area3/area3.html')
+    else:
+        return redirect('/')
+
 def level1_area3_parameterA(request):
-    return render(request,'file_manager/level1/area3/parameterA.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area3/parameterA.html')
+    else:
+        return redirect('/')
 def level1_area3_parameterB(request):
-    return render(request,'file_manager/level1/area3/parameterB.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area3/parameterB.html')
+    else:
+        return redirect('/')
 def level1_area3_parameterC(request):
-    return render(request,'file_manager/level1/area3/parameterC.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area3/parameterC.html')
+    else:
+        return redirect('/')
+
 def level1_area3_parameterD(request):
-    return render(request,'file_manager/level1/area3/parameterD.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area3/parameterD.html')
+    else:
+        return redirect('/')
+
 def level1_area3_parameterE(request):
-    return render(request,'file_manager/level1/area3/parameterE.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area3/parameterE.html')
+    else:
+        return redirect('/')
+
 def level1_area3_parameterF(request):
-    return render(request,'file_manager/level1/area3/parameterF.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area3/parameterF.html')
+    else:
+        return redirect('/')
 
 #Level 1 / Area 4
 def area4(request):
-    return render(request,'file_manager/level1/area4/area4.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area4/area4.html')
+    else:
+        return redirect('/')
 def level1_area4_implementation(request):
-    return render(request,'file_manager/level1/area4/implementation.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area4/implementation.html')
+    else:
+        return redirect('/')
 def level1_area4_implementation_parameterA(request):
-    return render(request,'file_manager/level1/area4/implementation/parameterA.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area4/implementation/parameterA.html')
+    else:
+        return redirect('/')
 def level1_area4_implementation_parameterB(request):
-    return render(request,'file_manager/level1/area4/implementation/parameterB.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area4/implementation/parameterB.html')
+    else:
+        return redirect('/')
 def level1_area4_implementation_parameterC(request):
-    return render(request,'file_manager/level1/area4/implementation/parameterC.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area4/implementation/parameterC.html')
+    else:
+        return redirect('/')
 def level1_area4_implementation_parameterD(request):
-    return render(request,'file_manager/level1/area4/implementation/parameterD.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area4/implementation/parameterD.html')
+    else:
+        return redirect('/')
 def level1_area4_implementation_parameterE(request):
-    return render(request,'file_manager/level1/area4/implementation/parameterE.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area4/implementation/parameterE.html')
+    else:
+        return redirect('/')
+
 def level1_area4_outcome(request):
-    return render(request,'file_manager/level1/area4/outcome.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area4/outcome.html')
+    else:
+        return redirect('/')
 def level1_area4_outcome_parameterA(request):
-    return render(request,'file_manager/level1/area4/outcome/parameterA.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area4/outcome/parameterA.html')
+    else:
+        return redirect('/')
 def level1_area4_outcome_parameterB(request):
-    return render(request,'file_manager/level1/area4/outcome/parameterB.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area4/outcome/parameterB.html')
+    else:
+        return redirect('/')
 def level1_area4_outcome_parameterC(request):
-    return render(request,'file_manager/level1/area4/outcome/parameterC.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area4/outcome/parameterC.html')
+    else:
+        return redirect('/')
+
 def level1_area4_outcome_parameterD(request):
-    return render(request,'file_manager/level1/area4/outcome/parameterD.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area4/outcome/parameterD.html')
+    else:
+        return redirect('/')
 def level1_area4_outcome_parameterE(request):
-    return render(request,'file_manager/level1/area4/outcome/parameterE.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area4/outcome/parameterE.html')
+    else:
+        return redirect('/')
 def level1_area4_system(request):
-    return render(request,'file_manager/level1/area4/system.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area4/system.html')
+    else:
+        return redirect('/')
 def level1_area4_system_parameterA(request):
-    return render(request,'file_manager/level1/area4/system/parameterA.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area4/system/parameterA.html')
+    else:
+        return redirect('/')
 def level1_area4_system_parameterB(request):
-    return render(request,'file_manager/level1/area4/system/parameterB.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area4/system/parameterB.html')
+    else:
+        return redirect('/')
 def level1_area4_system_parameterC(request):
-    return render(request,'file_manager/level1/area4/system/parameterC.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area4/system/parameterC.html')
+    else:
+        return redirect('/')
 def level1_area4_system_parameterD(request):
-    return render(request,'file_manager/level1/area4/system/parameterD.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area4/system/parameterD.html')
+    else:
+        return redirect('/')
 def level1_area4_system_parameterE(request):
-    return render(request,'file_manager/level1/area4/system/parameterE.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area4/system/parameterE.html')
+    else:
+        return redirect('/')
 
 
 #Level 1 / Area 5
 def area5(request):
-    return render(request,'file_manager/level1/area5/area5.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area5/area5.html')
+    else:
+        return redirect('/')
 def level1_area5_implementation(request):
-    return render(request,'file_manager/level1/area5/implementation.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area5/implementation.html')
+    else:
+        return redirect('/')
 def level1_area5_implementation_parameterA(request):
-    return render(request,'file_manager/level1/area5/implementation/parameterA.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area5/implementation/parameterA.html')
+    else:
+        return redirect('/')    
 def level1_area5_implementation_parameterB(request):
-    return render(request,'file_manager/level1/area5/implementation/parameterB.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area5/implementation/parameterB.html')
+    else:
+        return redirect('/')
 def level1_area5_implementation_parameterC(request):
-    return render(request,'file_manager/level1/area5/implementation/parameterC.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area5/implementation/parameterC.html')
+    else:
+        return redirect('/')
 def level1_area5_implementation_parameterD(request):
-    return render(request,'file_manager/level1/area5/implementation/parameterD.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area5/implementation/parameterD.html')
+    else:
+        return redirect('/')
 def level1_area5_outcome(request):
-    return render(request,'file_manager/level1/area5/outcome.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area5/outcome.html')
+    else:
+        return redirect('/')
 def level1_area5_outcome_parameterA(request):
-    return render(request,'file_manager/level1/area5/outcome/parameterA.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area5/outcome/parameterA.html')
+    else:
+        return redirect('/')
 def level1_area5_outcome_parameterB(request):
-    return render(request,'file_manager/level1/area5/outcome/parameterB.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area5/outcome/parameterB.html')
+    else:
+        return redirect('/')
+
 def level1_area5_outcome_parameterC(request):
-    return render(request,'file_manager/level1/area5/outcome/parameterC.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area5/outcome/parameterC.html')
+    else:
+        return redirect('/')
 def level1_area5_outcome_parameterD(request):
-    return render(request,'file_manager/level1/area5/outcome/parameterD.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area5/outcome/parameterD.html')
+    else:
+        return redirect('/')
 def level1_area5_system(request):
-    return render(request,'file_manager/level1/area5/system.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area5/system.html')
+    else:
+        return redirect('/')
+
 def level1_area5_system_parameterA(request):
-    return render(request,'file_manager/level1/area5/system/parameterA.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area5/system/parameterA.html')
+    else:
+        return redirect('/')    
 def level1_area5_system_parameterB(request):
-    return render(request,'file_manager/level1/area5/system/parameterB.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area5/system/parameterB.html')
+    else:
+        return redirect('/')    
 def level1_area5_system_parameterC(request):
-    return render(request,'file_manager/level1/area5/system/parameterC.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area5/system/parameterC.html')
+    else:
+        return redirect('/')    
 def level1_area5_system_parameterD(request):
-    return render(request,'file_manager/level1/area5/system/parameterD.html')
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area5/system/parameterD.html')
+    else:
+        return redirect('/') 
 
 
 
@@ -590,6 +864,22 @@ def generatelevel1_area1_parameterA(request):
 
         #0 = title Slide, 1 = title and content, 3 = section header, etc
         slide_layout = prs.slide_layouts[0]
+
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/front_page.png?alt=media&token=4a37d5e1-e270-40fd-a51b-33d99689fefb"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+
+        #FOR FRONT PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FRONT PAGE
         
         bulsu_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/BULSU_logo.png?alt=media&token=10fc51f4-2689-468b-b7c4-e331d86540c1"
         response_bulsu = requests.get(bulsu_img_url)
@@ -623,7 +913,7 @@ def generatelevel1_area1_parameterA(request):
 
             pic = slide.shapes.add_picture(image_data, left, top, height=height)
             
-            bulsuLogo = slide.shapes.add_picture(image_data_bulsu, Inches(0.3), Inches(10.5), height=Inches(1.5))
+            bulsuLogo = slide.shapes.add_picture(image_data_bulsu, Inches(0.3), Inches(11), height=Inches(1.5))
 
         prs.save('./ppt/test.pptx')
 
@@ -646,6 +936,121 @@ def generatelevel1_area1_parameterA(request):
         })
 
 
-        return redirect('/level1_area1_parameterA')
+        return redirect('/level1/area1/parameterA')
+    else:
+        return redirect('/')
+
+def generatelevel1_area2_implementation_parameterA(request):
+    if 'user_id' in request.session:
+        try:
+            os.remove('./ppt/level1_area2_implementation_parameterA.pptx')
+        except:
+            print("no file found")
+
+        implementations = firestoreDB.collection('Level 1_Area 2_Parameter A_Implementation').get()
+        
+        dynamic_images = []
+
+        for implementation in implementations:
+            value = implementation.to_dict()
+            dynamic_images.append({
+                'storage_file_url': value['storage_file_url'],
+                'uploadIn': value['uploadIn'],
+            })
+
+
+        prs = Presentation()
+        prs.slide_width = Inches(8.51)
+        prs.slide_height = Inches(13.01)
+
+        #0 = title Slide, 1 = title and content, 3 = section header, etc
+        slide_layout = prs.slide_layouts[0]
+
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/front_page.png?alt=media&token=4a37d5e1-e270-40fd-a51b-33d99689fefb"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+
+        #FOR FRONT PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FRONT PAGE
+
+        #"IMPLEMENTATION" TITLE SLIDE
+        slide = prs.slides.add_slide(slide_layout)
+
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(243, 241, 181)
+
+        shapes = slide.shapes
+        title_shape = shapes.title
+        title_shape.top = Inches(1)
+        title_shape.left = Inches(0.1)
+        title_shape.width = Inches(2.5)
+        title_shape.text = "IMPLEMENTATION"
+        # END "IMPLEMENTATION" TITLE SLIDE
+        
+        bulsu_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/BULSU_logo.png?alt=media&token=10fc51f4-2689-468b-b7c4-e331d86540c1"
+        response_bulsu = requests.get(bulsu_img_url)
+        image_data_bulsu = BytesIO(response_bulsu.content)
+
+        for images in dynamic_images:
+            value = images
+            slide = prs.slides.add_slide(slide_layout)
+
+            background = slide.background
+            fill = background.fill
+            fill.solid()
+            fill.fore_color.rgb = RGBColor(243, 241, 181)
+
+            shapes = slide.shapes
+            title_shape = shapes.title
+            title_shape.top = Inches(1)
+            title_shape.left = Inches(0.1)
+            title_shape.width = Inches(2)
+            title_shape.text = value['uploadIn']
+
+            #distance of the top edge
+            top = Inches(2.5)
+            #distance of the left edge
+            left = Inches(0.3)
+            height = Inches(5.5)
+            
+            img_url = value['storage_file_url']
+            response = requests.get(img_url)
+            image_data = BytesIO(response.content)
+
+            pic = slide.shapes.add_picture(image_data, left, top, height=height)
+            
+            bulsuLogo = slide.shapes.add_picture(image_data_bulsu, Inches(0.3), Inches(11), height=Inches(1.5))
+
+        prs.save('./ppt/level1_area2_implementation_parameterA.pptx')
+
+        tz = pytz.timezone('Asia/Hong_Kong')
+        now = datetime.now(tz)
+
+        fileName = "parameterA_"+str(time.time())+".pptx"
+        file_directory = "/ppt/level1/area2/implementation/parameterA/"+ fileName
+
+        #upload image
+        storage.child(file_directory).put('./ppt/level1_area2_implementation_parameterA.pptx')
+
+        doc_ref = firestoreDB.collection('generatelevel1_area2_implementation_parameterA').document()
+
+        doc_ref.set({
+            'storage_file_id': doc_ref.id,
+            'storage_file_url' : storage.child(file_directory).get_url(None),
+            'file_name': fileName,
+            'date': now,
+        })
+        return redirect('/level1/area2/implementation/parameterA')
     else:
         return redirect('/')

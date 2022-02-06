@@ -124,6 +124,8 @@ urlpatterns = [
 
     # generate PPT
     path('generatelevel1_area1_parameterA/', views.generatelevel1_area1_parameterA, name="generatelevel1_area1_parameterA"),
+    path('generatelevel1_area2_implementation_parameterA/', views.generatelevel1_area2_implementation_parameterA, name="generatelevel1_area2_implementation_parameterA"),
     
+
     
 ]
