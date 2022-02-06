@@ -78,7 +78,10 @@ def login_validation(request):
             return HttpResponse('Invalid Email or Password!')    
 
 def homepage(request):
-    return render(request, 'homepage.html')
+    if 'user_id' in request.session:
+        return render(request, 'homepage.html')
+    else:
+        return redirect('/')
 
 def storage_drive(request):
     return render(request, 'file_manager/storage_drive.html')
