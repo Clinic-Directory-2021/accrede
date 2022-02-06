@@ -188,6 +188,56 @@ def level1_area2_implementation(request):
     return render(request,'file_manager/level1/area2/implementation.html')
 def level1_area2_implementation_parameterA(request):
     return render(request,'file_manager/level1/area2/implementation/parameterA.html')
+def level1_area2_implementation_parameterB(request):
+    return render(request,'file_manager/level1/area2/implementation/parameterB.html')
+def level1_area2_implementation_parameterC(request):
+    return render(request,'file_manager/level1/area2/implementation/parameterC.html')
+def level1_area2_implementation_parameterD(request):
+    return render(request,'file_manager/level1/area2/implementation/parameterD.html')
+def level1_area2_implementation_parameterE(request):
+    return render(request,'file_manager/level1/area2/implementation/parameterE.html')
+def level1_area2_implementation_parameterF(request):
+    return render(request,'file_manager/level1/area2/implementation/parameterF.html')
+def level1_area2_implementation_parameterG(request):
+    return render(request,'file_manager/level1/area2/implementation/parameterG.html')
+def level1_area2_implementation_parameterH(request):
+    return render(request,'file_manager/level1/area2/implementation/parameterH.html')
+def level1_area2_outcome(request):
+    return render(request,'file_manager/level1/area2/outcome.html')
+def level1_area2_outcome_parameterA(request):
+    return render(request,'file_manager/level1/area2/outcome/parameterA.html')
+def level1_area2_outcome_parameterB(request):
+    return render(request,'file_manager/level1/area2/outcome/parameterB.html')
+def level1_area2_outcome_parameterC(request):
+    return render(request,'file_manager/level1/area2/outcome/parameterC.html')
+def level1_area2_outcome_parameterD(request):
+    return render(request,'file_manager/level1/area2/outcome/parameterD.html')
+def level1_area2_outcome_parameterE(request):
+    return render(request,'file_manager/level1/area2/outcome/parameterE.html')
+def level1_area2_outcome_parameterF(request):
+    return render(request,'file_manager/level1/area2/outcome/parameterF.html')
+def level1_area2_outcome_parameterG(request):
+    return render(request,'file_manager/level1/area2/outcome/parameterG.html')
+def level1_area2_outcome_parameterH(request):
+    return render(request,'file_manager/level1/area2/outcome/parameterH.html')
+def level1_area2_system(request):
+    return render(request,'file_manager/level1/area2/system.html')
+def level1_area2_system_parameterA(request):
+    return render(request,'file_manager/level1/area2/system/parameterA.html')
+def level1_area2_system_parameterB(request):
+    return render(request,'file_manager/level1/area2/system/parameterB.html')
+def level1_area2_system_parameterC(request):
+    return render(request,'file_manager/level1/area2/system/parameterC.html')
+def level1_area2_system_parameterD(request):
+    return render(request,'file_manager/level1/area2/system/parameterD.html')
+def level1_area2_system_parameterE(request):
+    return render(request,'file_manager/level1/area2/system/parameterE.html')
+def level1_area2_system_parameterF(request):
+    return render(request,'file_manager/level1/area2/system/parameterF.html')
+def level1_area2_system_parameterG(request):
+    return render(request,'file_manager/level1/area2/system/parameterG.html')
+def level1_area2_system_parameterH(request):
+    return render(request,'file_manager/level1/area2/system/parameterH.html')
 
 
 
