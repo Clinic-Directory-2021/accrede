@@ -28,7 +28,7 @@ urlpatterns = [
     ## Level 1 / Area 1
     path('level1/', views.level1, name="level1"),
     path('level1/area1/', views.area1, name = "level1/area1"),
-    path('level1/area1/parameterA', views.parameterA, name = "level1/area1/parameterA"),
+    path('level1/area1/parameterA', views.level1_area1_parameterA, name = "level1/area1/parameterA"),
     
     ## Level 1/ Area 2
     path('level1/area2/', views.area1, name = "level1/area2"),
