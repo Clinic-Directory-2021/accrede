@@ -5,6 +5,31 @@ var parameterValue;
 var categoryValue;
 var dateValue;
 
+function errorGenerate(){
+  Swal.fire({
+    icon: 'error',
+    title: 'Sorry',
+    text: 'Some Files Needed to Generate are Missing!',
+  })
+}
+
+function generateFile(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+     
+    }
+  })
+}
+
+
+
 setInterval(generateFilename, 1000);
 
 

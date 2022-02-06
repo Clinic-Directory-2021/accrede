@@ -171,10 +171,13 @@ def level1_area1_parameterA(request):
             value = outcome.to_dict()
             uploaded_data.append(value)
             needed_data.append(value['uploadIn'])
-        
-        return render(request,'file_manager/level1/area1/parameterA/parameterA.html', {
+            
+        data = {
             'uploaded_data': uploaded_data,
-        })
+            'needed_datas': needed_data,
+        }
+        
+        return render(request,'file_manager/level1/area1/parameterA/parameterA.html', data)
     else:
         return render(request,'login.html')
 
