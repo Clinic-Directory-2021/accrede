@@ -28,13 +28,8 @@ urlpatterns = [
     ## Level 1 / Area 1
     path('level1/', views.level1, name="level1"),
     path('level1/area1/', views.area1, name = "level1/area1"),
-<<<<<<< Updated upstream
     path('level1/area1/parameterA', views.level1_area1_parameterA, name = "level1/area1/parameterA"),
     
-=======
-    path('level1/area1/parameterA', views.parameterA, name = "level1/area1/parameterA"),
-
->>>>>>> Stashed changes
     ## Level 1/ Area 2
     path('level1/area2/', views.area2, name = "level1/area2"),
     path('level1/area2/implementation', views.level1_area2_implementation, name = "level1/area2/implementation"),
