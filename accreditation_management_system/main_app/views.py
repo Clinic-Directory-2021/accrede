@@ -30,6 +30,9 @@ import time
 
 import os
 
+from io import BytesIO
+from pptx.dml.color import RGBColor
+
 config = {
   'apiKey': "AIzaSyAh_oOakDenknpcWt5oucsLODSDiheWxps",
   'authDomain': "accreditation-management.firebaseapp.com",
@@ -546,34 +549,78 @@ def editAccount(request):
 
 def generatelevel1_area1_parameterA(request):
     if 'user_id' in request.session:
-        os.remove('./ppt/test.pptx')
+        try:
+            os.remove('./ppt/test.pptx')
+        except:
+            print("no file found")
 
         systems = firestoreDB.collection('Level 1_Area 1_Parameter A_System').get()
         implementations = firestoreDB.collection('Level 1_Area 1_Parameter A_Implementation').get()
         outcomes = firestoreDB.collection('Level 1_Area 1_Parameter A_Outcomes').get()
         
+        dynamic_images = []
+
+        for system in systems:
+            value = system.to_dict()
+            dynamic_images.append({
+                'storage_file_url': value['storage_file_url'],
+                'uploadIn': value['uploadIn'],
+            })
+
+        for implementation in implementations:
+            value = implementation.to_dict()
+            dynamic_images.append({
+                'storage_file_url': value['storage_file_url'],
+                'uploadIn': value['uploadIn'],
+            })
+
+        for outcome in outcomes:
+            value = outcome.to_dict()
+            dynamic_images.append({
+                'storage_file_url': value['storage_file_url'],
+                'uploadIn': value['uploadIn'],
+            })
 
         prs = Presentation()
-        bullet_slide_layout = prs.slide_layouts[1]
+        prs.slide_width = Inches(8.51)
+        prs.slide_height = Inches(13.01)
 
-        slide = prs.slides.add_slide(bullet_slide_layout)
-        shapes = slide.shapes
+        #0 = title Slide, 1 = title and content, 3 = section header, etc
+        slide_layout = prs.slide_layouts[0]
+        
+        bulsu_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/BULSU_logo.png?alt=media&token=10fc51f4-2689-468b-b7c4-e331d86540c1"
+        response_bulsu = requests.get(bulsu_img_url)
+        image_data_bulsu = BytesIO(response_bulsu.content)
 
-        title_shape = shapes.title
-        body_shape = shapes.placeholders[1]
+        for images in dynamic_images:
+            value = images
+            slide = prs.slides.add_slide(slide_layout)
 
-        title_shape.text = 'Adding a Bullet Slide'
+            background = slide.background
+            fill = background.fill
+            fill.solid()
+            fill.fore_color.rgb = RGBColor(243, 241, 181)
 
-        tf = body_shape.text_frame
-        tf.text = 'Find the bullet slide layout'
+            shapes = slide.shapes
+            title_shape = shapes.title
+            title_shape.top = Inches(1.2)
+            title_shape.left = Inches(0.1)
+            title_shape.width = Inches(2)
+            title_shape.text = value['uploadIn']
 
-        p = tf.add_paragraph()
-        p.text = 'Use _TextFrame.text for first bullet'
-        p.level = 1
+            #distance of the top edge
+            top = Inches(2.5)
+            #distance of the left edge
+            left = Inches(0.3)
+            height = Inches(5.5)
+            
+            img_url = value['storage_file_url']
+            response = requests.get(img_url)
+            image_data = BytesIO(response.content)
 
-        p = tf.add_paragraph()
-        p.text = 'Use _TextFrame.add_paragraph() for subsequent bullets'
-        p.level = 2
+            pic = slide.shapes.add_picture(image_data, left, top, height=height)
+            
+            bulsuLogo = slide.shapes.add_picture(image_data_bulsu, Inches(0.3), Inches(11.5), height=Inches(1.5))
 
         prs.save('./ppt/test.pptx')
 

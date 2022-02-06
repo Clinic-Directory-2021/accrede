@@ -118,7 +118,7 @@ else if(levelValue == 'Level 1' && areaValue == 'Area 1' && parameterValue == 'P
   '<option value="S.1">S.1 The Institution has a system of determining the Vision and Mission</option>' +
   '<option value="S.2">S.2 The Vision Clearly Reflects what the institution hopes to become in the Future</option>' +
   '<option value="S.3">S.3 The Mission reflects the Institution\'s legal and other statutory mandates</option>'+
-  '<option value="S.4">S.3 The Goals of  the College/  Academic Units are  consistent with the  Mission of the  Institution.</option>'+
+  '<option value="S.4">S.4 The Goals of  the College/  Academic Units are  consistent with the  Mission of the  Institution.</option>'+
   '<option value="S.5.1">S.5.1 Technical Skills</option>'+
   '<option value="S.5.2">S.5.2 Research and Extension Capabilities</option>'+
   '<option value="S.5.3">S.5.3 Students\' own  ideas, desirable  attitudes and  personal discipline</option>'+
