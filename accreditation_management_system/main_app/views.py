@@ -1,3 +1,4 @@
+from sys import implementation
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
@@ -147,8 +148,35 @@ def level1(request):
 def area1(request):
     return render(request,'file_manager/level1/area1/area1.html')
 
-def parameterA(request):
-    return render(request,'file_manager/level1/area1/parameterA/parameterA.html')
+def level1_area1_parameterA(request):
+    if 'user_id' in request.session:
+        systems = firestoreDB.collection('Level 1_Area 1_Parameter A_System').get()
+        implementations = firestoreDB.collection('Level 1_Area 1_Parameter A_Implementation').get()
+        outcomes = firestoreDB.collection('Level 1_Area 1_Parameter A_Outcomes').get()
+
+        uploaded_data = []
+        needed_data = []
+
+        for system in systems:
+            value = system.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+        for implementation in implementations:
+            value = implementation.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+        for outcome in outcomes:
+            value = outcome.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+        
+        return render(request,'file_manager/level1/area1/parameterA/parameterA.html', {
+            'uploaded_data': uploaded_data,
+        })
+    else:
+        return render(request,'login.html')
 
 #Level 1 / Area 2
 def area2(request):
