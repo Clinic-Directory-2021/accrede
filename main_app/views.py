@@ -146,7 +146,7 @@ def activity_logs(request):
         'logs_data': logs_data,
         })
     else:
-        return render(request,'login.html')
+        return redirect('/login')
 
 def recycle_bin(request):
     return render(request,'file_manager/recycle_bin.html')
@@ -196,7 +196,7 @@ def level1_area1_parameterA(request):
         
         return render(request,'file_manager/level1/area1/parameterA/parameterA.html', data)
     else:
-        return render(request,'login.html')
+        return redirect('/login')
 
 #Level 1 / Area 2
 def area2(request):
@@ -360,7 +360,7 @@ def logout(request):
 
 def manage_accounts(request):
     if 'user_id' not in request.session:
-        return render(request,'login.html')
+        return redirect('/login')
     else:
         if request.method == 'GET':
             department = request.GET.get('department')
@@ -643,6 +643,6 @@ def generatelevel1_area1_parameterA(request):
         })
 
 
-        return HttpResponse("Success!")
+        return redirect('/level1_area1_parameterA')
     else:
-        return render(request,'login.html')
+        return redirect('/login')
