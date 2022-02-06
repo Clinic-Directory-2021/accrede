@@ -181,9 +181,15 @@ def level1_area1_parameterA(request):
 #Level 1 / Area 2
 def area2(request):
     return render(request,'file_manager/level1/area2/area2.html')
+def level1_area2_implementation(request):
+    return render(request,'file_manager/level1/area2/implementation.html')
+def level1_area2_implementation_parameterA(request):
+    return render(request,'file_manager/level1/area2/implementation/parameterA.html')
 
-def parameterA(request):
-    return render(request,'file_manager/level1/area2/parameterA/parameterA.html')
+
+
+
+
 
 def logout(request):
     try:
