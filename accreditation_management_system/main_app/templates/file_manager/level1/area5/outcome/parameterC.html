@@ -1,0 +1,52 @@
+{% include 'superadmin_base.html' %}
+{% block content %}
+<div class="content" style="background-color: gainsboro;">
+    <header class="h-20" style="width: 90vw; height: 67px; text-align: center; background-color: #61B15A;">
+        <h1>Accreditation Management System</h1>
+    </header>
+    <br>
+    <br>
+    <h1 class="m-5">Parameter C</h1>
+    <div class="p-10">
+        <button class="mif-sort-asc icon" style="width: 50px; height: 50px;"></button>
+        <button class="button primary" style="height: 50px;">Generate</button>
+    </div>
+<div class="folders p-5" style="display: flex;">
+    <div style="width: 50%; padding: 10px;">
+    <h5>Files</h5>
+    <table class="table stripped" data-role="table" style="background-color: white;">
+        <thead>
+            <tr>
+                <th>File Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>File Name Sample</td>
+                <td><button class="button mif-eye icon primary"> View</button></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <div style="width: 50%; padding: 10px;">
+        <h5>Generated</h5>
+        <table class="table stripped" data-role="table" style="background-color: white;">
+            <thead>
+                <tr>
+                    <th>File Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>File Name Sample</td>
+                    <td><button class="button mif-eye icon primary"> View</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+</div>
+{% endblock %}
