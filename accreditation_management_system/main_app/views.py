@@ -140,10 +140,22 @@ def activity_logs(request):
 def recycle_bin(request):
     return render(request,'file_manager/recycle_bin.html')
 
-def area(request):
-    return render(request,'file_manager/area.html')
-def generate_template(request):
-    return render(request,'file_manager/generate_template.html')
+#Level 1 / Area 1
+def level1(request):
+    return render(request,'file_manager/level1/level1.html')
+
+def area1(request):
+    return render(request,'file_manager/level1/area1/area1.html')
+
+def parameterA(request):
+    return render(request,'file_manager/level1/area1/parameterA/parameterA.html')
+
+#Level 1 / Area 2
+def area2(request):
+    return render(request,'file_manager/level1/area2/area2.html')
+
+def parameterA(request):
+    return render(request,'file_manager/level1/area2/parameterA/parameterA.html')
 
 def logout(request):
     try:

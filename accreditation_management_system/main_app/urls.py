@@ -23,8 +23,21 @@ urlpatterns = [
     path('storage_drive/', views.storage_drive, name = "storage_drive"),
     path('activity_logs/', views.activity_logs, name = "activity_logs"),
     path('recycle_bin/', views.recycle_bin, name = "recycle_bin"),
-    path('generate_template/', views.generate_template, name = "generate_template"),
-    path('area/', views.area, name="area"),
+
+    #Area and Parameters
+    ## Level 1 / Area 1
+    path('level1/', views.level1, name="level1"),
+    path('level1/area1/', views.area1, name = "level1/area1"),
+    path('level1/area1/parameterA', views.parameterA, name = "level1/area1/parameterA"),
+    
+    ## Level 1/ Area 2
+    path('level1/area2/', views.area1, name = "level1/area2"),
+    path('level1/area2/parameterA', views.parameterA, name = "level1/area2/parameterA"),
+
+
+
+
+
     path('login_validation/', views.login_validation, name="login_validation"),
     path('manage_accounts/', views.manage_accounts, name="manage_accounts"),
     path('logout/', views.logout, name="logout"),
