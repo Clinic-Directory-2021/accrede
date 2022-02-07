@@ -880,6 +880,52 @@ def generatelevel1_area1_parameterA(request):
         fill.solid()
         fill.fore_color.rgb = RGBColor(204, 125, 95)
         #END FRONT PAGE
+
+        #FOR 2ND PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%201%20parameter%20A.%20Vision%20misionpng.png?alt=media&token=a1260394-b05f-4eec-94cb-9723077a17cf"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 2ND PAGE
+
+        #FOR 3RD PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%201%20parameter%20A%203rd%20page.png?alt=media&token=ff4b99bd-2d62-4c85-b963-67843140c5dc"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 3rd PAGE
+
+        #FOR 4TH PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%201%20parameter%20A%204th%20page.png?alt=media&token=1672c90f-f81b-4fcc-b1b1-cb42ec18812d"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 4TH PAGE
+        
         
         bulsu_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/BULSU_logo.png?alt=media&token=10fc51f4-2689-468b-b7c4-e331d86540c1"
         response_bulsu = requests.get(bulsu_img_url)
