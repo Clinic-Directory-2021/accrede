@@ -8,8 +8,11 @@
     <br>
     <h1 class="m-5">Parameter E</h1>
     <div class="p-10">
-        <button class="mif-sort-asc icon" style="width: 50px; height: 50px;"></button>
-        <button class="button primary" style="height: 50px;">Generate</button>
+        {% if 'S.1' in needed_datas and 'S.2' in needed_datas and 'S.3' in needed_datas and 'S.4' in needed_datas %}
+        <button class="button primary" style="height: 50px;" onclick="generateFileArea2SystemParameterE()">Generate</button>
+        {% else %}
+        <button class="button primary" style="height: 50px;" onclick="errorGenerate()">Generate</button>
+    {% endif %}
     </div>
 <div class="folders p-5" style="display: flex;">
     <div style="width: 50%; padding: 10px;">
@@ -17,15 +20,21 @@
     <table class="table stripped" data-role="table" style="background-color: white;">
         <thead>
             <tr>
+                <th>Image</th>
                 <th>File Name</th>
+                <th>Category</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
+            {% for uploaded_file in uploaded_data %}
             <tr>
-                <td>File Name Sample</td>
+                <td><img src="{{uploaded_file.storage_file_url}}" width="100%" style="margin: auto;text-align:center"/></td>
+                <td>{{uploaded_file.file_name}}</td>
+                <td>{{uploaded_file.category}}</td>
                 <td><button class="button mif-eye icon primary"> View</button></td>
             </tr>
+            {% endfor %}
         </tbody>
     </table>
     </div>
@@ -35,14 +44,18 @@
             <thead>
                 <tr>
                     <th>File Name</th>
+                    <th>Date Generated</th>
                     <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
+                {% for powerpoint in generated_data %}
                 <tr>
-                    <td>File Name Sample</td>
-                    <td><button class="button mif-eye icon primary"> View</button></td>
+                    <td>{{powerpoint.file_name}}</td>
+                    <td>{{powerpoint.date}}</td>
+                    <td><button class="button mif-eye icon primary" onclick="viewPowerPoint('{{powerpoint.storage_file_url}}')"> View</button></td>
                 </tr>
+                {% endfor %}
             </tbody>
         </table>
     </div>

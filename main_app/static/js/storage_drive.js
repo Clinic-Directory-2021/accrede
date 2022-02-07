@@ -720,7 +720,13 @@ else if(levelValue == 'Level 1' && areaValue == 'Area 2' && parameterValue == 'P
   var html = 
   '<div class="appendedField">'+
   '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
-  '<option value="S.1">S.1. There is an institutional Human Resource Development Plan/ Program designed for faculty recruitment.</option>' +
+  '<option value="S.1.1">S.1.1. lecture (1:35-50)</option>' +
+  '<option value="S.1.2">S.1.2. laboratory (specific to the discipline)</option>' +
+  '<option value="S.2">S.2. There is a provision for incentives of overload teaching in accordance with the CMO of the program and/ or institutional guidelines</option>' +
+  '<option value="S.3">S.3. There are full-time faculty classified by  rank, subject/ specialization</option>' +
+  '<option value="S.4">S.4. Faculty schedule has time for  preparation of  lessons, scoring  of test papers, record - keeping, class evaluation and other instruction - related activities</option>' +
+  '<option value="S.5">S.5. Workload Guidelines contain sufficient time for teaching  and/or research, extension,  production and  other assigned tasks</option>' +
+  '<option value="S.6">S.6. There is equitable, measurable and fair distribution of teaching load and other assignments</option>' +
   '</select>'+
 '</div>';
 }
