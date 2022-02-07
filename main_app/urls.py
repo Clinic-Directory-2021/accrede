@@ -124,8 +124,21 @@ urlpatterns = [
 
     # generate PPT
     path('generatelevel1_area1_parameterA/', views.generatelevel1_area1_parameterA, name="generatelevel1_area1_parameterA"),
+
+    #area 2 IMPLEMENTATION
     path('generatelevel1_area2_implementation_parameterA/', views.generatelevel1_area2_implementation_parameterA, name="generatelevel1_area2_implementation_parameterA"),
-    
+    path('generatelevel1_area2_implementation_parameterB/', views.generatelevel1_area2_implementation_parameterB, name="generatelevel1_area2_implementation_parameterB"),
+    path('generatelevel1_area2_implementation_parameterC/', views.generatelevel1_area2_implementation_parameterC, name="generatelevel1_area2_implementation_parameterC"),
+    path('generatelevel1_area2_implementation_parameterD/', views.generatelevel1_area2_implementation_parameterD, name="generatelevel1_area2_implementation_parameterD"),
+    path('generatelevel1_area2_implementation_parameterE/', views.generatelevel1_area2_implementation_parameterE, name="generatelevel1_area2_implementation_parameterE"),
+    path('generatelevel1_area2_implementation_parameterF/', views.generatelevel1_area2_implementation_parameterF, name="generatelevel1_area2_implementation_parameterF"),
+    path('generatelevel1_area2_implementation_parameterG/', views.generatelevel1_area2_implementation_parameterG, name="generatelevel1_area2_implementation_parameterG"),
+    path('generatelevel1_area2_implementation_parameterH/', views.generatelevel1_area2_implementation_parameterH, name="generatelevel1_area2_implementation_parameterH"),
+
+
+
+    path('generatelevel1_area2_outcomes_parameterA/', views.generatelevel1_area2_outcomes_parameterA, name="generatelevel1_area2_outcomes_parameterA"),
+    path('generatelevel1_area2_system_parameterA/', views.generatelevel1_area2_system_parameterA, name="generatelevel1_area2_system_parameterA"),
 
     
 ]

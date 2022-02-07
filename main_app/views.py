@@ -251,43 +251,204 @@ def level1_area2_implementation_parameterA(request):
 
 def level1_area2_implementation_parameterB(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area2/implementation/parameterB.html')
+        implementations = firestoreDB.collection('Level 1_Area 2_Parameter B_Implementation').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area2_implementation_parameterB').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for implementation in implementations:
+            value = implementation.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area2/implementation/parameterB.html', data)
     else:
         return redirect('/')   
 
 def level1_area2_implementation_parameterC(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area2/implementation/parameterC.html')
+        implementations = firestoreDB.collection('Level 1_Area 2_Parameter C_Implementation').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area2_implementation_parameterC').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for implementation in implementations:
+            value = implementation.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area2/implementation/parameterC.html', data)
     else:
         return redirect('/')   
 
 def level1_area2_implementation_parameterD(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area2/implementation/parameterD.html')
+        implementations = firestoreDB.collection('Level 1_Area 2_Parameter D_Implementation').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area2_implementation_parameterD').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for implementation in implementations:
+            value = implementation.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area2/implementation/parameterD.html', data)
     else:
         return redirect('/')   
 
 def level1_area2_implementation_parameterE(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area2/implementation/parameterE.html')
+        implementations = firestoreDB.collection('Level 1_Area 2_Parameter E_Implementation').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area2_implementation_parameterE').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for implementation in implementations:
+            value = implementation.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area2/implementation/parameterE.html', data)
     else:
         return redirect('/')  
 
 def level1_area2_implementation_parameterF(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area2/implementation/parameterF.html')
+        implementations = firestoreDB.collection('Level 1_Area 2_Parameter F_Implementation').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area2_implementation_parameterF').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for implementation in implementations:
+            value = implementation.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area2/implementation/parameterF.html', data)
     else:
         return redirect('/') 
 
 def level1_area2_implementation_parameterG(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area2/implementation/parameterG.html')
+        implementations = firestoreDB.collection('Level 1_Area 2_Parameter G_Implementation').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area2_implementation_parameterG').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for implementation in implementations:
+            value = implementation.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area2/implementation/parameterG.html', data)
     else:
         return redirect('/') 
 
 def level1_area2_implementation_parameterH(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area2/implementation/parameterH.html')
+        implementations = firestoreDB.collection('Level 1_Area 2_Parameter H_Implementation').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area2_implementation_parameterH').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for implementation in implementations:
+            value = implementation.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area2/implementation/parameterH.html', data)
     else:
         return redirect('/') 
 
@@ -299,49 +460,233 @@ def level1_area2_outcome(request):
 
 def level1_area2_outcome_parameterA(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area2/outcome/parameterA.html')
+        outcomes = firestoreDB.collection('Level 1_Area 2_Parameter A_Outcomes').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area2_outcomes_parameterA').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for outcome in outcomes:
+            value = outcome.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area2/outcome/parameterA.html', data)
     else:
         return redirect('/')
 
 def level1_area2_outcome_parameterB(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area2/outcome/parameterB.html')
+        outcomes = firestoreDB.collection('Level 1_Area 2_Parameter B_Outcomes').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area2_outcomes_parameterB').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for outcome in outcomes:
+            value = outcome.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area2/outcome/parameterB.html', data)
     else:
         return redirect('/')
 
 def level1_area2_outcome_parameterC(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area2/outcome/parameterC.html')
+        outcomes = firestoreDB.collection('Level 1_Area 2_Parameter C_Outcomes').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area2_outcomes_parameterC').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for outcome in outcomes:
+            value = outcome.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area2/outcome/parameterC.html', data)
     else:
         return redirect('/')
 
 def level1_area2_outcome_parameterD(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area2/outcome/parameterD.html')
+        outcomes = firestoreDB.collection('Level 1_Area 2_Parameter D_Outcomes').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area2_outcomes_parameterD').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for outcome in outcomes:
+            value = outcome.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area2/outcome/parameterD.html', data)
     else:
         return redirect('/')
 
 def level1_area2_outcome_parameterE(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area2/outcome/parameterE.html')
+        outcomes = firestoreDB.collection('Level 1_Area 2_Parameter E_Outcomes').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area2_outcomes_parameterE').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for outcome in outcomes:
+            value = outcome.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area2/outcome/parameterE.html', data)
     else:
         return redirect('/')
 
 def level1_area2_outcome_parameterF(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area2/outcome/parameterF.html')
+        outcomes = firestoreDB.collection('Level 1_Area 2_Parameter F_Outcomes').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area2_outcomes_parameterF').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for outcome in outcomes:
+            value = outcome.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area2/outcome/parameterF.html', data)
     else:
         return redirect('/')
 
 def level1_area2_outcome_parameterG(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area2/outcome/parameterG.html')
+        outcomes = firestoreDB.collection('Level 1_Area 2_Parameter G_Outcomes').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area2_outcomes_parameterG').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for outcome in outcomes:
+            value = outcome.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area2/outcome/parameterG.html', data)
     else:
         return redirect('/')
 
 def level1_area2_outcome_parameterH(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area2/outcome/parameterH.html')
+        outcomes = firestoreDB.collection('Level 1_Area 2_Parameter H_Outcomes').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area2_outcomes_parameterH').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for outcome in outcomes:
+            value = outcome.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area2/outcome/parameterH.html' , data)
     else:
         return redirect('/')
 
@@ -353,49 +698,233 @@ def level1_area2_system(request):
 
 def level1_area2_system_parameterA(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area2/system/parameterA.html')
+        systems = firestoreDB.collection('Level 1_Area 2_Parameter A_System').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area2_system_parameterA').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for system in systems:
+            value = system.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area2/system/parameterA.html', data)
     else:
         return redirect('/')
 
 def level1_area2_system_parameterB(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area2/system/parameterB.html')
+        systems = firestoreDB.collection('Level 1_Area 2_Parameter B_System').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area2_system_parameterB').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for system in systems:
+            value = system.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area2/system/parameterB.html', data)
     else:
         return redirect('/')
         
 def level1_area2_system_parameterC(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area2/system/parameterC.html')
+        systems = firestoreDB.collection('Level 1_Area 2_Parameter C_System').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area2_system_parameterC').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for system in systems:
+            value = system.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area2/system/parameterC.html', data)
     else:
         return redirect('/')
 
 def level1_area2_system_parameterD(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area2/system/parameterD.html')
+        systems = firestoreDB.collection('Level 1_Area 2_Parameter D_System').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area2_system_parameterD').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for system in systems:
+            value = system.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area2/system/parameterD.html' , data)
     else:
         return redirect('/')
 
 def level1_area2_system_parameterE(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area2/system/parameterE.html')
+        systems = firestoreDB.collection('Level 1_Area 2_Parameter E_System').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area2_system_parameterE').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for system in systems:
+            value = system.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area2/system/parameterE.html', data)
     else:
         return redirect('/')
 
 def level1_area2_system_parameterF(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area2/system/parameterF.html')
+        systems = firestoreDB.collection('Level 1_Area 2_Parameter F_System').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area2_system_parameterF').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for system in systems:
+            value = system.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area2/system/parameterF.html', data)
     else:
         return redirect('/')
 
 def level1_area2_system_parameterG(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area2/system/parameterG.html')
+        systems = firestoreDB.collection('Level 1_Area 2_Parameter G_System').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area2_system_parameterG').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for system in systems:
+            value = system.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area2/system/parameterG.html', data)
     else:
         return redirect('/')
 
 def level1_area2_system_parameterH(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area2/system/parameterH.html')
+        systems = firestoreDB.collection('Level 1_Area 2_Parameter H_System').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area2_system_parameterH').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for system in systems:
+            value = system.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area2/system/parameterH.html', data)
     else:
         return redirect('/')
 
@@ -1098,5 +1627,295 @@ def generatelevel1_area2_implementation_parameterA(request):
             'date': now,
         })
         return redirect('/level1/area2/implementation/parameterA')
+    else:
+        return redirect('/')
+
+def generatelevel1_area2_outcomes_parameterA(request):
+    if 'user_id' in request.session:
+        try:
+            os.remove('./ppt/level1_area2_outcomes_parameterA.pptx')
+        except:
+            print("no file found")
+
+        outcomes = firestoreDB.collection('Level 1_Area 2_Parameter A_Outcomes').get()
+        
+        dynamic_images = []
+
+        for outcome in outcomes:
+            value = outcome.to_dict()
+            dynamic_images.append({
+                'storage_file_url': value['storage_file_url'],
+                'uploadIn': value['uploadIn'],
+            })
+
+
+        prs = Presentation()
+        prs.slide_width = Inches(8.51)
+        prs.slide_height = Inches(13.01)
+
+        #0 = title Slide, 1 = title and content, 3 = section header, etc
+        slide_layout = prs.slide_layouts[0]
+
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/front_page.png?alt=media&token=4a37d5e1-e270-40fd-a51b-33d99689fefb"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+
+        #FOR FRONT PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FRONT PAGE
+
+        #"OUTCOMES" TITLE SLIDE
+        slide = prs.slides.add_slide(slide_layout)
+
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(243, 241, 181)
+
+        shapes = slide.shapes
+        title_shape = shapes.title
+        title_shape.top = Inches(1)
+        title_shape.left = Inches(0.1)
+        title_shape.width = Inches(2.5)
+        title_shape.text = "OUTCOMES"
+        # END "OUTCOMES" TITLE SLIDE
+        
+        bulsu_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/BULSU_logo.png?alt=media&token=10fc51f4-2689-468b-b7c4-e331d86540c1"
+        response_bulsu = requests.get(bulsu_img_url)
+        image_data_bulsu = BytesIO(response_bulsu.content)
+
+        for images in dynamic_images:
+            value = images
+            slide = prs.slides.add_slide(slide_layout)
+
+            background = slide.background
+            fill = background.fill
+            fill.solid()
+            fill.fore_color.rgb = RGBColor(243, 241, 181)
+
+            shapes = slide.shapes
+            title_shape = shapes.title
+            title_shape.top = Inches(1)
+            title_shape.left = Inches(0.1)
+            title_shape.width = Inches(2)
+            title_shape.text = value['uploadIn']
+
+            #distance of the top edge
+            top = Inches(2.5)
+            #distance of the left edge
+            left = Inches(0.3)
+            height = Inches(5.5)
+            
+            img_url = value['storage_file_url']
+            response = requests.get(img_url)
+            image_data = BytesIO(response.content)
+
+            pic = slide.shapes.add_picture(image_data, left, top, height=height)
+            
+            bulsuLogo = slide.shapes.add_picture(image_data_bulsu, Inches(0.3), Inches(11), height=Inches(1.5))
+
+        prs.save('./ppt/level1_area2_outcomes_parameterA.pptx')
+
+        tz = pytz.timezone('Asia/Hong_Kong')
+        now = datetime.now(tz)
+
+        fileName = "parameterA_"+str(time.time())+".pptx"
+        file_directory = "/ppt/level1/area2/outcomes/parameterA/"+ fileName
+
+        #upload image
+        storage.child(file_directory).put('./ppt/level1_area2_outcomes_parameterA.pptx')
+
+        doc_ref = firestoreDB.collection('generatelevel1_area2_outcomes_parameterA').document()
+
+        doc_ref.set({
+            'storage_file_id': doc_ref.id,
+            'storage_file_url' : storage.child(file_directory).get_url(None),
+            'file_name': fileName,
+            'date': now,
+        })
+        return redirect('/level1/area2/outcome/parameterA')
+    else:
+        return redirect('/')
+
+def generatelevel1_area2_system_parameterA(request):
+    if 'user_id' in request.session:
+        try:
+            os.remove('./ppt/level1_area2_system_parameterA.pptx')
+        except:
+            print("no file found")
+
+        systems = firestoreDB.collection('Level 1_Area 2_Parameter A_System').get()
+        
+        dynamic_images = []
+
+        for system in systems:
+            value = system.to_dict()
+            dynamic_images.append({
+                'storage_file_url': value['storage_file_url'],
+                'uploadIn': value['uploadIn'],
+            })
+
+
+        prs = Presentation()
+        prs.slide_width = Inches(8.51)
+        prs.slide_height = Inches(13.01)
+
+        #0 = title Slide, 1 = title and content, 3 = section header, etc
+        slide_layout = prs.slide_layouts[0]
+
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/front_page.png?alt=media&token=4a37d5e1-e270-40fd-a51b-33d99689fefb"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+
+        #FOR FRONT PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FRONT PAGE
+
+        #FOR 2ND PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%201%20parameter%20A.%20Vision%20misionpng.png?alt=media&token=a1260394-b05f-4eec-94cb-9723077a17cf"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 2ND PAGE
+
+        #FOR 3RD PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%202%20system%20parameter%20A%203rd%20page.png?alt=media&token=322f6afc-a19a-4ea3-a393-8fbfe61146cc"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 3RD PAGE
+
+        #FOR 4TH PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%202%20system%20parameter%20A%204TH%20page.png?alt=media&token=2a595cec-4e17-4b89-be78-e90ec3b1fb31"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 4TH PAGE
+
+        #FOR 5TH PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%202%20system%20parameter%20A%205th%20page.png?alt=media&token=b6765896-ed11-48f4-8fe6-b4cc01a6fc5a"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 5TH PAGE
+
+        #"SYSTEM" TITLE SLIDE
+        slide = prs.slides.add_slide(slide_layout)
+
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(243, 241, 181)
+
+        shapes = slide.shapes
+        title_shape = shapes.title
+        title_shape.top = Inches(1)
+        title_shape.left = Inches(0.1)
+        title_shape.width = Inches(2.5)
+        title_shape.text = "SYSTEM"
+        # END "SYSTEM" TITLE SLIDE
+        
+        bulsu_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/BULSU_logo.png?alt=media&token=10fc51f4-2689-468b-b7c4-e331d86540c1"
+        response_bulsu = requests.get(bulsu_img_url)
+        image_data_bulsu = BytesIO(response_bulsu.content)
+
+        for images in dynamic_images:
+            value = images
+            slide = prs.slides.add_slide(slide_layout)
+
+            background = slide.background
+            fill = background.fill
+            fill.solid()
+            fill.fore_color.rgb = RGBColor(243, 241, 181)
+
+            shapes = slide.shapes
+            title_shape = shapes.title
+            title_shape.top = Inches(1)
+            title_shape.left = Inches(0.1)
+            title_shape.width = Inches(2)
+            title_shape.text = value['uploadIn']
+
+            #distance of the top edge
+            top = Inches(2.5)
+            #distance of the left edge
+            left = Inches(0.3)
+            height = Inches(5.5)
+            
+            img_url = value['storage_file_url']
+            response = requests.get(img_url)
+            image_data = BytesIO(response.content)
+
+            pic = slide.shapes.add_picture(image_data, left, top, height=height)
+            
+            bulsuLogo = slide.shapes.add_picture(image_data_bulsu, Inches(0.3), Inches(11), height=Inches(1.5))
+
+        prs.save('./ppt/level1_area2_system_parameterA.pptx')
+
+        tz = pytz.timezone('Asia/Hong_Kong')
+        now = datetime.now(tz)
+
+        fileName = "parameterA_"+str(time.time())+".pptx"
+        file_directory = "/ppt/level1/area2/outcomes/parameterA/"+ fileName
+
+        #upload image
+        storage.child(file_directory).put('./ppt/level1_area2_system_parameterA.pptx')
+
+        doc_ref = firestoreDB.collection('generatelevel1_area2_system_parameterA').document()
+
+        doc_ref.set({
+            'storage_file_id': doc_ref.id,
+            'storage_file_url' : storage.child(file_directory).get_url(None),
+            'file_name': fileName,
+            'date': now,
+        })
+        return redirect('/level1/area2/outcome/parameterA')
     else:
         return redirect('/')
