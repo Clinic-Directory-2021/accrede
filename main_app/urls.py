@@ -29,6 +29,7 @@ urlpatterns = [
     path('level1/', views.level1, name="level1"),
     path('level1/area1/', views.area1, name = "level1/area1"),
     path('level1/area1/parameterA', views.level1_area1_parameterA, name = "level1/area1/parameterA"),
+    path('level1/area1/parameterB', views.level1_area1_parameterB, name = "level1/area1/parameterB"),
     
     ## Level 1/ Area 2
     path('level1/area2/', views.area2, name = "level1/area2"),
@@ -109,6 +110,12 @@ urlpatterns = [
     path('level1/area5/system/parameterC', views.level1_area5_system_parameterC, name = "level1/area5/system/parameterC"),
     path('level1/area5/system/parameterD', views.level1_area5_system_parameterD, name = "level1/area5/system/parameterD"),
 
+    ## Level 1/ Area 6
+    path('level1/area6/', views.area6, name = "level1/area6"),
+    path('level1/area6/parameterA', views.level1_area6_parameterA, name = "level1/area6/parameterA"),
+    path('level1/area6/parameterB', views.level1_area6_parameterB, name = "level1/area6/parameterB"),
+    path('level1/area6/parameterC', views.level1_area6_parameterC, name = "level1/area6/parameterC"),
+    path('level1/area6/parameterD', views.level1_area6_parameterD, name = "level1/area6/parameterD"),
 
 
     path('login_validation/', views.login_validation, name="login_validation"),

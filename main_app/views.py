@@ -207,6 +207,9 @@ def level1_area1_parameterA(request):
     else:
         return redirect('/')
 
+def level1_area1_parameterB(request):
+    return render(request,'file_manager/level1/area1/parameterB/parameterB.html')
+
 #Level 1 / Area 2
 def area2(request):
     if 'user_id' in request.session:
@@ -1359,6 +1362,33 @@ def level1_area5_system_parameterD(request):
         return render(request,'file_manager/level1/area5/system/parameterD.html')
     else:
         return redirect('/') 
+
+#Level 1 / Area 6
+def area6(request):
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area6/area6.html')
+    else:
+        return redirect('/')
+def level1_area6_parameterA(request):
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area6/parameterA.html')
+    else:
+        return redirect('/')    
+def level1_area6_parameterB(request):
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area6/parameterB.html')
+    else:
+        return redirect('/')
+def level1_area6_parameterC(request):
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area6/parameterC.html')
+    else:
+        return redirect('/')
+def level1_area6_parameterD(request):
+    if 'user_id' in request.session:
+        return render(request,'file_manager/level1/area6/parameterD.html')
+    else:
+        return redirect('/')
 
 
 
