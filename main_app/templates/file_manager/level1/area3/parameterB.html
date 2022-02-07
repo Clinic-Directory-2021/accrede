@@ -6,10 +6,14 @@
     </header>
     <br>
     <br>
-    <h1 class="m-5">Parameter A</h1>
+    <h1 class="m-5">Parameter B</h1>
     <div class="p-10">
-        <button class="mif-sort-asc icon" style="width: 50px; height: 50px;"></button>
-        <button class="button primary" style="height: 50px;">Generate</button>
+
+        {% if 'S.1' in needed_datas and 'S.2' in needed_datas and 'S.3' in needed_datas and 'S.4' in needed_datas and 'S.5' in needed_datas and 'S.6' in needed_datas and 'I.1' in needed_datas and 'I.2' in needed_datas and 'I.3' in needed_datas and 'I.4' in needed_datas and 'I.5' in needed_datas and 'I.6.1' in needed_datas and 'I.6.2' in needed_datas and 'I.6.3' in needed_datas and 'I.6.4' in needed_datas and 'I.7.1' in needed_datas and 'I.7.2' in needed_datas and 'I.7.3' in needed_datas and 'I.7.4' in needed_datas and 'I.7.5' in needed_datas and 'I.7.6' in needed_datas and 'I.7.7' in needed_datas and 'I.7.8' in needed_datas and 'I.7.9' in needed_datas and 'I.8.1' in needed_datas and 'I.8.2' in needed_datas and 'I.8.3' in needed_datas and 'I.8.4' in needed_datas and 'I.8.5' in needed_datas and 'I.8.6' in needed_datas and 'I.8.7' in needed_datas and 'I.8.8' in needed_datas and 'I.8.9' in needed_datas and 'I.8.10' in needed_datas and 'I.8.11' in needed_datas and 'I.8.12' in needed_datas and 'I.8.13' in needed_datas and 'I.8.14' in needed_datas and 'I.8.15' in needed_datas and 'I.8.16' in needed_datas and 'I.8.17' in needed_datas and 'I.8.18' in needed_datas and 'I.8.19' in needed_datas and 'I.8.20' in needed_datas and 'I.8.21' in needed_datas and 'I.8.22' in needed_datas and 'I.8.23' in needed_datas and 'I.9' in needed_datas and 'I.10.1' in needed_datas and 'I.10.2' in needed_datas and 'I.10.3' in needed_datas and 'I.10.4' in needed_datas and 'I.10.5' in needed_datas and 'I.10.6' in needed_datas and 'I.10.7' in needed_datas and 'I.11' in needed_datas and 'I.12' in needed_datas and 'I.13' in needed_datas and 'I.14' in needed_datas and 'O.1' in needed_datas and 'O.2' in needed_datas and 'O.3' in needed_datas %}
+        <button class="button primary" style="height: 50px;" onclick="generateFileArea3ParameterB()">Generate</button>
+        {% else %}
+        <button class="button primary" style="height: 50px;" onclick="errorGenerate()">Generate</button>
+    {% endif %}
     </div>
 <div class="folders p-5" style="display: flex;">
     <div style="width: 50%; padding: 10px;">
@@ -17,15 +21,21 @@
     <table class="table stripped" data-role="table" style="background-color: white;">
         <thead>
             <tr>
+                <th>Image</th>
                 <th>File Name</th>
+                <th>Category</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
+            {% for uploaded_file in uploaded_data %}
             <tr>
-                <td>File Name Sample</td>
+                <td><img src="{{uploaded_file.storage_file_url}}" width="100%" style="margin: auto;text-align:center"/></td>
+                <td>{{uploaded_file.file_name}}</td>
+                <td>{{uploaded_file.category}}</td>
                 <td><button class="button mif-eye icon primary"> View</button></td>
             </tr>
+            {% endfor %}
         </tbody>
     </table>
     </div>
@@ -35,14 +45,18 @@
             <thead>
                 <tr>
                     <th>File Name</th>
+                    <th>Date Generated</th>
                     <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
+                {% for powerpoint in generated_data %}
                 <tr>
-                    <td>File Name Sample</td>
-                    <td><button class="button mif-eye icon primary"> View</button></td>
+                    <td>{{powerpoint.file_name}}</td>
+                    <td>{{powerpoint.date}}</td>
+                    <td><button class="button mif-eye icon primary" onclick="viewPowerPoint('{{powerpoint.storage_file_url}}')"> View</button></td>
                 </tr>
+                {% endfor %}
             </tbody>
         </table>
     </div>

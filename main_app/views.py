@@ -937,35 +937,242 @@ def area3(request):
 
 def level1_area3_parameterA(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area3/parameterA.html')
+        systems = firestoreDB.collection('Level 1_Area 3_Parameter A_System').get()
+        implementations = firestoreDB.collection('Level 1_Area 3_Parameter A_Implementation').get()
+        outcomes = firestoreDB.collection('Level 1_Area 3_Parameter A_Outcomes').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area3_parameterA').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for system in systems:
+            value = system.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+        for implementation in implementations:
+            value = implementation.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+        for outcome in outcomes:
+            value = outcome.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area3/parameterA.html', data)
     else:
         return redirect('/')
+        
 def level1_area3_parameterB(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area3/parameterB.html')
+        systems = firestoreDB.collection('Level 1_Area 3_Parameter B_System').get()
+        implementations = firestoreDB.collection('Level 1_Area 3_Parameter B_Implementation').get()
+        outcomes = firestoreDB.collection('Level 1_Area 3_Parameter B_Outcomes').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area3_parameterB').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for system in systems:
+            value = system.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+        for implementation in implementations:
+            value = implementation.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+        for outcome in outcomes:
+            value = outcome.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area3/parameterB.html', data)
     else:
         return redirect('/')
+
+
 def level1_area3_parameterC(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area3/parameterC.html')
+        systems = firestoreDB.collection('Level 1_Area 3_Parameter C_System').get()
+        implementations = firestoreDB.collection('Level 1_Area 3_Parameter C_Implementation').get()
+        outcomes = firestoreDB.collection('Level 1_Area 3_Parameter C_Outcomes').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area3_parameterC').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for system in systems:
+            value = system.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+        for implementation in implementations:
+            value = implementation.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+        for outcome in outcomes:
+            value = outcome.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area3/parameterC.html', data)
     else:
         return redirect('/')
 
 def level1_area3_parameterD(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area3/parameterD.html')
+        systems = firestoreDB.collection('Level 1_Area 3_Parameter D_System').get()
+        implementations = firestoreDB.collection('Level 1_Area 3_Parameter D_Implementation').get()
+        outcomes = firestoreDB.collection('Level 1_Area 3_Parameter D_Outcomes').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area3_parameterD').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for system in systems:
+            value = system.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+        for implementation in implementations:
+            value = implementation.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+        for outcome in outcomes:
+            value = outcome.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area3/parameterD.html', data)
     else:
         return redirect('/')
 
 def level1_area3_parameterE(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area3/parameterE.html')
+        systems = firestoreDB.collection('Level 1_Area 3_Parameter E_System').get()
+        implementations = firestoreDB.collection('Level 1_Area 3_Parameter E_Implementation').get()
+        outcomes = firestoreDB.collection('Level 1_Area 3_Parameter E_Outcomes').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area3_parameterE').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for system in systems:
+            value = system.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+        for implementation in implementations:
+            value = implementation.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+        for outcome in outcomes:
+            value = outcome.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area3/parameterE.html', data)
     else:
         return redirect('/')
 
 def level1_area3_parameterF(request):
     if 'user_id' in request.session:
-        return render(request,'file_manager/level1/area3/parameterF.html')
+        systems = firestoreDB.collection('Level 1_Area 3_Parameter F_System').get()
+        implementations = firestoreDB.collection('Level 1_Area 3_Parameter F_Implementation').get()
+        outcomes = firestoreDB.collection('Level 1_Area 3_Parameter F_Outcomes').get()
+
+        powerpoints = firestoreDB.collection('generatelevel1_area3_parameterF').get()
+
+        uploaded_data = []
+        needed_data = []
+        generated_data = []
+
+        for system in systems:
+            value = system.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+        for implementation in implementations:
+            value = implementation.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+        for outcome in outcomes:
+            value = outcome.to_dict()
+            uploaded_data.append(value)
+            needed_data.append(value['uploadIn'])
+
+        for powerpoint in powerpoints:
+            value = powerpoint.to_dict()
+            generated_data.append(value)
+            
+        data = {
+            'uploaded_data': uploaded_data,
+            'needed_datas': needed_data,
+            'generated_data': generated_data,
+        }
+        return render(request,'file_manager/level1/area3/parameterF.html', data)
     else:
         return redirect('/')
 
@@ -4882,5 +5089,1145 @@ def generatelevel1_area2_system_parameterH(request):
             'date': now,
         })
         return redirect('/level1/area2/system/parameterH')
+    else:
+        return redirect('/')
+
+
+#GENERATE AREA 3 PARAMETER A
+def generatelevel1_area3_parameterA(request):
+    if 'user_id' in request.session:
+        try:
+            os.remove('./ppt/level1_area3_parameterA.pptx')
+        except:
+            print("no file found")
+
+        systems = firestoreDB.collection('Level 1_Area 3_Parameter A_System').get()
+        implementations = firestoreDB.collection('Level 1_Area 3_Parameter A_Implementation').get()
+        outcomes = firestoreDB.collection('Level 1_Area 3_Parameter A_Outcomes').get()
+        
+        dynamic_images = []
+
+        for system in systems:
+            value = system.to_dict()
+            dynamic_images.append({
+                'storage_file_url': value['storage_file_url'],
+                'uploadIn': value['uploadIn'],
+            })
+
+        for implementation in implementations:
+            value = implementation.to_dict()
+            dynamic_images.append({
+                'storage_file_url': value['storage_file_url'],
+                'uploadIn': value['uploadIn'],
+            })
+
+        for outcome in outcomes:
+            value = outcome.to_dict()
+            dynamic_images.append({
+                'storage_file_url': value['storage_file_url'],
+                'uploadIn': value['uploadIn'],
+            })
+
+        prs = Presentation()
+        prs.slide_width = Inches(8.51)
+        prs.slide_height = Inches(13.01)
+
+        #0 = title Slide, 1 = title and content, 3 = section header, etc
+        slide_layout = prs.slide_layouts[0]
+
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/front_page.png?alt=media&token=4a37d5e1-e270-40fd-a51b-33d99689fefb"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+
+        #FOR FRONT PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FRONT PAGE
+
+        #FOR 2ND PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%203%20PPT%20template%2Farea%203%20parameter%20A%202nd%20page.png?alt=media&token=5fd778f8-5ee7-4329-9be1-b82f4d552842"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 2ND PAGE
+
+        #FOR 3RD PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%203%20PPT%20template%2Farea%203%20parameter%20A%203rd%20page.png?alt=media&token=7a7b21a1-3969-4935-88e7-6aa89877e79c"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 3rd PAGE
+
+        #FOR 4TH PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%203%20PPT%20template%2Farea%203%20parameter%20A%204th%20page.png?alt=media&token=3a4e164b-f603-43b4-898e-6bc02fc3ee9c"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 4TH PAGE
+        
+        #FOR 5TH PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%203%20PPT%20template%2Farea%203%20parameter%20A%205th%20page.png?alt=media&token=529547f5-02c0-4353-b26f-152c850c5330"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 5TH PAGE
+
+        #FOR 6TH PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%203%20PPT%20template%2Farea%203%20parameter%20A%206th%20page.png?alt=media&token=bef5ae73-ff43-4ffb-aa41-4075f6b2ed69"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 6TH PAGE
+        
+        bulsu_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/BULSU_logo.png?alt=media&token=10fc51f4-2689-468b-b7c4-e331d86540c1"
+        response_bulsu = requests.get(bulsu_img_url)
+        image_data_bulsu = BytesIO(response_bulsu.content)
+
+        for images in dynamic_images:
+            value = images
+            slide = prs.slides.add_slide(slide_layout)
+
+            background = slide.background
+            fill = background.fill
+            fill.solid()
+            fill.fore_color.rgb = RGBColor(243, 241, 181)
+
+            shapes = slide.shapes
+            title_shape = shapes.title
+            title_shape.top = Inches(1)
+            title_shape.left = Inches(0.1)
+            title_shape.width = Inches(2)
+            title_shape.text = value['uploadIn']
+
+            #distance of the top edge
+            top = Inches(2.5)
+            #distance of the left edge
+            left = Inches(0.3)
+            height = Inches(5.5)
+            
+            img_url = value['storage_file_url']
+            response = requests.get(img_url)
+            image_data = BytesIO(response.content)
+
+            pic = slide.shapes.add_picture(image_data, left, top, height=height)
+            
+            bulsuLogo = slide.shapes.add_picture(image_data_bulsu, Inches(0.3), Inches(11), height=Inches(1.5))
+
+        prs.save('./ppt/level1_area3_parameterA.pptx')
+
+        tz = pytz.timezone('Asia/Hong_Kong')
+        now = datetime.now(tz)
+
+        fileName = "parameterA_"+str(time.time())+".pptx"
+        file_directory = "/ppt/level1/area3/parameterA/"+ fileName
+
+        #upload image
+        storage.child(file_directory).put('./ppt/level1_area3_parameterA.pptx')
+
+        doc_ref = firestoreDB.collection('generatelevel1_area3_parameterA').document()
+
+        doc_ref.set({
+            'storage_file_id': doc_ref.id,
+            'storage_file_url' : storage.child(file_directory).get_url(None),
+            'file_name': fileName,
+            'date': now,
+        })
+
+
+        return redirect('/level1/area3/parameterA')
+    else:
+        return redirect('/')
+
+#GENERATE AREA 3 PARAMETER B
+def generatelevel1_area3_parameterB(request):
+    if 'user_id' in request.session:
+        try:
+            os.remove('./ppt/level1_area3_parameterB.pptx')
+        except:
+            print("no file found")
+
+        systems = firestoreDB.collection('Level 1_Area 3_Parameter B_System').get()
+        implementations = firestoreDB.collection('Level 1_Area 3_Parameter B_Implementation').get()
+        outcomes = firestoreDB.collection('Level 1_Area 3_Parameter B_Outcomes').get()
+        
+        dynamic_images = []
+
+        for system in systems:
+            value = system.to_dict()
+            dynamic_images.append({
+                'storage_file_url': value['storage_file_url'],
+                'uploadIn': value['uploadIn'],
+            })
+
+        for implementation in implementations:
+            value = implementation.to_dict()
+            dynamic_images.append({
+                'storage_file_url': value['storage_file_url'],
+                'uploadIn': value['uploadIn'],
+            })
+
+        for outcome in outcomes:
+            value = outcome.to_dict()
+            dynamic_images.append({
+                'storage_file_url': value['storage_file_url'],
+                'uploadIn': value['uploadIn'],
+            })
+
+        prs = Presentation()
+        prs.slide_width = Inches(8.51)
+        prs.slide_height = Inches(13.01)
+
+        #0 = title Slide, 1 = title and content, 3 = section header, etc
+        slide_layout = prs.slide_layouts[0]
+
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/front_page.png?alt=media&token=4a37d5e1-e270-40fd-a51b-33d99689fefb"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+
+        #FOR FRONT PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FRONT PAGE
+
+        #FOR 2ND PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%203%20PPT%20template%2Farea%203%20parameter%20A%202nd%20page.png?alt=media&token=5fd778f8-5ee7-4329-9be1-b82f4d552842"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 2ND PAGE
+
+        #FOR 3RD PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%203%20PPT%20template%2FPARAMETER%20B%2Farea%203%20parameter%20B%203rd%20page.png?alt=media&token=ed9bdbc0-0193-42aa-8b9e-32f0d7e73128"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 3rd PAGE
+
+        #FOR 4TH PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%203%20PPT%20template%2FPARAMETER%20B%2Farea%203%20parameter%20B%204TH%20page.png?alt=media&token=c3137da0-108f-47cd-9e6f-d7e97a133c3d"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 4TH PAGE
+        
+        #FOR 5TH PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%203%20PPT%20template%2FPARAMETER%20B%2Farea%203%20parameter%20B%205TH%20page.png?alt=media&token=e2eef323-d954-4d71-b94f-3e4e5ad3d020"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 5TH PAGE
+
+        #FOR 6TH PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%203%20PPT%20template%2FPARAMETER%20B%2Farea%203%20parameter%20B%206TH%20page.png?alt=media&token=d845e22c-d1f6-4313-b166-1f13219e6426"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 6TH PAGE
+
+        #FOR 7TH PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%203%20PPT%20template%2FPARAMETER%20B%2Farea%203%20parameter%20B%207TH%20page.png?alt=media&token=02f08b23-6843-47a3-b56a-8555b07df4f3"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 7TH PAGE
+
+        #FOR 8TH PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%203%20PPT%20template%2FPARAMETER%20B%2Farea%203%20parameter%20B%208TH%20page.png?alt=media&token=677688c7-b921-4e35-af4e-b087feca723c"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 8TH PAGE
+        
+        bulsu_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/BULSU_logo.png?alt=media&token=10fc51f4-2689-468b-b7c4-e331d86540c1"
+        response_bulsu = requests.get(bulsu_img_url)
+        image_data_bulsu = BytesIO(response_bulsu.content)
+
+        for images in dynamic_images:
+            value = images
+            slide = prs.slides.add_slide(slide_layout)
+
+            background = slide.background
+            fill = background.fill
+            fill.solid()
+            fill.fore_color.rgb = RGBColor(243, 241, 181)
+
+            shapes = slide.shapes
+            title_shape = shapes.title
+            title_shape.top = Inches(1)
+            title_shape.left = Inches(0.1)
+            title_shape.width = Inches(2)
+            title_shape.text = value['uploadIn']
+
+            #distance of the top edge
+            top = Inches(2.5)
+            #distance of the left edge
+            left = Inches(0.3)
+            height = Inches(5.5)
+            
+            img_url = value['storage_file_url']
+            response = requests.get(img_url)
+            image_data = BytesIO(response.content)
+
+            pic = slide.shapes.add_picture(image_data, left, top, height=height)
+            
+            bulsuLogo = slide.shapes.add_picture(image_data_bulsu, Inches(0.3), Inches(11), height=Inches(1.5))
+
+        prs.save('./ppt/level1_area3_parameterB.pptx')
+
+        tz = pytz.timezone('Asia/Hong_Kong')
+        now = datetime.now(tz)
+
+        fileName = "parameterB_"+str(time.time())+".pptx"
+        file_directory = "/ppt/level1/area3/parameterB/"+ fileName
+
+        #upload image
+        storage.child(file_directory).put('./ppt/level1_area3_parameterB.pptx')
+
+        doc_ref = firestoreDB.collection('generatelevel1_area3_parameterB').document()
+
+        doc_ref.set({
+            'storage_file_id': doc_ref.id,
+            'storage_file_url' : storage.child(file_directory).get_url(None),
+            'file_name': fileName,
+            'date': now,
+        })
+
+
+        return redirect('/level1/area3/parameterB')
+    else:
+        return redirect('/')
+
+
+#GENERATE AREA 3 PARAMETER C
+def generatelevel1_area3_parameterC(request):
+    if 'user_id' in request.session:
+        try:
+            os.remove('./ppt/level1_area3_parameterC.pptx')
+        except:
+            print("no file found")
+
+        systems = firestoreDB.collection('Level 1_Area 3_Parameter C_System').get()
+        implementations = firestoreDB.collection('Level 1_Area 3_Parameter C_Implementation').get()
+        outcomes = firestoreDB.collection('Level 1_Area 3_Parameter C_Outcomes').get()
+        
+        dynamic_images = []
+
+        for system in systems:
+            value = system.to_dict()
+            dynamic_images.append({
+                'storage_file_url': value['storage_file_url'],
+                'uploadIn': value['uploadIn'],
+            })
+
+        for implementation in implementations:
+            value = implementation.to_dict()
+            dynamic_images.append({
+                'storage_file_url': value['storage_file_url'],
+                'uploadIn': value['uploadIn'],
+            })
+
+        for outcome in outcomes:
+            value = outcome.to_dict()
+            dynamic_images.append({
+                'storage_file_url': value['storage_file_url'],
+                'uploadIn': value['uploadIn'],
+            })
+
+        prs = Presentation()
+        prs.slide_width = Inches(8.51)
+        prs.slide_height = Inches(13.01)
+
+        #0 = title Slide, 1 = title and content, 3 = section header, etc
+        slide_layout = prs.slide_layouts[0]
+
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/front_page.png?alt=media&token=4a37d5e1-e270-40fd-a51b-33d99689fefb"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+
+        #FOR FRONT PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FRONT PAGE
+
+        #FOR 2ND PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%203%20PPT%20template%2Farea%203%20parameter%20A%202nd%20page.png?alt=media&token=5fd778f8-5ee7-4329-9be1-b82f4d552842"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 2ND PAGE
+
+        #FOR 3RD PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%203%20PPT%20template%2FPARAMETER%20C%2Farea%203%20parameter%20C%203rd%20page.png?alt=media&token=0533da7b-3f9e-462f-89fd-7fccbe002fee"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 3rd PAGE
+
+        #FOR 4TH PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%203%20PPT%20template%2FPARAMETER%20C%2Farea%203%20parameter%20C%204TH%20page.png?alt=media&token=74ae170d-e64a-438d-8ffc-f1ad39f8d622"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 4TH PAGE
+        
+        #FOR 5TH PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%203%20PPT%20template%2FPARAMETER%20C%2Farea%203%20parameter%20C%205TH%20page.png?alt=media&token=dc27c4ab-464b-473d-82ed-5f801825f92f"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 5TH PAGE
+        
+        bulsu_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/BULSU_logo.png?alt=media&token=10fc51f4-2689-468b-b7c4-e331d86540c1"
+        response_bulsu = requests.get(bulsu_img_url)
+        image_data_bulsu = BytesIO(response_bulsu.content)
+
+        for images in dynamic_images:
+            value = images
+            slide = prs.slides.add_slide(slide_layout)
+
+            background = slide.background
+            fill = background.fill
+            fill.solid()
+            fill.fore_color.rgb = RGBColor(243, 241, 181)
+
+            shapes = slide.shapes
+            title_shape = shapes.title
+            title_shape.top = Inches(1)
+            title_shape.left = Inches(0.1)
+            title_shape.width = Inches(2)
+            title_shape.text = value['uploadIn']
+
+            #distance of the top edge
+            top = Inches(2.5)
+            #distance of the left edge
+            left = Inches(0.3)
+            height = Inches(5.5)
+            
+            img_url = value['storage_file_url']
+            response = requests.get(img_url)
+            image_data = BytesIO(response.content)
+
+            pic = slide.shapes.add_picture(image_data, left, top, height=height)
+            
+            bulsuLogo = slide.shapes.add_picture(image_data_bulsu, Inches(0.3), Inches(11), height=Inches(1.5))
+
+        prs.save('./ppt/level1_area3_parameterC.pptx')
+
+        tz = pytz.timezone('Asia/Hong_Kong')
+        now = datetime.now(tz)
+
+        fileName = "parameterC_"+str(time.time())+".pptx"
+        file_directory = "/ppt/level1/area3/parameterC/"+ fileName
+
+        #upload image
+        storage.child(file_directory).put('./ppt/level1_area3_parameterC.pptx')
+
+        doc_ref = firestoreDB.collection('generatelevel1_area3_parameterC').document()
+
+        doc_ref.set({
+            'storage_file_id': doc_ref.id,
+            'storage_file_url' : storage.child(file_directory).get_url(None),
+            'file_name': fileName,
+            'date': now,
+        })
+
+
+        return redirect('/level1/area3/parameterC')
+    else:
+        return redirect('/')
+
+#GENERATE AREA 3 PARAMETER D
+def generatelevel1_area3_parameterD(request):
+    if 'user_id' in request.session:
+        try:
+            os.remove('./ppt/level1_area3_parameterD.pptx')
+        except:
+            print("no file found")
+
+        systems = firestoreDB.collection('Level 1_Area 3_Parameter D_System').get()
+        implementations = firestoreDB.collection('Level 1_Area 3_Parameter D_Implementation').get()
+        outcomes = firestoreDB.collection('Level 1_Area 3_Parameter D_Outcomes').get()
+        
+        dynamic_images = []
+
+        for system in systems:
+            value = system.to_dict()
+            dynamic_images.append({
+                'storage_file_url': value['storage_file_url'],
+                'uploadIn': value['uploadIn'],
+            })
+
+        for implementation in implementations:
+            value = implementation.to_dict()
+            dynamic_images.append({
+                'storage_file_url': value['storage_file_url'],
+                'uploadIn': value['uploadIn'],
+            })
+
+        for outcome in outcomes:
+            value = outcome.to_dict()
+            dynamic_images.append({
+                'storage_file_url': value['storage_file_url'],
+                'uploadIn': value['uploadIn'],
+            })
+
+        prs = Presentation()
+        prs.slide_width = Inches(8.51)
+        prs.slide_height = Inches(13.01)
+
+        #0 = title Slide, 1 = title and content, 3 = section header, etc
+        slide_layout = prs.slide_layouts[0]
+
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/front_page.png?alt=media&token=4a37d5e1-e270-40fd-a51b-33d99689fefb"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+
+        #FOR FRONT PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FRONT PAGE
+
+        #FOR 2ND PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%203%20PPT%20template%2Farea%203%20parameter%20A%202nd%20page.png?alt=media&token=5fd778f8-5ee7-4329-9be1-b82f4d552842"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 2ND PAGE
+
+        #FOR 3RD PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%203%20PPT%20template%2FPARAMETER%20D%2Farea%203%20parameter%20D%203rd%20page.png?alt=media&token=04a25653-0ce5-464f-b8c8-c7edddfc62f5"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 3rd PAGE
+
+        #FOR 4TH PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%203%20PPT%20template%2FPARAMETER%20D%2Farea%203%20parameter%20D%204TH%20page.png?alt=media&token=857bd4a7-305c-402f-ab01-dc80d9619d22"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 4TH PAGE
+        
+        #FOR 5TH PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%203%20PPT%20template%2FPARAMETER%20D%2Farea%203%20parameter%20D%205TH%20page.png?alt=media&token=5465a55a-0bdd-4fb0-8bb1-5bf47e6b859c"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 5TH PAGE
+        
+        bulsu_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/BULSU_logo.png?alt=media&token=10fc51f4-2689-468b-b7c4-e331d86540c1"
+        response_bulsu = requests.get(bulsu_img_url)
+        image_data_bulsu = BytesIO(response_bulsu.content)
+
+        for images in dynamic_images:
+            value = images
+            slide = prs.slides.add_slide(slide_layout)
+
+            background = slide.background
+            fill = background.fill
+            fill.solid()
+            fill.fore_color.rgb = RGBColor(243, 241, 181)
+
+            shapes = slide.shapes
+            title_shape = shapes.title
+            title_shape.top = Inches(1)
+            title_shape.left = Inches(0.1)
+            title_shape.width = Inches(2)
+            title_shape.text = value['uploadIn']
+
+            #distance of the top edge
+            top = Inches(2.5)
+            #distance of the left edge
+            left = Inches(0.3)
+            height = Inches(5.5)
+            
+            img_url = value['storage_file_url']
+            response = requests.get(img_url)
+            image_data = BytesIO(response.content)
+
+            pic = slide.shapes.add_picture(image_data, left, top, height=height)
+            
+            bulsuLogo = slide.shapes.add_picture(image_data_bulsu, Inches(0.3), Inches(11), height=Inches(1.5))
+
+        prs.save('./ppt/level1_area3_parameterD.pptx')
+
+        tz = pytz.timezone('Asia/Hong_Kong')
+        now = datetime.now(tz)
+
+        fileName = "parameterD_"+str(time.time())+".pptx"
+        file_directory = "/ppt/level1/area3/parameterD/"+ fileName
+
+        #upload image
+        storage.child(file_directory).put('./ppt/level1_area3_parameterD.pptx')
+
+        doc_ref = firestoreDB.collection('generatelevel1_area3_parameterD').document()
+
+        doc_ref.set({
+            'storage_file_id': doc_ref.id,
+            'storage_file_url' : storage.child(file_directory).get_url(None),
+            'file_name': fileName,
+            'date': now,
+        })
+
+
+        return redirect('/level1/area3/parameterD')
+    else:
+        return redirect('/')
+
+
+#GENERATE AREA 3 PARAMETER E
+def generatelevel1_area3_parameterE(request):
+    if 'user_id' in request.session:
+        try:
+            os.remove('./ppt/level1_area3_parameterE.pptx')
+        except:
+            print("no file found")
+
+        systems = firestoreDB.collection('Level 1_Area 3_Parameter E_System').get()
+        implementations = firestoreDB.collection('Level 1_Area 3_Parameter E_Implementation').get()
+        outcomes = firestoreDB.collection('Level 1_Area 3_Parameter E_Outcomes').get()
+        
+        dynamic_images = []
+
+        for system in systems:
+            value = system.to_dict()
+            dynamic_images.append({
+                'storage_file_url': value['storage_file_url'],
+                'uploadIn': value['uploadIn'],
+            })
+
+        for implementation in implementations:
+            value = implementation.to_dict()
+            dynamic_images.append({
+                'storage_file_url': value['storage_file_url'],
+                'uploadIn': value['uploadIn'],
+            })
+
+        for outcome in outcomes:
+            value = outcome.to_dict()
+            dynamic_images.append({
+                'storage_file_url': value['storage_file_url'],
+                'uploadIn': value['uploadIn'],
+            })
+
+        prs = Presentation()
+        prs.slide_width = Inches(8.51)
+        prs.slide_height = Inches(13.01)
+
+        #0 = title Slide, 1 = title and content, 3 = section header, etc
+        slide_layout = prs.slide_layouts[0]
+
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/front_page.png?alt=media&token=4a37d5e1-e270-40fd-a51b-33d99689fefb"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+
+        #FOR FRONT PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FRONT PAGE
+
+        #FOR 2ND PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%201%20parameter%20A.%20Vision%20misionpng.png?alt=media&token=a1260394-b05f-4eec-94cb-9723077a17cf"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 2ND PAGE
+
+        #FOR 3RD PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%203%20PPT%20template%2FPARAMETER%20E%2Farea%203%20parameter%20E%203rd%20page.png?alt=media&token=fcd10dd3-6536-4164-b127-83a46508a37f"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 3rd PAGE
+
+        #FOR 4TH PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%203%20PPT%20template%2FPARAMETER%20E%2Farea%203%20parameter%20E%204TH%20page.png?alt=media&token=0c3c0970-2374-4edb-86b0-e49ef4592776"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 4TH PAGE
+           
+        bulsu_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/BULSU_logo.png?alt=media&token=10fc51f4-2689-468b-b7c4-e331d86540c1"
+        response_bulsu = requests.get(bulsu_img_url)
+        image_data_bulsu = BytesIO(response_bulsu.content)
+
+        for images in dynamic_images:
+            value = images
+            slide = prs.slides.add_slide(slide_layout)
+
+            background = slide.background
+            fill = background.fill
+            fill.solid()
+            fill.fore_color.rgb = RGBColor(243, 241, 181)
+
+            shapes = slide.shapes
+            title_shape = shapes.title
+            title_shape.top = Inches(1)
+            title_shape.left = Inches(0.1)
+            title_shape.width = Inches(2)
+            title_shape.text = value['uploadIn']
+
+            #distance of the top edge
+            top = Inches(2.5)
+            #distance of the left edge
+            left = Inches(0.3)
+            height = Inches(5.5)
+            
+            img_url = value['storage_file_url']
+            response = requests.get(img_url)
+            image_data = BytesIO(response.content)
+
+            pic = slide.shapes.add_picture(image_data, left, top, height=height)
+            
+            bulsuLogo = slide.shapes.add_picture(image_data_bulsu, Inches(0.3), Inches(11), height=Inches(1.5))
+
+        prs.save('./ppt/level1_area3_parameterE.pptx')
+
+        tz = pytz.timezone('Asia/Hong_Kong')
+        now = datetime.now(tz)
+
+        fileName = "parameterE_"+str(time.time())+".pptx"
+        file_directory = "/ppt/level1/area3/parameterE/"+ fileName
+
+        #upload image
+        storage.child(file_directory).put('./ppt/level1_area3_parameterE.pptx')
+
+        doc_ref = firestoreDB.collection('generatelevel1_area3_parameterE').document()
+
+        doc_ref.set({
+            'storage_file_id': doc_ref.id,
+            'storage_file_url' : storage.child(file_directory).get_url(None),
+            'file_name': fileName,
+            'date': now,
+        })
+
+
+        return redirect('/level1/area3/parameterE')
+    else:
+        return redirect('/')
+
+#GENERATE AREA 3 PARAMETER F
+def generatelevel1_area3_parameterF(request):
+    if 'user_id' in request.session:
+        try:
+            os.remove('./ppt/level1_area3_parameterF.pptx')
+        except:
+            print("no file found")
+
+        systems = firestoreDB.collection('Level 1_Area 3_Parameter F_System').get()
+        implementations = firestoreDB.collection('Level 1_Area 3_Parameter F_Implementation').get()
+        outcomes = firestoreDB.collection('Level 1_Area 3_Parameter F_Outcomes').get()
+        
+        dynamic_images = []
+
+        for system in systems:
+            value = system.to_dict()
+            dynamic_images.append({
+                'storage_file_url': value['storage_file_url'],
+                'uploadIn': value['uploadIn'],
+            })
+
+        for implementation in implementations:
+            value = implementation.to_dict()
+            dynamic_images.append({
+                'storage_file_url': value['storage_file_url'],
+                'uploadIn': value['uploadIn'],
+            })
+
+        for outcome in outcomes:
+            value = outcome.to_dict()
+            dynamic_images.append({
+                'storage_file_url': value['storage_file_url'],
+                'uploadIn': value['uploadIn'],
+            })
+
+        prs = Presentation()
+        prs.slide_width = Inches(8.51)
+        prs.slide_height = Inches(13.01)
+
+        #0 = title Slide, 1 = title and content, 3 = section header, etc
+        slide_layout = prs.slide_layouts[0]
+
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/front_page.png?alt=media&token=4a37d5e1-e270-40fd-a51b-33d99689fefb"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+
+        #FOR FRONT PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FRONT PAGE
+
+        #FOR 2ND PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%201%20parameter%20A.%20Vision%20misionpng.png?alt=media&token=a1260394-b05f-4eec-94cb-9723077a17cf"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 2ND PAGE
+
+        #FOR 3RD PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%203%20PPT%20template%2FPARAMETER%20F%2Farea%203%20parameter%20F%203rd%20page.png?alt=media&token=490e1a35-12dd-4f83-8426-a258cdaeca2d"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 3rd PAGE
+
+        #FOR 4TH PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%203%20PPT%20template%2FPARAMETER%20F%2Farea%203%20parameter%20F%204TH%20page.png?alt=media&token=96727aab-5a28-4a85-98e1-6a803fd2bb59"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 4TH PAGE
+
+        #FOR 5TH PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%203%20PPT%20template%2FPARAMETER%20F%2Farea%203%20parameter%20F%205TH%20page.png?alt=media&token=422a581c-dca1-410c-979b-622b2e624f91"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 5TH PAGE
+
+        #FOR 6TH PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%203%20PPT%20template%2FPARAMETER%20F%2Farea%203%20parameter%20F%206TH%20page.png?alt=media&token=3a82ea59-a71e-48fa-9773-bff42c018b83"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 6TH PAGE
+
+        #FOR 7TH PAGE
+        #add front page slide
+        slide = prs.slides.add_slide(slide_layout)
+        #change background with an image of the slide …
+        left = top = 0
+        front_page_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/area%203%20PPT%20template%2FPARAMETER%20F%2Farea%203%20parameter%20F%207TH%20page.png?alt=media&token=c573ec73-cb50-4fef-a116-890fe5456503"
+        response_front_page = requests.get(front_page_img_url)
+        image_data_front_page = BytesIO(response_front_page.content)
+        front_page_pic = slide.shapes.add_picture(image_data_front_page, left-0.1*prs.slide_width, top, height = prs.slide_height)
+        background = slide.background
+        fill = background.fill
+        fill.solid()
+        fill.fore_color.rgb = RGBColor(204, 125, 95)
+        #END FOR 7TH PAGE
+           
+        bulsu_img_url = "https://firebasestorage.googleapis.com/v0/b/accreditation-management.appspot.com/o/BULSU_logo.png?alt=media&token=10fc51f4-2689-468b-b7c4-e331d86540c1"
+        response_bulsu = requests.get(bulsu_img_url)
+        image_data_bulsu = BytesIO(response_bulsu.content)
+
+        for images in dynamic_images:
+            value = images
+            slide = prs.slides.add_slide(slide_layout)
+
+            background = slide.background
+            fill = background.fill
+            fill.solid()
+            fill.fore_color.rgb = RGBColor(243, 241, 181)
+
+            shapes = slide.shapes
+            title_shape = shapes.title
+            title_shape.top = Inches(1)
+            title_shape.left = Inches(0.1)
+            title_shape.width = Inches(2)
+            title_shape.text = value['uploadIn']
+
+            #distance of the top edge
+            top = Inches(2.5)
+            #distance of the left edge
+            left = Inches(0.3)
+            height = Inches(5.5)
+            
+            img_url = value['storage_file_url']
+            response = requests.get(img_url)
+            image_data = BytesIO(response.content)
+
+            pic = slide.shapes.add_picture(image_data, left, top, height=height)
+            
+            bulsuLogo = slide.shapes.add_picture(image_data_bulsu, Inches(0.3), Inches(11), height=Inches(1.5))
+
+        prs.save('./ppt/level1_area3_parameterF.pptx')
+
+        tz = pytz.timezone('Asia/Hong_Kong')
+        now = datetime.now(tz)
+
+        fileName = "parameterF_"+str(time.time())+".pptx"
+        file_directory = "/ppt/level1/area3/parameterF/"+ fileName
+
+        #upload image
+        storage.child(file_directory).put('./ppt/level1_area3_parameterF.pptx')
+
+        doc_ref = firestoreDB.collection('generatelevel1_area3_parameterF').document()
+
+        doc_ref.set({
+            'storage_file_id': doc_ref.id,
+            'storage_file_url' : storage.child(file_directory).get_url(None),
+            'file_name': fileName,
+            'date': now,
+        })
+
+
+        return redirect('/level1/area3/parameterF')
     else:
         return redirect('/')
