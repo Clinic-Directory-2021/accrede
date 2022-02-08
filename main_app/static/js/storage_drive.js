@@ -140,6 +140,278 @@ function generateFileArea3ParameterF(){
 }
 
 
+function generateFileArea4ImplementationParameterA(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area4_implementation_parameterA";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
+function generateFileArea4ImplementationParameterB(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area4_implementation_parameterB";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
+function generateFileArea4ImplementationParameterC(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area4_implementation_parameterC";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
+
+function generateFileArea4ImplementationParameterD(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area4_implementation_parameterD";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
+function generateFileArea4ImplementationParameterE(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area4_implementation_parameterE";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
+function generateFileArea4OutcomesParameterA(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area4_outcomes_parameterA";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
+function generateFileArea4OutcomesParameterB(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area4_outcomes_parameterB";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
+function generateFileArea4OutcomesParameterC(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area4_outcomes_parameterC";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
+function generateFileArea4OutcomesParameterD(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area4_outcomes_parameterD";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
+function generateFileArea4OutcomesParameterE(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area4_outcomes_parameterE";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
+function generateFileArea4SystemParameterA(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area4_system_parameterA";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
+function generateFileArea4SystemParameterB(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area4_system_parameterB";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
+function generateFileArea4SystemParameterC(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area4_system_parameterC";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
+function generateFileArea4SystemParameterD(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area4_system_parameterD";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
+function generateFileArea4SystemParameterE(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area4_system_parameterE";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
+
 function generateFileArea2ImplementationParameterA(){
   Swal.fire({
     title: 'Are you sure?',

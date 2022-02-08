@@ -174,4 +174,26 @@ urlpatterns = [
     path('generatelevel1_area3_parameterD/', views.generatelevel1_area3_parameterD, name="generatelevel1_area3_parameterD"),
     path('generatelevel1_area3_parameterE/', views.generatelevel1_area3_parameterE, name="generatelevel1_area3_parameterE"),
     path('generatelevel1_area3_parameterF/', views.generatelevel1_area3_parameterF, name="generatelevel1_area3_parameterF"),
+
+    #area 4 IMPLEMENTATION
+    path('generatelevel1_area4_implementation_parameterA/', views.generatelevel1_area4_implementation_parameterA, name="generatelevel1_area4_implementation_parameterA"),
+    path('generatelevel1_area4_implementation_parameterB/', views.generatelevel1_area4_implementation_parameterB, name="generatelevel1_area4_implementation_parameterB"),
+    path('generatelevel1_area4_implementation_parameterC/', views.generatelevel1_area4_implementation_parameterC, name="generatelevel1_area4_implementation_parameterC"),
+    path('generatelevel1_area4_implementation_parameterD/', views.generatelevel1_area4_implementation_parameterD, name="generatelevel1_area4_implementation_parameterD"),
+    path('generatelevel1_area4_implementation_parameterE/', views.generatelevel1_area4_implementation_parameterE, name="generatelevel1_area4_implementation_parameterE"),
+
+    #area 4 OUTCOMES
+    path('generatelevel1_area4_outcomes_parameterA/', views.generatelevel1_area4_outcomes_parameterA, name="generatelevel1_area4_outcomes_parameterA"),
+    path('generatelevel1_area4_outcomes_parameterB/', views.generatelevel1_area4_outcomes_parameterB, name="generatelevel1_area4_outcomes_parameterB"),
+    path('generatelevel1_area4_outcomes_parameterC/', views.generatelevel1_area4_outcomes_parameterC, name="generatelevel1_area4_outcomes_parameterC"),
+    path('generatelevel1_area4_outcomes_parameterD/', views.generatelevel1_area4_outcomes_parameterD, name="generatelevel1_area4_outcomes_parameterD"),
+    path('generatelevel1_area4_outcomes_parameterE/', views.generatelevel1_area4_outcomes_parameterE, name="generatelevel1_area4_outcomes_parameterE"),
+
+    #area 4 SYSTEM
+    path('generatelevel1_area4_system_parameterA/', views.generatelevel1_area4_system_parameterA, name="generatelevel1_area4_system_parameterA"),
+    path('generatelevel1_area4_system_parameterB/', views.generatelevel1_area4_system_parameterB, name="generatelevel1_area4_system_parameterB"),
+    path('generatelevel1_area4_system_parameterC/', views.generatelevel1_area4_system_parameterC, name="generatelevel1_area4_system_parameterC"),
+    path('generatelevel1_area4_system_parameterD/', views.generatelevel1_area4_system_parameterD, name="generatelevel1_area4_system_parameterD"),
+    path('generatelevel1_area4_system_parameterE/', views.generatelevel1_area4_system_parameterE, name="generatelevel1_area4_system_parameterE"),
+
 ]
