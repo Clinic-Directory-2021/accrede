@@ -26,14 +26,14 @@
 </style>
 <body style="display: flex;">
     <ul class="sidenav-m3">
-        <div class="sidebar-header" style="background-color: #ADCE74;">
+        <div class="sidebar-header" style="background-color: #ADCE74; height: 200px;">
             <div class="avatar">
                 <img data-role="gravatar" data-email="sergey@pimenov.com.ua">
             </div>
-            <span class="title">Admin</span>
+            <span class="title">Hello, {{ request.session.firstname }} {{ request.session.middlename }} {{ request.session.lastname }}</span>
         </div>
         <li class="active"><a href="{%  url 'homepage' %}"><span class="mif-home icon"></span>Home</a></li>
-        <li class="active"><a href="{%  url 'homepage' %}"><span class="mif-home icon"></span>File Manager</a></li>
+        <li class="active"><a href="{%  url 'homepage' %}"><span class="mif-folder icon"></span>File Manager</a></li>
         <li class="active"><a href="{% url 'logout' %}"><span class="mif-exit icon"></span>Logout</a></li>
     </ul>
     {% block content %}

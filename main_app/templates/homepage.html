@@ -1,4 +1,10 @@
+{% if request.session.user_level == 'Admin' %}
 {% include 'superadmin_base.html' %}
+{% elif request.session.user_level == 'User' %}
+{% include 'faculty_base.html' %}
+{% else %}
+{% include 'accreditor_base.html' %}
+{% endif %}
 {% block content %}
 <br>
 <br>

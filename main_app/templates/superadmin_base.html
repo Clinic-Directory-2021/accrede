@@ -28,11 +28,11 @@
 </style>
 <body style="display: flex;">
     <ul class="sidenav-m3">
-        <div class="sidebar-header" style="background-color: #ADCE74;">
+        <div class="sidebar-header" style="background-color: #ADCE74; height: 200px;">
             <div class="avatar">
                 <img  src="../static/images/logo.jpg">
             </div>
-            <span class="title">Admin</span>
+            <span class="title">Hello, {{ request.session.firstname }} {{ request.session.middlename }} {{ request.session.lastname }}</span>
         </div>
         <li class="active"><a href="{%  url 'homepage' %}"><span class="mif-home icon"></span>Home</a></li>
         <li class="stick-left">
@@ -43,24 +43,9 @@
                 <li><a href="{%  url 'recycle_bin' %}"><span class="mif-bin icon"></span> Recycle Bin</a></li>
             </ul>
         </li>
-        <li class="active"><a href="#"><span class="mif-document-file-pdf icon"></span>Templates</a></li>
-        <li class="stick-left">
-            <a class="dropdown-toggle" href="#"><span class="mif-assignment icon"></span>Subjects Deliverable</a>
-            <ul class="d-menu" data-role="dropdown" style="display: none; background-color: #ADCE74;">
-                <li><a href=""><span class="mif-folder icon"></span> IT Department</a></li>
-                <li><a href=""><span class="mif-folder icon"></span> HM and TM Department</a></li>
-                <li><a href=""><span class="mif-folder icon"></span> Education Department</a></li>
-            </ul>
-        </li>
-        <li class="stick-left">
-            <a class="dropdown-toggle" href="#"><span class="mif-list icon"></span>Document Checklist</a>
-            <ul class="d-menu" data-role="dropdown" style="display: none; background-color: #ADCE74;">
-                <li><a href=""><span class="mif-folder icon"></span> IT Department</a></li>
-                <li><a href=""><span class="mif-folder icon"></span> HM and TM Department</a></li>
-                <li><a href=""><span class="mif-folder icon"></span> Education Department</a></li>
-            </ul>
-        </li>
+        <li class="active"><a href="{% url 'todo_checklist' %}"><span class="mif-pencil icon"></span>TODO CHecklist</a></li>
         <li class="active"><a href="{% url 'manage_accounts' %}"><span class="mif-user-plus icon"></span>Manage Accounts</a></li>
+        <li class="active"><a href="{% url 'feedbacks' %}"><span class="mif-feed3 icon"></span>Feedbacks</a></li>
         <li class="active"><a href="{% url 'logout' %}"><span class="mif-exit icon"></span>Logout</a></li>
     </ul>
 

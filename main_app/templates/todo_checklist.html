@@ -1,4 +1,8 @@
+{% if request.session.user_level == 'Admin' %}
 {% include 'superadmin_base.html' %}
+{% elif request.session.user_level == 'User' %}
+{% include 'faculty_base.html' %}
+{% endif %}
 {% block content %}
 <br>
 <br>
@@ -7,7 +11,7 @@
     <header class="h-20" style="width: 90vw; height: 67px; text-align: center; background-color: #61B15A;">
         <h1>Accreditation Management System</h1>
     </header>
-    <h1 class="m-5">Department Name</h1>
+    <h1 class="m-5">TODO Checklist</h1>
     
     <div class="p-20">
         {% csrf_token %}
@@ -44,51 +48,34 @@
             
        
         <br>
-        <button class="button primary" onclick="Metro.dialog.open('#add_account')">Add Account</button>
+        <button class="button primary" onclick="Metro.dialog.open('#add_account')">Add Task</button>
         <br>
         <br>
-        <table class="table striped" data-role="table" data-rows-steps="5, 10" data-rows="5">
+        <table class="table striped" data-role="table" data-rows-steps="5, 10" data-rows="5" data-check="true">
             <thead>
                 <tr>
-                    <th  class="sortable-column sort-asc">Activity Status</th>
-                    <th  class="sortable-column sort-asc">Access Rights</th>
-                    <th class="sortable-column sort-asc">Name</th>
-                    <th  class="sortable-column sort-asc">Email</th>
-                    <th class="sortable-column sort-asc">Contact No.</th>
-                    <th class="sortable-column sort-asc">Address</th>
-                    <th class="sortable-column sort-asc">User Level</th>
-                    <th class="sortable-column sort-asc">Edit</th>
+                    <!-- <th class="check-cell">
+                        <label class="checkbox table-service-check-all style2 transition-on">
+                            <input type="checkbox" data-role="checkbox" class="" data-style="2" data-role-checkbox="true">
+                            <span class="check"></span><span class="caption"></span>
+                        </label>
+                    </th> -->
+                    <th  class="sortable-column sort-asc">Task Title</th>
+                    <th  class="sortable-column sort-asc">Actions</th>
                 </tr>
                 </thead>
                 <tbody>
                 <!-- <div class="account_data_modal"> -->
-                    {% for user in user_data %}
                     <tr>
-                        <td>{{user.active_status}}<s/td>
-                        <td class="info">{{user.access_rights}}</td>
-                        <td>{{user.firstname}} {{user.middlename}} {{user.lastname}}</td>
-                        <td>{{user.email}}</td>
-                        <td class="info">{{user.contact}}</td>
-                        <td>{{user.address}}</td>
-                        <td>{{user.user_level}}</td>
-                        <td><button class="button success" onclick="Metro.dialog.open('#edit_account'), editModal('{{user.user_id}}','{{user.firstname}}','{{user.middlename}}','{{user.lastname}}','{{user.email}}','{{user.contact}}','{{user.address}}')">Edit</button></td>
+                        <!-- <td class="check-cell">
+                            <label class="checkbox table-service-check style2 transition-on"><input type="checkbox" data-style="2" data-role="checkbox" name="table_row_check[]" value="1" class="" data-role-checkbox="true">
+                                <span class="check"></span>
+                                <span class="caption"></span>
+                            </label>
+                        </td> -->
+                        <td>Task Title</td>
+                        <td><button class="button success w-25" style="margin: 10px;" onclick="Metro.dialog.open('#edit_account')">Edit</button><button class="button alert w-25" onclick="Metro.dialog.open('#edit_account')">Delete</button></td>
                     </tr>
-                
-                    {% endfor %}
-                        <!-- <tr>
-                            <td>Active Now</td>
-                            <td class="info">???</td>
-                            <td>Kenneth Galvez</td>
-                            <td>sample@gmail.com</td>
-                            <td>zxayhcnsauqfasd(Encrypted - SHA256)</td>
-                            <td class="info">09293006635</td>
-                            <td>Marilao, Bulacan</td>
-                            <td>Administrator</td>
-                            <td><Button class="button success" >Edit</Button></td>
-                        </tr> -->
-                    
-                 
-                <!-- </div> -->
             </tbody>
         </table>
     </div>

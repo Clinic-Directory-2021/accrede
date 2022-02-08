@@ -70,9 +70,25 @@ def login_validation(request):
             user = auth_pyrebase.sign_in_with_email_and_password(email, password)
 
             request.session['user_id'] = user['localId']
-
             request.session['user_email'] = email
 
+            it_department_accounts = firestoreDB.collection(u'it_department_accounts').document(str(user['localId']))
+            hrm_department_accounts = firestoreDB.collection(u'hrm_department_accounts').document(str(user['localId']))
+            it_department_doc = it_department_accounts.get()
+            hrm_department_doc = hrm_department_accounts.get()
+            if it_department_doc.exists:
+                request.session['user_level'] = it_department_doc.to_dict()['user_level']
+                request.session['middlename'] = it_department_doc.to_dict()['middlename']
+                request.session['firstname'] = it_department_doc.to_dict()['firstname']
+                request.session['lastname'] = it_department_doc.to_dict()['lastname']
+            else:
+                if hrm_department_doc.exists:
+                    request.session['user_level'] = hrm_department_doc.to_dict()['user_level']
+                    request.session['middlename'] = it_department_doc.to_dict()['middlename']
+                    request.session['firstname'] = it_department_doc.to_dict()['firstname']
+                    request.session['lastname'] = it_department_doc.to_dict()['lastname']
+                else:
+                    print('no document like this')
             return HttpResponse('Success!')
         except:
             return HttpResponse('Invalid Email or Password!')    
@@ -6261,3 +6277,8 @@ def generatelevel1_area3_parameterF(request):
         return redirect('/level1/area3/parameterF')
     else:
         return redirect('/')
+
+def feedbacks(request):
+    return render(request,'feedback.html')
+def todo_checklist(request):
+    return render(request,'todo_checklist.html')
