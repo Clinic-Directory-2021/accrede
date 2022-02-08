@@ -12,29 +12,19 @@
                 <tr>
                     <th  class="sortable-column sort-asc">#</th>
                     <th  class="sortable-column sort-asc">Name</th>
-                    <th class="sortable-column sort-asc">Feedback</th>
+                    <th class="sortable-column sort-asc">Feedback Content</th>
                     <th  class="sortable-column sort-asc">Date</th>
                 </tr>
                 </thead>
                 <tbody>
-                <!-- <div class="account_data_modal"> -->
-                    <!-- <tr>
-                        <td>{{user.active_status}}<s/td>
-                        <td class="info">{{user.access_rights}}</td>
-                        <td>{{user.firstname}} {{user.middlename}} {{user.lastname}}</td>
-                        <td>{{user.email}}</td>
-                        <td class="info">{{user.contact}}</td>
-                        <td>{{user.address}}</td>
-                        <td>{{user.user_level}}</td>
-                        <td><button class="button success" onclick="Metro.dialog.open('#edit_account'), editModal('{{user.user_id}}','{{user.firstname}}','{{user.middlename}}','{{user.lastname}}','{{user.email}}','{{user.contact}}','{{user.address}}')">Edit</button></td>
-                    </tr> -->
-                
+                        {% for doc in feedbacks %}
                         <tr>
-                            <td>1</td>
-                            <td class="info">Juan Dela Cruz</td>
-                            <td>Sample Feedback 1</td>
-                            <td>January 1, 2020</td>
+                            <td>{{forloop.counter}}</td>
+                            <td class="info" >{{doc.accreditor_name}}</td>
+                            <td>{{doc.content}}</td>
+                            <td>{{doc.date_created}}</td>
                         </tr>
+                        {% endfor %}
                     
                  
                 <!-- </div> -->

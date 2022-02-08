@@ -28,14 +28,36 @@
     <ul class="sidenav-m3">
         <div class="sidebar-header" style="background-color: #ADCE74; height: 200px;">
             <div class="avatar">
-                <img data-role="gravatar" data-email="sergey@pimenov.com.ua">
+                <img src="../static/images/logo.jpg">
             </div>
             <span class="title">Hello, {{ request.session.firstname }} {{ request.session.middlename }} {{ request.session.lastname }}</span>
         </div>
         <li class="active"><a href="{%  url 'homepage' %}"><span class="mif-home icon"></span>Home</a></li>
         <li class="active"><a href="{%  url 'homepage' %}"><span class="mif-folder icon"></span>File Manager</a></li>
+        <li class="active"><a href="#" onclick="Metro.dialog.open('#demoDialog1')"><span class="mif-chat-bubble icon"></span>Create Feedback</a></li>
         <li class="active"><a href="{% url 'logout' %}"><span class="mif-exit icon"></span>Logout</a></li>
     </ul>
+
+    <div class="dialog w-25 h-50" data-role="dialog" id="demoDialog1">
+        <div class="dialog-title">Create your Feedback</div>
+        <div class="dialog-content h-100" style="overflow: auto;">
+            <p class="text">To: Admin</p>
+            <p>From: Mr/Ms/Mrs. {{ request.session.firstname }} {{ request.session.lastname }}</p>
+            <br>
+            <textarea class="h-75"  data-role="textarea" data-prepend="<span class='mif-leanpub'></span>" id="content"></textarea>
+        </div>
+        <div class="dialog-actions">
+            <button class="button js-dialog-close">Cancel</button>
+            <button class="button primary js-dialog-close" onclick="send_feedback()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        function send_feedback(){
+            var content = $('#content').val();
+            window.location.href = "../send_feedback?content=" + content;
+        }
+    </script>
     {% block content %}
     {% endblock %}
 

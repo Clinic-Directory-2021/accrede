@@ -1,3 +1,4 @@
+import calendar
 from sys import implementation
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
@@ -6279,6 +6280,19 @@ def generatelevel1_area3_parameterF(request):
         return redirect('/')
 
 def feedbacks(request):
-    return render(request,'feedback.html')
+    feedbacks = firestoreDB.collection(u'feedbacks').get()
+    return render(request,'feedback.html',{"feedbacks":[doc.to_dict() for doc in feedbacks]})
 def todo_checklist(request):
     return render(request,'todo_checklist.html')
+def send_feedback(request):
+    content = request.GET.get('content')
+    date_created = datetime.now()
+    feedback_id =  calendar.timegm(date_created.timetuple())
+    firestoreDB.collection(u'feedbacks').document(str(feedback_id)).set({
+        'accreditor_name': request.session['firstname'] + " " + request.session['middlename'] + " " + request.session['lastname'],
+        'date_created':date_created,
+        'accreditor_id':request.session['user_id'],
+        'feedback_id': str(feedback_id),
+        'content': content,
+    })
+    return render(request,'homepage.html',{"validation":"Successfully Send your Feedback. Thanks for letting the admin know your side."})

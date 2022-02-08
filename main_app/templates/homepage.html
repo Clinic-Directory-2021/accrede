@@ -5,6 +5,21 @@
 {% else %}
 {% include 'accreditor_base.html' %}
 {% endif %}
+
+{% if validation %}
+<script>
+    Swal.fire({
+  text: "{{validation}}",
+  icon: 'success',
+  showClass: {
+    popup: 'animate__animated animate__fadeInDown'
+  },
+  hideClass: {
+    popup: 'animate__animated animate__fadeOutUp'
+  }
+})
+</script>
+{% endif %}
 {% block content %}
 <br>
 <br>
