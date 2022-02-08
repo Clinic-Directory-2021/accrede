@@ -12164,7 +12164,8 @@ def feedbacks(request):
     feedbacks = firestoreDB.collection(u'feedbacks').get()
     return render(request,'feedback.html',{"feedbacks":[doc.to_dict() for doc in feedbacks]})
 def todo_checklist(request):
-    return render(request,'todo_checklist.html')
+    todo_list= firestoreDB.collection(u'it_department_accounts').document(request.session['user_id']).collection('todo_list').get()
+    return render(request,'todo_checklist.html',{"todo_list":[doc.to_dict() for doc in todo_list]})
 def send_feedback(request):
     content = request.GET.get('content')
     date_created = datetime.now()
@@ -12177,3 +12178,31 @@ def send_feedback(request):
         'content': content,
     })
     return render(request,'homepage.html',{"validation":"Successfully Send your Feedback. Thanks for letting the admin know your side."})
+def add_task(request):
+    task_title = request.GET.get('task_title')
+    date_created = datetime.now()
+    todo_id =  calendar.timegm(date_created.timetuple())
+    firestoreDB.collection(u'it_department_accounts').document(request.session['user_id']).collection('todo_list').document(str(todo_id)).set({
+        'task_title': task_title,
+        'status':'undone',
+        'date_created':date_created,
+        'todo_id': todo_id,
+    })
+    print(task_title)
+    return redirect('../todo_checklist/')
+def finish_task(request):
+    status = request.GET.get('status')
+    todo_id = request.GET.get('todo_id')
+    if status == 'undone':
+        firestoreDB.collection(u'it_department_accounts').document(request.session['user_id']).collection('todo_list').document(todo_id).update({
+            'status':'done'
+        })
+    else:
+        firestoreDB.collection(u'it_department_accounts').document(request.session['user_id']).collection('todo_list').document(todo_id).update({
+            'status':'undone'
+        })
+    return redirect('../todo_checklist/')
+def delete_task(request):
+    todo_id = request.GET.get('todo_id')
+    firestoreDB.collection(u'it_department_accounts').document(request.session['user_id']).collection('todo_list').document(todo_id).delete()
+    return redirect('../todo_checklist/')

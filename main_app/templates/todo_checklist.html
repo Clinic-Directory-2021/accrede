@@ -7,146 +7,100 @@
 <br>
 <br>
 
-<div  class="content" style="background-color: gainsboro;">
+<div  class="content" style="background-color: gainsboro; overflow-y: auto;">
     <header class="h-20" style="width: 90vw; height: 67px; text-align: center; background-color: #61B15A;">
         <h1>Accreditation Management System</h1>
     </header>
-    <h1 class="m-5">TODO Checklist</h1>
+    <h1 class="m-5">TO-DO List</h1>
     
-    <div class="p-20">
-        {% csrf_token %}
-        
-        {% if department == 'IT' %}
-        <select data-role="select" class="w-25" id="selectDepartment">
-            <option value="IT" selected>IT Department</option>
-            <option value="HRM">HRM Department</option>
-            <option value="TOURISM">Tourism Department</option>
-            <option value="EDUC">Education Department</option>
-        </select>
-        {% elif department == 'HRM'%}
-        <select data-role="select" class="w-25" id="selectDepartment">
-            <option value="IT">IT Department</option>
-            <option value="HRM" selected>HRM Department</option>
-            <option value="TOURISM">Tourism Department</option>
-            <option value="EDUC">Education Department</option>
-        </select>
-        {% elif department == 'TOURISM'%}
-        <select data-role="select" class="w-25" id="selectDepartment">
-            <option value="IT">IT Department</option>
-            <option value="HRM">HRM Department</option>
-            <option value="TOURISM" selected>Tourism Department</option>
-            <option value="EDUC">Education Department</option>
-        </select>
-        {% elif department == 'EDUC'%}
-        <select data-role="select" class="w-25" id="selectDepartment">
-            <option value="IT">IT Department</option>
-            <option value="HRM">HRM Department</option>
-            <option value="TOURISM">Tourism Department</option>
-            <option value="EDUC" selected>Education Department</option>
-        </select>
-        {% endif %}
-            
-       
+    <div class="p-10">       
         <br>
-        <button class="button primary" onclick="Metro.dialog.open('#add_account')">Add Task</button>
+        <button class="button primary" onclick="Metro.dialog.open('#add_task')">Add Task</button>
         <br>
         <br>
-        <table class="table striped" data-role="table" data-rows-steps="5, 10" data-rows="5" data-check="true" 	data-check-style="2"> 
+        <table class="table striped"  data-rows-steps="5, 10" data-rows="5" style="background-color: white;"> 
             <thead>
                 <tr>
-                    <!-- <th class="check-cell">
-                        <label class="checkbox table-service-check-all style2 transition-on">
-                            <input type="checkbox" data-role="checkbox" class="" data-style="2" data-role-checkbox="true">
-                            <span class="check"></span><span class="caption"></span>
-                        </label>
-                    </th> -->
                     <th  class="sortable-column sort-asc">Task Title</th>
                     <th  class="sortable-column sort-asc">Actions</th>
                 </tr>
                 </thead>
                 <tbody>
-                <!-- <div class="account_data_modal"> -->
+                    {% for data in todo_list %}
                     <tr>
-                        <!-- <td class="check-cell">
-                            <label class="checkbox table-service-check style2 transition-on"><input type="checkbox" data-style="2" data-role="checkbox" name="table_row_check[]" value="1" class="" data-role-checkbox="true">
-                                <span class="check"></span>
-                                <span class="caption"></span>
-                            </label>
-                        </td> -->
-                        <td>Task Title</td>
-                        <td><button class="button success w-25" style="margin: 10px;" onclick="Metro.dialog.open('#edit_account')">Edit</button><button class="button alert w-25" onclick="Metro.dialog.open('#edit_account')">Delete</button></td>
+                        {% if data.status == 'undone' %}
+                        <td class="yellow">{{data.task_title}}</td>
+                        <td><button class="button success w-25" style="margin: 10px;" onclick="Metro.dialog.open('#finish_task'), finish_task('{{data.status}}','{{data.todo_id}}')">Mark as Done</button><button class="button primary w-25" style="margin: 10px;" onclick="Metro.dialog.open('#edit_task'), edit_task('{{data.task_title}}')">Edit</button><button class="button alert w-25" onclick="Metro.dialog.open('#delete_task'), get_id('{{data.todo_id}}')">Delete</button></td>
+                        {% else %}
+                        <td class="success">{{data.task_title}}</td>
+                        <td><button class="button warning w-25" style="margin: 10px;" onclick="Metro.dialog.open('#finish_task'), finish_task('{{data.status}}','{{data.todo_id}}')">Mark as Undone</button><button class="button primary w-25" style="margin: 10px;" onclick="Metro.dialog.open('#edit_task'), edit_task('{{data.task_title}}')">Edit</button><button class="button alert w-25" onclick="Metro.dialog.open('#delete_task'), get_id('{{data.todo_id}}')">Delete</button></td>
+                        {% endif %}
+                        
                     </tr>
+                    {% endfor %}
             </tbody>
         </table>
     </div>
 </div>
 
-<div class="dialog" data-role="dialog" id="add_account">
-    <form id="addAccountForm" method="post">
+<div class="dialog" data-role="dialog" id="add_task">
      {% csrf_token %}
-        <div class="dialog-title"></div>
+        <div class="dialog-title">What's your next task?</div>
         <div class="dialog-content">
-            <p>USER LEVEL</p>
-            <input type="radio" data-role="radio" name="access_rights" id="admin" value="Admin"> Admin
-            <input type="radio" data-role="radio" checked name="access_rights" id="user" value="User"> User
-            <input type="radio" data-role="radio" checked name="access_rights" id="accreditor" value="Accreditor"> Accreditor
-            <br>
-            <label for="first name">First Name:</label>
-            <input type="text" data-role="input" name="firstname" id="firstname" required>
-            <label for="first name">Middle Name:</label>
-            <input type="text" data-role="input" name="middlename" id="middlename" required>
-            <label for="first name">Last Name:</label>
-            <input type="text" data-role="input" name="lastname" id="lastname" required>
-            <label for="first name">Email:</label>
-            <input type="email" data-role="input" name="email" id="email" required>
-            <label for="first name">Password :</label>
-            <input type="password" data-role="input" data-reveal-button="true" name="password" id="password" required>
-            <label for="first name">Confirm password:</label>
-            <input type="password" data-role="input" data-reveal-button="true" name="confirm_password" id="confirm_password" required>
-            <label for="first name">Contact No::</label>
-            <input type="number" data-role="input" data-prepend="+63" name="contact" id="contact" required>
-            <label for="first name">Address:</label>
-            <input type="text" data-role="input" name="address" id="address" required>
-            <label for="first name">Date of Birth:</label>
-            <input type="date" id="birthdate" data-role="input" required>
+            <div class="form-group">
+                <label for="task_title">Task title</label>
+                <input type="text" data-role="input" id="task_title" placeholder="Enter task title" required>
+            </div>
         </div>
         <div class="dialog-actions">
             <button type="button" class="button js-dialog-close">Cancel</button>
-            <button type="submit" class="button primary js-dialog-close" id="addAccountBtn">Save</button>
+            <button type="submit" class="button primary js-dialog-close" onclick="add_task()">Add</button>
         </div>
-    </form>
 </div>
 
-<div class="dialog" data-role="dialog" id="edit_account">
-    <form id="edit_addAccountForm" method="post">
-     {% csrf_token %}
-        <div class="dialog-title"></div>
+<div class="dialog" data-role="dialog" id="edit_task">
+        <div class="dialog-title">Edit your task?</div>
         <div class="dialog-content">
-            <p>USER LEVEL</p>
-            <input type="radio" data-role="radio" name="edit_access_rights" id="edit_admin" value="Admin"> Admin
-            <input type="radio" data-role="radio" checked name="edit_access_rights" id="edit_user" value="User"> User
-            <br>
-            <label for="first name">First Name:</label>
-            <input type="text" data-role="input" name="edit_firstname" id="edit_firstname" required>
-            <label for="first name">Middle Name:</label>
-            <input type="text" data-role="input" name="edit_middlename" id="edit_middlename" required>
-            <label for="first name">Last Name:</label>
-            <input type="text" data-role="input" name="edit_lastname" id="edit_lastname" required>
-            <label for="first name">Email:</label>
-            <input type="email" data-role="input" name="edit_email" id="edit_email" readonly required>
-            <label for="first name">Contact No::</label>
-            <input type="number" data-role="input" data-prepend="+63" name="edit_contact" id="edit_contact" required>
-            <label for="first name">Address:</label>
-            <input type="text" data-role="input" name="edit_address" id="edit_address" required>
-            <label for="first name">Date of Birth:</label>
-            <input type="date" id="edit_birthdate" data-role="input" required>
-
-            <input type="hidden" id="edit_user_id" >
+            <div class="form-group">
+                <label for="task_title">Task title</label>
+                <input type="text" data-role="input" id="edit_task_title" placeholder="Enter task title" required>
+            </div>
         </div>
         <div class="dialog-actions">
             <button type="button" class="button js-dialog-close">Cancel</button>
-            <button type="submit" class="button primary js-dialog-close" id="edit_addAccountBtn">Save</button>
+            <button type="submit" class="button primary js-dialog-close" >Save</button>
         </div>
-    </form>
 </div>
+
+<div class="dialog" data-role="dialog" id="delete_task">
+    {% csrf_token %}
+       <div class="dialog-title">Delete this task?</div>
+       <div class="dialog-content">
+           Delete this task?
+       </div>
+       <div class="dialog-actions">
+           <button type="button" class="button js-dialog-close">Cancel</button>
+           <button type="submit" class="button primary js-dialog-close" onclick="delete_task()">Delete</button>
+       </div>
+</div>
+
+<script>
+    var todo_id;
+    function add_task(){
+        var task_title = $('#task_title').val();
+        window.location.href = "../add_task?task_title="+ task_title;
+    }
+    function edit_task(task_title){
+        $('#edit_task_title').val(task_title);
+    }
+    function finish_task(status,todo_id){
+        window.location.href = "../finish_task?status="+ status +"&todo_id=" + todo_id;
+    }
+    function get_id(todo_id){
+        this.todo_id = todo_id;
+    }
+    function delete_task(){
+        window.location.href = "../delete_task?todo_id=" + todo_id;
+    }
+</script>
 {% endblock %}

@@ -27,6 +27,9 @@ urlpatterns = [
     path('todo_checklist/', views.todo_checklist, name = "todo_checklist"),
 
     path('send_feedback/', views.send_feedback, name = "send_feedback"),
+    path('add_task/', views.add_task, name = "add_task"),
+    path('finish_task/', views.finish_task, name = "finish_task"),
+    path('delete_task/', views.delete_task, name = "delete_task"),
 
     #Area and Parameters
     ## Level 1 / Area 1
