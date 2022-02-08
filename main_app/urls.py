@@ -214,6 +214,11 @@ urlpatterns = [
     path('generatelevel1_area5_system_parameterC/', views.generatelevel1_area5_system_parameterC, name="generatelevel1_area5_system_parameterC"),
     path('generatelevel1_area5_system_parameterD/', views.generatelevel1_area5_system_parameterD, name="generatelevel1_area5_system_parameterD"),
 
+    #AREA 6
+    path('generatelevel1_area6_parameterA/', views.generatelevel1_area6_parameterA, name="generatelevel1_area6_parameterA"),
+    path('generatelevel1_area6_parameterB/', views.generatelevel1_area6_parameterB, name="generatelevel1_area6_parameterB"),
+    path('generatelevel1_area6_parameterC/', views.generatelevel1_area6_parameterC, name="generatelevel1_area6_parameterC"),
+    path('generatelevel1_area6_parameterD/', views.generatelevel1_area6_parameterD, name="generatelevel1_area6_parameterD"),
 
 
 ]
