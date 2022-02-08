@@ -136,6 +136,7 @@ urlpatterns = [
     # generate PPT
     #AREA 1
     path('generatelevel1_area1_parameterA/', views.generatelevel1_area1_parameterA, name="generatelevel1_area1_parameterA"),
+    path('generatelevel1_area1_parameterB/', views.generatelevel1_area1_parameterB, name="generatelevel1_area1_parameterB"),
 
     #area 2 IMPLEMENTATION
     path('generatelevel1_area2_implementation_parameterA/', views.generatelevel1_area2_implementation_parameterA, name="generatelevel1_area2_implementation_parameterA"),
