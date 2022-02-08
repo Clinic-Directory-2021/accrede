@@ -46,9 +46,36 @@
         <li class="active"><a href="{% url 'todo_checklist' %}"><span class="mif-pencil icon"></span>TODO CHecklist</a></li>
         <li class="active"><a href="{% url 'manage_accounts' %}"><span class="mif-user-plus icon"></span>Manage Accounts</a></li>
         <li class="active"><a href="{% url 'feedbacks' %}"><span class="mif-feed3 icon"></span>Feedbacks</a></li>
-        <li class="active"><a href="{% url 'logout' %}"><span class="mif-exit icon"></span>Logout</a></li>
+        <li class="active"><a onclick="logout()" style="cursor: pointer;"><span class="mif-exit icon"></span>Logout</a></li>
     </ul>
-
+    <script>
+        function logout(){
+            let timerInterval
+            Swal.fire({
+            allowOutsideClick: false,
+            title: 'Signing out.',
+            html: 'Please wait... <b></b> milliseconds.',
+            timer: 1000,
+            timerProgressBar: true,
+            didOpen: () => {
+                Swal.showLoading()
+                const b = Swal.getHtmlContainer().querySelector('b')
+                timerInterval = setInterval(() => {
+                b.textContent = Swal.getTimerLeft()
+                }, 100)
+            },
+            willClose: () => {
+                clearInterval(timerInterval)
+            }
+            }).then((result) => {
+            /* Read more about handling dismissals below */
+            if (result.dismiss === Swal.DismissReason.timer) {
+                console.log('I was closed by the timer');
+                window.location.href = "../logout/"
+            }
+            })
+        }
+    </script>
     {% block content %}
     {% endblock %}
 
