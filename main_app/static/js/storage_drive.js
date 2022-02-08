@@ -411,6 +411,222 @@ function generateFileArea4SystemParameterE(){
   })
 }
 
+function generateFileArea5ImplementationParameterA(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area5_implementation_parameterA";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
+function generateFileArea5ImplementationParameterB(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area5_implementation_parameterB";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
+function generateFileArea5ImplementationParameterC(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area5_implementation_parameterC";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
+function generateFileArea5ImplementationParameterD(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area5_implementation_parameterD";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
+function generateFileArea5OutcomesParameterA(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area5_outcomes_parameterA";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
+function generateFileArea5OutcomesParameterB(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area5_outcomes_parameterB";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
+function generateFileArea5OutcomesParameterC(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area5_outcomes_parameterC";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
+function generateFileArea5OutcomesParameterD(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area5_outcomes_parameterD";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
+function generateFileArea5SystemParameterA(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area5_system_parameterA";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
+function generateFileArea5SystemParameterB(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area5_system_parameterB";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
+function generateFileArea5SystemParameterC(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area5_system_parameterC";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
+function generateFileArea5SystemParameterD(){
+  Swal.fire({
+    title: 'Are you sure?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      var url = "/generatelevel1_area5_system_parameterD";
+
+      // Construct the full URL with "id"
+      document.location.href = url;
+    }
+  })
+}
+
 
 function generateFileArea2ImplementationParameterA(){
   Swal.fire({
@@ -2141,6 +2357,20 @@ else if(levelValue == 'Level 1' && areaValue == 'Area 5' && parameterValue == 'P
   '<option value="O.1">O.1. Research outputs are published in refereed journals.</option>' +
   '<option value="O.2">O.2. Research outputs are utilized.</option>' +
   '<option value="O.3">O.3. Patented and copyrighted research outputs are commercialized.</option>' +
+  '</select>'+
+'</div>';
+}
+
+// AREA 5 PARAMETER D System
+else if(levelValue == 'Level 1' && areaValue == 'Area 5' && parameterValue == 'Parameter D' && categoryValue == 'System'){
+  var html = 
+  '<div class="appendedField">'+
+  '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
+  '<option value="S.1">S.1. The institution has an approved and copyrighted Research Journal</option>' +
+  '<option value="S.2.1">S.2.1. paper presentations;</option>' +
+  '<option value="S.2.2">S.2.2. journal publication;</option>' +
+  '<option value="S.2.3">S.2.3. outstanding research related performance;</option>' +
+  '<option value="S.2.4">S.2.4. patented outputs.</option>' +
   '</select>'+
 '</div>';
 }

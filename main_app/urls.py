@@ -196,4 +196,24 @@ urlpatterns = [
     path('generatelevel1_area4_system_parameterD/', views.generatelevel1_area4_system_parameterD, name="generatelevel1_area4_system_parameterD"),
     path('generatelevel1_area4_system_parameterE/', views.generatelevel1_area4_system_parameterE, name="generatelevel1_area4_system_parameterE"),
 
+    #area 5 IMPLEMENTATION
+    path('generatelevel1_area5_implementation_parameterA/', views.generatelevel1_area5_implementation_parameterA, name="generatelevel1_area5_implementation_parameterA"),
+    path('generatelevel1_area5_implementation_parameterB/', views.generatelevel1_area5_implementation_parameterB, name="generatelevel1_area5_implementation_parameterB"),
+    path('generatelevel1_area5_implementation_parameterC/', views.generatelevel1_area5_implementation_parameterC, name="generatelevel1_area5_implementation_parameterC"),
+    path('generatelevel1_area5_implementation_parameterD/', views.generatelevel1_area5_implementation_parameterD, name="generatelevel1_area5_implementation_parameterD"),
+
+    #area 5 OUTCOMES
+    path('generatelevel1_area5_outcomes_parameterA/', views.generatelevel1_area5_outcomes_parameterA, name="generatelevel1_area5_outcomes_parameterA"),
+    path('generatelevel1_area5_outcomes_parameterB/', views.generatelevel1_area5_outcomes_parameterB, name="generatelevel1_area5_outcomes_parameterB"),
+    path('generatelevel1_area5_outcomes_parameterC/', views.generatelevel1_area5_outcomes_parameterC, name="generatelevel1_area5_outcomes_parameterC"),
+    path('generatelevel1_area5_outcomes_parameterD/', views.generatelevel1_area5_outcomes_parameterD, name="generatelevel1_area5_outcomes_parameterD"),
+
+    #area 5 SYSTEM
+    path('generatelevel1_area5_system_parameterA/', views.generatelevel1_area5_system_parameterA, name="generatelevel1_area5_system_parameterA"),
+    path('generatelevel1_area5_system_parameterB/', views.generatelevel1_area5_system_parameterB, name="generatelevel1_area5_system_parameterB"),
+    path('generatelevel1_area5_system_parameterC/', views.generatelevel1_area5_system_parameterC, name="generatelevel1_area5_system_parameterC"),
+    path('generatelevel1_area5_system_parameterD/', views.generatelevel1_area5_system_parameterD, name="generatelevel1_area5_system_parameterD"),
+
+
+
 ]
