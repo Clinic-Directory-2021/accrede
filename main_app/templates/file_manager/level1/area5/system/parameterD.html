@@ -38,7 +38,7 @@
                 <td><img src="{{uploaded_file.storage_file_url}}" width="100%" style="margin: auto;text-align:center"/></td>
                 <td>{{uploaded_file.file_name}}</td>
                 <td>{{uploaded_file.category}}</td>
-                <td><button class="button mif-eye icon primary"> View</button></td>
+                <button class="button mif-eye icon primary" onclick="Metro.dialog.open('#open_file'), save_url('{{uploaded_file.storage_file_url}}')"> View</button>
             </tr>
             {% endfor %}
         </tbody>
@@ -68,4 +68,19 @@
 
 </div>
 </div>
+<div class="dialog w-50 h-100" data-role="dialog" id="open_file">
+    <div class="dialog-title"></div>
+    <div class="dialog-content" style="text-align: center; height: 100%;">
+        <img src="#" alt="" id="image" style="width: 100%; height: 100%;">
+    </div>
+    <div class="dialog-actions">
+        <button class="button js-dialog-close">Close</button>
+    </div>
+</div>
+
+<script>
+    function save_url(url){
+        $('#image'). attr('src',url)
+    }
+</script>
 {% endblock %}

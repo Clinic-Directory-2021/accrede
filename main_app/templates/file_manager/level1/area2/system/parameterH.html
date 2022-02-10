@@ -23,7 +23,7 @@
 <div class="folders p-5" style="display: flex;">
     <div style="width: 50%; padding: 10px;">
     <h5>Files</h5>
-    <table class="table stripped" data-role="table" style="background-color: white;">
+    <table class="table stripped" data-role="table" style="background-color: white;" data-horizontal-scroll="true">
         <thead>
             <tr>
                 <th>Image</th>
@@ -38,7 +38,7 @@
                 <td><img src="{{uploaded_file.storage_file_url}}" width="100%" style="margin: auto;text-align:center"/></td>
                 <td>{{uploaded_file.file_name}}</td>
                 <td>{{uploaded_file.category}}</td>
-                <td><button class="button mif-eye icon primary"> View</button></td>
+                <td><button class="button mif-eye icon primary" onclick="Metro.dialog.open('#open_file'), save_url('{{uploaded_file.storage_file_url}}')"> View</button></td>
             </tr>
             {% endfor %}
         </tbody>
@@ -46,7 +46,7 @@
     </div>
     <div style="width: 50%; padding: 10px;">
         <h5>Generated</h5>
-        <table class="table stripped" data-role="table" style="background-color: white;">
+        <table class="table stripped" data-role="table" style="background-color: white;" data-horizontal-scroll="true">
             <thead>
                 <tr>
                     <th>File Name</th>

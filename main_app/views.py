@@ -96,24 +96,28 @@ def login_validation(request):
                     request.session['middlename'] = it_department_doc.to_dict()['middlename']
                     request.session['firstname'] = it_department_doc.to_dict()['firstname']
                     request.session['lastname'] = it_department_doc.to_dict()['lastname']
+                    request.session['account_type'] = 'it_department_accounts'
                 else:
                     if hrm_department_doc.exists:
                         request.session['user_level'] = hrm_department_doc.to_dict()['user_level']
-                        request.session['middlename'] = it_department_doc.to_dict()['middlename']
-                        request.session['firstname'] = it_department_doc.to_dict()['firstname']
-                        request.session['lastname'] = it_department_doc.to_dict()['lastname']
+                        request.session['middlename'] = hrm_department_doc.to_dict()['middlename']
+                        request.session['firstname'] = hrm_department_doc.to_dict()['firstname']
+                        request.session['lastname'] = hrm_department_doc.to_dict()['lastname']
+                        request.session['account_type'] = 'hrm_department_accounts'
                     else:
                         if education_department_doc.exists:
-                            request.session['user_level'] = hrm_department_doc.to_dict()['user_level']
-                            request.session['middlename'] = it_department_doc.to_dict()['middlename']
-                            request.session['firstname'] = it_department_doc.to_dict()['firstname']
-                            request.session['lastname'] = it_department_doc.to_dict()['lastname']
+                            request.session['user_level'] = education_department_doc.to_dict()['user_level']
+                            request.session['middlename'] = education_department_doc.to_dict()['middlename']
+                            request.session['firstname'] = education_department_doc.to_dict()['firstname']
+                            request.session['lastname'] = education_department_doc.to_dict()['lastname']
+                            request.session['account_type'] = 'education_department_accounts'
                         else:
                             if industrial_department_doc.exists:
-                                request.session['user_level'] = hrm_department_doc.to_dict()['user_level']
-                                request.session['middlename'] = it_department_doc.to_dict()['middlename']
-                                request.session['firstname'] = it_department_doc.to_dict()['firstname']
-                                request.session['lastname'] = it_department_doc.to_dict()['lastname']
+                                request.session['user_level'] = industrial_department_doc.to_dict()['user_level']
+                                request.session['middlename'] = industrial_department_doc.to_dict()['middlename']
+                                request.session['firstname'] = industrial_department_doc.to_dict()['firstname']
+                                request.session['lastname'] = industrial_department_doc.to_dict()['lastname']
+                                request.session['account_type'] = 'industrial_department_accounts'
                         print('no document like this')
                 return HttpResponse('Success!')
         except:
@@ -12233,3 +12237,24 @@ def delete_task(request):
     todo_id = request.GET.get('todo_id')
     firestoreDB.collection(u'it_department_accounts').document(request.session['user_id']).collection('todo_list').document(todo_id).delete()
     return redirect('../todo_checklist/')
+
+def delete_file(request):
+    file_id = request.GET.get('file_id')
+    sliced_string = str(request.META['HTTP_REFERER']).index('level')
+    # files = firestoreDB.collection(u'cities').document(u'SF')
+
+    # doc = doc_ref.get()
+    # if doc.exists:
+    #     print(f'Document data: {doc.to_dict()}')
+    # else:
+    #     print(u'No such document!')
+    # data = {
+    #     u'name': u'Los Angeles',
+    #     u'state': u'CA',
+    #     u'country': u'USA'
+    # }
+
+    # # Add a new doc in collection 'cities' with ID 'LA'
+    # firestoreDB.collection(request.session['account_type']).document(request.session['user_id']).collection('recycle_bin').document(file_id).set(data)
+    print(str(request.META['HTTP_REFERER'])[sliced_string:])
+    return redirect(request.META['HTTP_REFERER'])

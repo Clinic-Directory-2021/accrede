@@ -30,6 +30,7 @@ urlpatterns = [
     path('add_task/', views.add_task, name = "add_task"),
     path('finish_task/', views.finish_task, name = "finish_task"),
     path('delete_task/', views.delete_task, name = "delete_task"),
+    path('delete_file/', views.delete_file, name = "delete_file"),
 
     #Area and Parameters
     ## Level 1 / Area 1
