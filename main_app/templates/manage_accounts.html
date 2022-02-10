@@ -11,7 +11,7 @@
 <br>
 <br>
 
-<div  class="content" style="background-color: gainsboro;">
+<div  class="content h-50" style="background-color: gainsboro;">
     <header class="h-20" style="width: 90vw; height: 67px; text-align: center; background-color: #61B15A;">
         <h1>Accreditation Management System</h1>
     </header>
@@ -85,8 +85,8 @@
                             <button class="button success" style="cursor: not-allowed;" disabled>Edit</button>
                             <button class="button alert" style="cursor: not-allowed;" disabled> Delete</button>
                             {% else %}
-                            <button class="button success" onclick="Metro.dialog.open('#edit_account'), editModal('{{user.user_id}}','{{user.firstname}}','{{user.middlename}}','{{user.lastname}}','{{user.email}}','{{user.contact}}','{{user.address}}')">Edit</button>
-                            <button class="button alert"> Delete</button>
+                            <button class="button success" onclick="Metro.dialog.open('#edit_account'), editModal('{{user.user_id}}','{{user.firstname}}','{{user.middlename}}','{{user.lastname}}','{{user.email}}','{{user.contact}}','{{user.address}}','{{user.birthdate}}')">Edit</button>
+                            <button class="button alert" onclick="Metro.dialog.open('#delete_dialog'), get_user_id('{{user.user_id}}')"> Delete</button>
                             {% endif %}
                         </td>
                     </tr>
@@ -105,7 +105,6 @@
             <p>USER LEVEL</p>
             <input type="radio" data-role="radio" name="access_rights" id="admin" value="Admin"> Admin
             <input type="radio" data-role="radio" checked name="access_rights" id="user" value="User"> User
-            <input type="radio" data-role="radio" checked name="access_rights" id="accreditor" value="Accreditor"> Accreditor
             <br>
             <label for="first name">First Name:</label>
             <input type="text" data-role="input" name="firstname" id="firstname" required>
@@ -155,7 +154,7 @@
             <label for="first name">Address:</label>
             <input type="text" data-role="input" name="edit_address" id="edit_address" required>
             <label for="first name">Date of Birth:</label>
-            <input type="date" id="edit_birthdate" data-role="input" required>
+            <input type="text" id="edit_birthdate" data-role="input" required>
 
             <input type="hidden" id="edit_user_id" >
         </div>
@@ -165,4 +164,25 @@
         </div>
     </form>
 </div>
+
+<div class="dialog" data-role="dialog" id="delete_dialog">
+     {% csrf_token %}
+        <div class="dialog-title">Delete Dialog</div>
+        <div class="dialog-content">
+            Delete this user?
+        </div>
+        <div class="dialog-actions">
+            <button type="button" class="button js-dialog-close">No</button>
+            <button type="submit" class="button alert js-dialog-close" onclick="delete_user()">Yes</button>
+        </div>
+</div>
+
+<script>
+    var user_id = "";
+    function get_user_id(user_id){
+        this.user_id = user_id
+    }
+    function delete_user(){
+        window.location.href = "{% url 'delete_user' %}" + "?user_id=" + user_id    }
+</script>
 {% endblock %}

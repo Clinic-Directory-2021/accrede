@@ -31,7 +31,7 @@ $( ".department_result" ).remove();
 });
 
 
-function editModal(user_id, fname, mname, lname, email, contact, address){
+function editModal(user_id, fname, mname, lname, email, contact, address,birthdate){
     $('#edit_user_id').val(user_id);
 
     $('#edit_firstname').val(fname);
@@ -40,6 +40,7 @@ function editModal(user_id, fname, mname, lname, email, contact, address){
     $('#edit_email').val(email);
     $('#edit_contact').val(contact);
     $('#edit_address').val(address);
+    $('#edit_birthdate').val(birthdate);
 }
 
 
@@ -128,7 +129,6 @@ $('#edit_addAccountForm').on('submit', function(e){
                   })
             }else if (data == 'Success!'){
                 $('#addAccountBtn').prop('disabled', false);
-                alert('hello');
                 location.reload();
             }
         },

@@ -2419,8 +2419,9 @@ def editAccount(request):
 
         user_id = request.POST.get('user_id')
         access_rights = request.POST.get('access_rights')
-
+        print('hello4')
         if password != confirm_password:
+            print('hello3')
             return HttpResponse("Password Do Not Match!")
         else:
             try:
@@ -2452,6 +2453,7 @@ def editAccount(request):
             except requests.HTTPError as e:
                 error_json = e.args[1]
                 error = json.loads(error_json)['error']['message']
+                print('not hello: ' + str(e))
                 if error == "EMAIL_EXISTS":
                     return HttpResponse('Email Already Exists!')
 
@@ -12273,4 +12275,9 @@ def permanent_delete_all_data(request):
     recycle_bin = firestoreDB.collection(request.session['account_type']).document(request.session['user_id']).collection('recycle_bin').get()
     for doc in recycle_bin:
         firestoreDB.collection(request.session['account_type']).document(request.session['user_id']).collection('recycle_bin').document(doc.to_dict()['storage_file_id']).delete()
+    return redirect(request.META['HTTP_REFERER'])
+def delete_user(request):
+    user_id = request.GET.get('user_id')
+    firestoreDB.collection(request.session['account_type']).document(user_id).delete()
+    auth.delete_user(user_id)
     return redirect(request.META['HTTP_REFERER'])
