@@ -67,7 +67,6 @@ def login_validation(request):
         try:
             email = request.POST.get('login_email')
             password = request.POST.get('login_password')
-
             if(email == 'accreditation.management.system@gmail.com' and password == 'AccreditationSystem2021'):
                 user = auth_pyrebase.sign_in_with_email_and_password(email, password)
 
@@ -125,7 +124,7 @@ def login_validation(request):
                         print('no document like this')
                 return HttpResponse('Success!')
         except Exception as e:
-            return HttpResponse('Invalid Email or Password! ' + str(e))
+            return HttpResponse('Invalid Email or Password!')
                 
 
 def homepage(request):
