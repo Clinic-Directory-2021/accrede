@@ -1,0 +1,83 @@
+{%  load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css">
+    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+    <script src="https://cdn.metroui.org.ua/v4.3.2/js/metro.min.js"></script>
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="{% static 'js/manage_account.js'%}" defer></script>
+    <script src="{% static 'js/storage_drive.js'%}"></script>
+</head>
+<style>
+    li{
+        padding: 15px;
+    }
+    .sidenav-m3{
+        width: 300px;
+    }
+</style>
+<body style="display: flex;">
+    <ul class="sidenav-m3">
+        <div class="sidebar-header" style="background-color: #ADCE74; height: 200px;">
+            <div class="avatar">
+                <img  src="../static/images/logo.jpg">
+            </div>
+            <span class="title">Hello, {{ request.session.firstname }} {{ request.session.middlename }} {{ request.session.lastname }}</span>
+        </div>
+        <li class="active"><a href="{%  url 'homepage' %}"><span class="mif-home icon"></span>Home</a></li>
+        <li class="stick-left">
+            <a class="dropdown-toggle" href="#"><span class="mif-folder icon"></span>File Manager</a>
+            <ul class="d-menu" data-role="dropdown" style="display: none; background-color: #ADCE74;">
+                <li><a href="{%  url 'storage_drive' %}"><span class="mif-folder icon"></span> Storage Drive</a></li>
+                <li><a href="{%  url 'activity_logs' %}"><span class="mif-document-file-doc icon"></span> Activity Logs</a></li>
+                <li><a href="{%  url 'recycle_bin' %}"><span class="mif-bin icon"></span> Recycle Bin</a></li>
+            </ul>
+        </li>
+        <li class="active"><a href="{% url 'todo_checklist' %}"><span class="mif-pencil icon"></span>TODO CHecklist</a></li>
+        <li class="active"><a href="{% url 'manage_accounts' %}"><span class="mif-user-plus icon"></span>Manage Accounts</a></li>
+        <li class="active"><a href="{% url 'feedbacks' %}"><span class="mif-feed3 icon"></span>Feedbacks</a></li>
+        <li class="active"><a onclick="logout()" style="cursor: pointer;"><span class="mif-exit icon"></span>Logout</a></li>
+    </ul>
+    <script>
+        function logout(){
+            let timerInterval
+            Swal.fire({
+            allowOutsideClick: false,
+            title: 'Signing out.',
+            html: 'Please wait... <b></b> milliseconds.',
+            timer: 1000,
+            timerProgressBar: true,
+            didOpen: () => {
+                Swal.showLoading()
+                const b = Swal.getHtmlContainer().querySelector('b')
+                timerInterval = setInterval(() => {
+                b.textContent = Swal.getTimerLeft()
+                }, 100)
+            },
+            willClose: () => {
+                clearInterval(timerInterval)
+            }
+            }).then((result) => {
+            /* Read more about handling dismissals below */
+            if (result.dismiss === Swal.DismissReason.timer) {
+                console.log('I was closed by the timer');
+                window.location.href = "{% url 'logout' %}"
+            }
+            })
+        }
+    </script>
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

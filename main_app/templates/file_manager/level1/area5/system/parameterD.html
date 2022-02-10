@@ -1,5 +1,7 @@
-{% if request.session.user_level == 'Admin' %}
+{% if request.session.user_level == 'Superadmin' %}
 {% include 'superadmin_base.html' %}
+{% elif request.session.user_level == 'Admin' %}
+{% include 'admin_base.html' %}
 {% elif request.session.user_level == 'User' %}
 {% include 'faculty_base.html' %}
 {% endif %}

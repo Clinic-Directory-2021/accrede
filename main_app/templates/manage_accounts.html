@@ -1,4 +1,12 @@
+{% if request.session.user_level == 'Superadmin' %}
 {% include 'superadmin_base.html' %}
+{% elif request.session.user_level == 'Admin' %}
+{% include 'admin_base.html' %}
+{% elif request.session.user_level == 'User' %}
+{% include 'faculty_base.html' %}
+{% else %}
+{% include 'accreditor_base.html' %}
+{% endif %}
 {% block content %}
 <br>
 <br>
@@ -15,29 +23,29 @@
         {% if department == 'IT' %}
         <select data-role="select" class="w-25" id="selectDepartment">
             <option value="IT" selected>IT Department</option>
-            <option value="HRM">HRM Department</option>
-            <option value="TOURISM">Tourism Department</option>
+            <option value="HRM">Hospitality and Toursim Department</option>
+            <option value="INDUSTRIAL">Industrial Department</option>
             <option value="EDUC">Education Department</option>
         </select>
         {% elif department == 'HRM'%}
         <select data-role="select" class="w-25" id="selectDepartment">
             <option value="IT">IT Department</option>
-            <option value="HRM" selected>HRM Department</option>
-            <option value="TOURISM">Tourism Department</option>
+            <option value="HRM" selected>Hospitality and Toursim Department</option>
+            <option value="INDUSTRIAL">Industrial Department</option>
             <option value="EDUC">Education Department</option>
         </select>
-        {% elif department == 'TOURISM'%}
+        {% elif department == 'INDUSTRIAL'%}
         <select data-role="select" class="w-25" id="selectDepartment">
             <option value="IT">IT Department</option>
-            <option value="HRM">HRM Department</option>
-            <option value="TOURISM" selected>Tourism Department</option>
+            <option value="HRM">Hospitality and Toursim Department</option>
+            <option value="INDUSTRIAL" selected>Industrial Department</option>
             <option value="EDUC">Education Department</option>
         </select>
         {% elif department == 'EDUC'%}
         <select data-role="select" class="w-25" id="selectDepartment">
             <option value="IT">IT Department</option>
-            <option value="HRM">HRM Department</option>
-            <option value="TOURISM">Tourism Department</option>
+            <option value="HRM">Hospitality and Toursim Department</option>
+            <option value="INDUSTRIAL">Industrial Department</option>
             <option value="EDUC" selected>Education Department</option>
         </select>
         {% endif %}
@@ -71,7 +79,16 @@
                         <td class="info">{{user.contact}}</td>
                         <td>{{user.address}}</td>
                         <td>{{user.user_level}}</td>
-                        <td><button class="button success" onclick="Metro.dialog.open('#edit_account'), editModal('{{user.user_id}}','{{user.firstname}}','{{user.middlename}}','{{user.lastname}}','{{user.email}}','{{user.contact}}','{{user.address}}')">Edit</button></td>
+                        <td>
+                            {% if request.session.user_level == 'Admin' and  user.user_level == 'Admin' %}
+                            <p style="font-size: 12px;">You can't modify admin accounts.</p>
+                            <button class="button success" style="cursor: not-allowed;" disabled>Edit</button>
+                            <button class="button alert" style="cursor: not-allowed;" disabled> Delete</button>
+                            {% else %}
+                            <button class="button success" onclick="Metro.dialog.open('#edit_account'), editModal('{{user.user_id}}','{{user.firstname}}','{{user.middlename}}','{{user.lastname}}','{{user.email}}','{{user.contact}}','{{user.address}}')">Edit</button>
+                            <button class="button alert"> Delete</button>
+                            {% endif %}
+                        </td>
                     </tr>
                 
                     {% endfor %}

@@ -68,31 +68,57 @@ def login_validation(request):
             email = request.POST.get('login_email')
             password = request.POST.get('login_password')
 
-            user = auth_pyrebase.sign_in_with_email_and_password(email, password)
+            if(email == 'accreditation.management.system@gmail.com' and password == 'AccreditationSystem2021'):
+                user = auth_pyrebase.sign_in_with_email_and_password(email, password)
 
-            request.session['user_id'] = user['localId']
-            request.session['user_email'] = email
+                request.session['user_id'] = user['localId']
+                request.session['user_email'] = email
+                request.session['user_level'] = 'Superadmin'
 
-            it_department_accounts = firestoreDB.collection(u'it_department_accounts').document(str(user['localId']))
-            hrm_department_accounts = firestoreDB.collection(u'hrm_department_accounts').document(str(user['localId']))
-            it_department_doc = it_department_accounts.get()
-            hrm_department_doc = hrm_department_accounts.get()
-            if it_department_doc.exists:
-                request.session['user_level'] = it_department_doc.to_dict()['user_level']
-                request.session['middlename'] = it_department_doc.to_dict()['middlename']
-                request.session['firstname'] = it_department_doc.to_dict()['firstname']
-                request.session['lastname'] = it_department_doc.to_dict()['lastname']
+                return HttpResponse('Success!')
             else:
-                if hrm_department_doc.exists:
-                    request.session['user_level'] = hrm_department_doc.to_dict()['user_level']
+                user = auth_pyrebase.sign_in_with_email_and_password(email, password)
+
+                request.session['user_id'] = user['localId']
+                request.session['user_email'] = email
+
+                it_department_accounts = firestoreDB.collection(u'it_department_accounts').document(str(user['localId']))
+                hrm_department_accounts = firestoreDB.collection(u'hrm_department_accounts').document(str(user['localId']))
+                education_department_accounts = firestoreDB.collection(u'education_department_accounts').document(str(user['localId']))
+                industrial_department_accounts = firestoreDB.collection(u'industrial_department_accounts').document(str(user['localId']))
+
+                it_department_doc = it_department_accounts.get()
+                hrm_department_doc = hrm_department_accounts.get()
+                education_department_doc = hrm_department_accounts.get()
+                industrial_department_doc = hrm_department_accounts.get()
+                if it_department_doc.exists:
+                    request.session['user_level'] = it_department_doc.to_dict()['user_level']
                     request.session['middlename'] = it_department_doc.to_dict()['middlename']
                     request.session['firstname'] = it_department_doc.to_dict()['firstname']
                     request.session['lastname'] = it_department_doc.to_dict()['lastname']
                 else:
-                    print('no document like this')
-            return HttpResponse('Success!')
+                    if hrm_department_doc.exists:
+                        request.session['user_level'] = hrm_department_doc.to_dict()['user_level']
+                        request.session['middlename'] = it_department_doc.to_dict()['middlename']
+                        request.session['firstname'] = it_department_doc.to_dict()['firstname']
+                        request.session['lastname'] = it_department_doc.to_dict()['lastname']
+                    else:
+                        if education_department_doc.exists:
+                            request.session['user_level'] = hrm_department_doc.to_dict()['user_level']
+                            request.session['middlename'] = it_department_doc.to_dict()['middlename']
+                            request.session['firstname'] = it_department_doc.to_dict()['firstname']
+                            request.session['lastname'] = it_department_doc.to_dict()['lastname']
+                        else:
+                            if industrial_department_doc.exists:
+                                request.session['user_level'] = hrm_department_doc.to_dict()['user_level']
+                                request.session['middlename'] = it_department_doc.to_dict()['middlename']
+                                request.session['firstname'] = it_department_doc.to_dict()['firstname']
+                                request.session['lastname'] = it_department_doc.to_dict()['lastname']
+                        print('no document like this')
+                return HttpResponse('Success!')
         except:
-            return HttpResponse('Invalid Email or Password!')    
+            return HttpResponse('Invalid Email or Password!')
+                
 
 def homepage(request):
     if 'user_id' in request.session:
@@ -2272,8 +2298,8 @@ def manage_accounts(request):
                 }
                 return render(request, 'manage_accounts.html', data)
             
-            if department == 'TOURISM':
-                getCollection = firestoreDB.collection('tourism_department_accounts').get()
+            if department == 'INDUSTRIAL':
+                getCollection = firestoreDB.collection('industrial_department_accounts').get()
 
                 collection_data = []
 
@@ -2283,7 +2309,7 @@ def manage_accounts(request):
 
                 data = {
                     'user_data': collection_data,
-                    'department': "TOURISM",
+                    'department': "INDUSTRIAL",
                 }
                 return render(request, 'manage_accounts.html', data)
             
@@ -2344,8 +2370,8 @@ def addAccount(request):
                     doc_ref = firestoreDB.collection('it_department_accounts').document(user['localId'])
                 elif access_rights == 'HRM':
                     doc_ref = firestoreDB.collection('hrm_department_accounts').document(user['localId'])
-                elif access_rights == 'TOURISM':
-                    doc_ref = firestoreDB.collection('tourism_department_accounts').document(user['localId'])    
+                elif access_rights == 'INDUSTRIAL':
+                    doc_ref = firestoreDB.collection('industrial_department_accounts').document(user['localId'])    
                 elif access_rights == 'EDUC':
                     doc_ref = firestoreDB.collection('educ_department_accounts').document(user['localId']) 
                 

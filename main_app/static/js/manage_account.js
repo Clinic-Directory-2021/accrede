@@ -16,11 +16,11 @@ $( ".department_result" ).remove();
     // Construct the full URL with "id"
     document.location.href = url + "?department=" + "HRM";
    }
-   else if (e.target.value == "TOURISM"){
+   else if (e.target.value == "INDUSTRIAL"){
       var url = "/manage_accounts";
   
       // Construct the full URL with "id"
-      document.location.href = url + "?department=" + "TOURISM";
+      document.location.href = url + "?department=" + "INDUSTRIAL";
      }
      else if (e.target.value == "EDUC"){
       var url = "/manage_accounts";
