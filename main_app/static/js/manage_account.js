@@ -114,7 +114,7 @@ $('#edit_addAccountForm').on('submit', function(e){
           contact: $('#edit_contact').val(),
           address: $('#edit_address').val(),
           birthdate: $('#edit_birthdate').val(),
-          user_level: $('input[name="access_rights"]:checked').val(),
+          user_level: $('input[name="edit_access_rights"]:checked').val(),
           user_id: $('#edit_user_id').val(),
           access_rights: $('#selectDepartment').val(),
           csrfmiddlewaretoken: $("input[name='csrfmiddlewaretoken']").val(),

@@ -41,10 +41,10 @@
             <ul class="d-menu" data-role="dropdown" style="display: none; background-color: #ADCE74;">
                 <li><a href="{%  url 'storage_drive' %}"><span class="mif-folder icon"></span> Storage Drive</a></li>
                 <li><a href="{%  url 'activity_logs' %}"><span class="mif-document-file-doc icon"></span> Activity Logs</a></li>
-                <li><a href="{%  url 'recycle_bin' %}"><span class="mif-bin icon"></span> Recycle Bin</a></li>
+                <li><a href="{%  url 'recycle_bin' %}"><span class="mif-bin icon"></span> Recently Deleted</a></li>
             </ul>
         </li>
-        <li class="active"><a href="{% url 'todo_checklist' %}"><span class="mif-pencil icon"></span>TODO CHecklist</a></li>
+        <li class="active"><a href="{% url 'todo_checklist' %}"><span class="mif-pencil icon"></span>To Do Checklist</a></li>
         <li class="active"><a href="{% url 'manage_accounts' %}"><span class="mif-user-plus icon"></span>Manage Accounts</a></li>
         <li class="active"><a href="{% url 'feedbacks' %}"><span class="mif-feed3 icon"></span>Feedbacks</a></li>
         <li class="active"><a onclick="logout()" style="cursor: pointer;"><span class="mif-exit icon"></span>Logout</a></li>
