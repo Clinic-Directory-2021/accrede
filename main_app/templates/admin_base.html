@@ -33,6 +33,8 @@
             <div class="avatar">
                 <img  src="{% static 'images/logo.png' %}">
             </div>
+            <span class="title">{{ request.session.access_right }} Department</span>
+            <br>
             <span class="title">{{ request.session.firstname }} {{ request.session.middlename }} {{ request.session.lastname }}</span>
         </div>
         <li class="active"><a href="{%  url 'homepage' %}"><span class="mif-home icon"></span>Home</a></li>

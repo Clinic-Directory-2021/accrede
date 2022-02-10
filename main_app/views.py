@@ -96,6 +96,7 @@ def login_validation(request):
                     request.session['middlename'] = it_department_doc.to_dict()['middlename']
                     request.session['firstname'] = it_department_doc.to_dict()['firstname']
                     request.session['lastname'] = it_department_doc.to_dict()['lastname']
+                    request.session['access_right'] = it_department_doc.to_dict()['access_right']
                     request.session['account_type'] = 'it_department_accounts'
                 else:
                     if hrm_department_doc.exists:
@@ -103,6 +104,7 @@ def login_validation(request):
                         request.session['middlename'] = hrm_department_doc.to_dict()['middlename']
                         request.session['firstname'] = hrm_department_doc.to_dict()['firstname']
                         request.session['lastname'] = hrm_department_doc.to_dict()['lastname']
+                        request.session['access_right'] = it_department_doc.to_dict()['access_right']
                         request.session['account_type'] = 'hrm_department_accounts'
                     else:
                         if education_department_doc.exists:
@@ -110,6 +112,7 @@ def login_validation(request):
                             request.session['middlename'] = education_department_doc.to_dict()['middlename']
                             request.session['firstname'] = education_department_doc.to_dict()['firstname']
                             request.session['lastname'] = education_department_doc.to_dict()['lastname']
+                            request.session['access_right'] = it_department_doc.to_dict()['access_right']
                             request.session['account_type'] = 'education_department_accounts'
                         else:
                             if industrial_department_doc.exists:
@@ -117,11 +120,12 @@ def login_validation(request):
                                 request.session['middlename'] = industrial_department_doc.to_dict()['middlename']
                                 request.session['firstname'] = industrial_department_doc.to_dict()['firstname']
                                 request.session['lastname'] = industrial_department_doc.to_dict()['lastname']
+                                request.session['access_right'] = it_department_doc.to_dict()['access_right']
                                 request.session['account_type'] = 'industrial_department_accounts'
                         print('no document like this')
                 return HttpResponse('Success!')
-        except:
-            return HttpResponse('Invalid Email or Password!')
+        except Exception as e:
+            return HttpResponse('Invalid Email or Password! ' + str(e))
                 
 
 def homepage(request):
@@ -12202,7 +12206,8 @@ def todo_checklist(request):
     return render(request,'todo_checklist.html',{"todo_list":[doc.to_dict() for doc in todo_list]})
 def send_feedback(request):
     content = request.GET.get('content')
-    date_created = datetime.now()
+    tz = pytz.timezone('Asia/Hong_Kong')
+    date_created = datetime.now(tz)
     feedback_id =  calendar.timegm(date_created.timetuple())
     firestoreDB.collection(u'feedbacks').document(str(feedback_id)).set({
         'accreditor_name': request.session['firstname'] + " " + request.session['middlename'] + " " + request.session['lastname'],

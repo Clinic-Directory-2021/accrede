@@ -31,9 +31,15 @@ $( ".department_result" ).remove();
 });
 
 
-function editModal(user_id, fname, mname, lname, email, contact, address,birthdate){
+function editModal(user_id, fname, mname, lname, email, contact, address,birthdate,user_level){
     $('#edit_user_id').val(user_id);
-
+    if(user_level == 'Admin'){
+        document.querySelector('#edit_admin').checked = true;
+    }
+    else{
+        document.querySelector('#edit_user').checked = true;
+    }
+    
     $('#edit_firstname').val(fname);
     $('#edit_middlename').val(mname);
     $('#edit_lastname').val(lname),
