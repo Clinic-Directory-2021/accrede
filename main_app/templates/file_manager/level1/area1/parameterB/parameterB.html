@@ -43,7 +43,7 @@
                 <td>{{uploaded_file.category}}</td>
                 <td>
                     <button class="button mif-eye icon primary" onclick="Metro.dialog.open('#open_file'), save_url('{{uploaded_file.storage_file_url}}')"> View</button>
-                    <button class="button alert mif-bin icon" onclick="Metro.dialog.open('#delete_file'), get_file_id('{{uploaded_file.storage_file_id}}'),'{{uploaded_file.collection_name}}'"> Delete</button>
+                    <button class="button alert mif-bin icon" onclick="Metro.dialog.open('#delete_file'), get_file_id('{{uploaded_file.storage_file_id}}','{{uploaded_file.collection_name}}')"> Delete</button>
                 </td>
             </tr>
             {% endfor %}
@@ -113,7 +113,7 @@
     }
 
     function delete_file(){
-        window.location.href = "{% url 'delete_file' %}" + "?file_id=" + file_id + :"?collection_name=" + collection_name
+        window.location.href = "{% url 'delete_file' %}" + "?file_id=" + file_id + "&collection_name=" + collection_name
     }
 </script>
 {% endblock %}

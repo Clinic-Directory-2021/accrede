@@ -16,35 +16,50 @@
     <br>
     <h1 class="m-5">Recycle Bin</h1>
     <div class="p-5">
-        <button class="button success mif-refresh"> Retrieve all</button>
-        <button class="button alert mif-warning"> Delete All</button>
+        <button class="button success mif-refresh" onclick="retrieve_all_data()"> Retrieve all</button>
+        <button class="button alert mif-warning" onclick="permanent_delete_all_data()"> Delete All</button>
     </div>
     <div class="p-5 w-75">
         <table class="table bg-white">
             <thead>
             <tr>
                 <th>#</th>
-                <th class="sortable-column sort-asc">Date and Time</th>
+                <th>Image</th>
                 <th >File Name</th>
                 <th >User</th>
                 <th>Action</th>
             </tr>
             </thead>
             <tbody>
+                {% for data in recycle_bin %}
             <tr>
-                <td>1</td>
-                <td>January 1, 2022</td>
-                <td>Juan Dela Cruz</td>
-                <td>Example@gmail.com</td>
+                <td>{{forloop.counter}}</td>
+                <td><img src="{{data.storage_file_url}}" alt="" width="50" height="50"></td>
+                <td>{{data.date}}</td>
+                <td>{{data.file_name}}</td>
                 <td>
-                    <button class="button success mif-refresh"> Retrieve</button>
-                    <button class="button alert mif-bin"> Delete</button>
+                    <button class="button success mif-refresh" onclick="retrieve_data('{{data.collection_name}}','{{data.storage_file_id}}')"> Retrieve</button>
+                    <button class="button alert mif-bin" onclick="permanent_delete_data('{{data.storage_file_id}}')"> Delete</button>
                 </td>
             </tr>
+            {% endfor %}
             </tbody>
         </table>
     </div>
     
 </div>
-
+<script>
+    function retrieve_data(collection_name,file_id){
+        window.location.href = "{% url 'retrieve_data' %}" + "?collection_name="+collection_name + "&file_id="+file_id
+    }
+    function retrieve_all_data(){
+        window.location.href = "{% url 'retrieve_all_data' %}"
+    }
+    function permanent_delete_data(file_id){
+        window.location.href = "{% url 'permanent_delete_data' %}" + "?file_id=" + file_id
+    }
+    function permanent_delete_all_data(){
+        window.location.href = "{% url 'permanent_delete_all_data' %}"
+    }
+</script>
 {% endblock %}

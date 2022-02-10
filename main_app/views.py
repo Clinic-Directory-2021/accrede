@@ -200,7 +200,8 @@ def activity_logs(request):
         return redirect('/')
 
 def recycle_bin(request):
-    return render(request,'file_manager/recycle_bin.html')
+    recycle_bin_collection = firestoreDB.collection(request.session['account_type']).document(request.session['user_id']).collection('recycle_bin').get()
+    return render(request,'file_manager/recycle_bin.html',{"recycle_bin":[doc.to_dict() for doc in recycle_bin_collection]})
 
 #Level 1 / Area 1
 def level1(request):
@@ -12241,12 +12242,35 @@ def delete_task(request):
 def delete_file(request):
     file_id = request.GET.get('file_id')
     collection_name = request.GET.get('collection_name')
-    sliced_string = str(request.META['HTTP_REFERER']).index('level')
     files = firestoreDB.collection(collection_name).document(file_id)
 
     doc = files.get()
     if doc.exists:
-        print(f'Document data: {doc.to_dict()}')
         firestoreDB.collection(request.session['account_type']).document(request.session['user_id']).collection('recycle_bin').document(file_id).set(doc.to_dict())
-    print(str(request.META['HTTP_REFERER'])[sliced_string:])
+        files.delete()
+    return redirect(request.META['HTTP_REFERER'])
+
+def retrieve_data(request):
+    collection_name = request.GET.get('collection_name')
+    file_id = request.GET.get('file_id')
+    recycle_bin = firestoreDB.collection(request.session['account_type']).document(request.session['user_id']).collection('recycle_bin').document(file_id).get()
+    firestoreDB.collection(request.session['account_type']).document(request.session['user_id']).collection('recycle_bin').document(file_id).delete()
+    firestoreDB.collection(collection_name).document(file_id).set(recycle_bin.to_dict())
+    return redirect(request.META['HTTP_REFERER'])
+def retrieve_all_data(request):
+    recycle_bin = firestoreDB.collection(request.session['account_type']).document(request.session['user_id']).collection('recycle_bin')
+    data = recycle_bin.get()
+    for doc in data:
+        firestoreDB.collection(request.session['account_type']).document(request.session['user_id']).collection('recycle_bin').document(doc.to_dict()['storage_file_id']).delete()
+        firestoreDB.collection(doc.to_dict()['collection_name']).document(doc.to_dict()['storage_file_id']).set(doc.to_dict())
+    return redirect(request.META['HTTP_REFERER'])
+def permanent_delete_data(request):
+    file_id = request.GET.get('file_id')
+    firestoreDB.collection(request.session['account_type']).document(request.session['user_id']).collection('recycle_bin').document(file_id).delete()
+    return redirect(request.META['HTTP_REFERER'])
+
+def permanent_delete_all_data(request):
+    recycle_bin = firestoreDB.collection(request.session['account_type']).document(request.session['user_id']).collection('recycle_bin').get()
+    for doc in recycle_bin:
+        firestoreDB.collection(request.session['account_type']).document(request.session['user_id']).collection('recycle_bin').document(doc.to_dict()['storage_file_id']).delete()
     return redirect(request.META['HTTP_REFERER'])

@@ -31,6 +31,10 @@ urlpatterns = [
     path('finish_task/', views.finish_task, name = "finish_task"),
     path('delete_task/', views.delete_task, name = "delete_task"),
     path('delete_file/', views.delete_file, name = "delete_file"),
+    path('retrieve_data/', views.retrieve_data, name = "retrieve_data"),
+    path('retrieve_all_data/', views.retrieve_all_data, name = "retrieve_all_data"),
+    path('permanent_delete_data/', views.permanent_delete_data, name = "permanent_delete_data"),
+    path('permanent_delete_all_data/', views.permanent_delete_all_data, name = "permanent_delete_all_data"),
 
     #Area and Parameters
     ## Level 1 / Area 1

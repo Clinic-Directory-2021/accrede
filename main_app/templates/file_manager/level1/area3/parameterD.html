@@ -38,7 +38,10 @@
                 <td><img src="{{uploaded_file.storage_file_url}}" width="100%" style="margin: auto;text-align:center"/></td>
                 <td>{{uploaded_file.file_name}}</td>
                 <td>{{uploaded_file.category}}</td>
-                <td><button class="button mif-eye icon primary" onclick="Metro.dialog.open('#open_file'), save_url('{{uploaded_file.storage_file_url}}')"> View</button></td>
+                <td>
+                    <button class="button mif-eye icon primary" onclick="Metro.dialog.open('#open_file'), save_url('{{uploaded_file.storage_file_url}}')"> View</button>
+                    <button class="button alert mif-bin icon" onclick="Metro.dialog.open('#delete_file'), get_file_id('{{uploaded_file.storage_file_id}}','{{uploaded_file.collection_name}}')"> Delete</button>
+                </td>
             </tr>
             {% endfor %}
         </tbody>
@@ -77,10 +80,41 @@
         <button class="button js-dialog-close">Close</button>
     </div>
 </div>
+<div class="dialog" data-role="dialog" id="delete_file">
+    <div class="dialog-title"></div>
+    <div class="dialog-content">
+        Delete this file?
+    </div>
+    <div class="dialog-actions">
+        <button class="button js-dialog-close">Close</button>
+        <button class="button alert js-dialog-close" onclick="delete_file()">Delete</button>
+    </div>
+</div>
+<div class="dialog" data-role="dialog" id="delete_file">
+    <div class="dialog-title"></div>
+    <div class="dialog-content">
+        Delete this file?
+    </div>
+    <div class="dialog-actions">
+        <button class="button js-dialog-close">Close</button>
+        <button class="button alert js-dialog-close" onclick="delete_file()">Delete</button>
+    </div>
+</div>
 
 <script>
+    var file_id = "";
+    var collection_name = "";
     function save_url(url){
         $('#image'). attr('src',url)
+    }
+
+    function get_file_id(file_id,collection_name){
+        this.file_id = file_id
+        this.collection_name = collection_name
+    }
+
+    function delete_file(){
+        window.location.href = "{% url 'delete_file' %}" + "?file_id=" + file_id + "&collection_name=" + collection_name
     }
 </script>
 {% endblock %}

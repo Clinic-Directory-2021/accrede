@@ -39,7 +39,7 @@
     <form action="/upload_storage_drive/" method="post" enctype="multipart/form-data" id="drive_form">
         {% csrf_token %}
     <div class="dialog-title">UPLOAD FILE</div>
-    <div class="dialog-content">
+    <div class="dialog-content" style="overflow-y: auto;">
         <input type="file" data-role="file" data-mode="drop" name="drive_upload" id="drive_upload" required>
         <hr>
         Level:
