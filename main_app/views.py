@@ -159,6 +159,7 @@ def upload_storage_drive(request):
             'date': selectDate,
             'file_name': fileName,
             'uploadIn': uploadIn,
+            'collection_name': selectLevel+'_'+selectArea+"_"+selectParameter+"_"+selectCategory,
         })
 
         tz = pytz.timezone('Asia/Hong_Kong')
