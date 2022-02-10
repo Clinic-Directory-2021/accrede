@@ -12240,21 +12240,13 @@ def delete_task(request):
 
 def delete_file(request):
     file_id = request.GET.get('file_id')
+    collection_name = request.GET.get('collection_name')
     sliced_string = str(request.META['HTTP_REFERER']).index('level')
-    # files = firestoreDB.collection(u'cities').document(u'SF')
+    files = firestoreDB.collection(collection_name).document(file_id)
 
-    # doc = doc_ref.get()
-    # if doc.exists:
-    #     print(f'Document data: {doc.to_dict()}')
-    # else:
-    #     print(u'No such document!')
-    # data = {
-    #     u'name': u'Los Angeles',
-    #     u'state': u'CA',
-    #     u'country': u'USA'
-    # }
-
-    # # Add a new doc in collection 'cities' with ID 'LA'
-    # firestoreDB.collection(request.session['account_type']).document(request.session['user_id']).collection('recycle_bin').document(file_id).set(data)
+    doc = files.get()
+    if doc.exists:
+        print(f'Document data: {doc.to_dict()}')
+        firestoreDB.collection(request.session['account_type']).document(request.session['user_id']).collection('recycle_bin').document(file_id).set(doc.to_dict())
     print(str(request.META['HTTP_REFERER'])[sliced_string:])
     return redirect(request.META['HTTP_REFERER'])
