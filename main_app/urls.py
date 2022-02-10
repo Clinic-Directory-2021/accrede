@@ -31,6 +31,7 @@ urlpatterns = [
     path('finish_task/', views.finish_task, name = "finish_task"),
     path('delete_task/', views.delete_task, name = "delete_task"),
     path('delete_file/', views.delete_file, name = "delete_file"),
+    path('edit_title/', views.edit_title, name = "edit_title"),
     path('retrieve_data/', views.retrieve_data, name = "retrieve_data"),
     path('retrieve_all_data/', views.retrieve_all_data, name = "retrieve_all_data"),
     path('permanent_delete_data/', views.permanent_delete_data, name = "permanent_delete_data"),

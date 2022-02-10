@@ -12216,7 +12216,7 @@ def add_task(request):
     task_title = request.GET.get('task_title')
     date_created = datetime.now()
     todo_id =  calendar.timegm(date_created.timetuple())
-    firestoreDB.collection(u'it_department_accounts').document(request.session['user_id']).collection('todo_list').document(str(todo_id)).set({
+    firestoreDB.collection(request.session['account_type']).document(request.session['user_id']).collection('todo_list').document(str(todo_id)).set({
         'task_title': task_title,
         'status':'undone',
         'date_created':date_created,
@@ -12228,17 +12228,17 @@ def finish_task(request):
     status = request.GET.get('status')
     todo_id = request.GET.get('todo_id')
     if status == 'undone':
-        firestoreDB.collection(u'it_department_accounts').document(request.session['user_id']).collection('todo_list').document(todo_id).update({
+        firestoreDB.collection(request.session['account_type']).document(request.session['user_id']).collection('todo_list').document(todo_id).update({
             'status':'done'
         })
     else:
-        firestoreDB.collection(u'it_department_accounts').document(request.session['user_id']).collection('todo_list').document(todo_id).update({
+        firestoreDB.collection(request.session['account_type']).document(request.session['user_id']).collection('todo_list').document(todo_id).update({
             'status':'undone'
         })
     return redirect('../todo_checklist/')
 def delete_task(request):
     todo_id = request.GET.get('todo_id')
-    firestoreDB.collection(u'it_department_accounts').document(request.session['user_id']).collection('todo_list').document(todo_id).delete()
+    firestoreDB.collection(request.session['account_type']).document(request.session['user_id']).collection('todo_list').document(todo_id).delete()
     return redirect('../todo_checklist/')
 
 def delete_file(request):
@@ -12285,4 +12285,10 @@ def delete_user(request):
 def delete_feedback(request):
     feedback_id = request.GET.get('feedback_id')
     firestoreDB.collection('feedbacks').document(feedback_id).delete()
+    return redirect(request.META['HTTP_REFERER'])
+def edit_title(request):
+    todo_id = request.GET.get('todo_id')
+    task_title = request.GET.get('task_title')
+    print(task_title)
+    firestoreDB.collection(request.session['account_type']).document(request.session['user_id']).collection('todo_list').document(todo_id).update({"task_title":task_title})
     return redirect(request.META['HTTP_REFERER'])

@@ -58,8 +58,7 @@
         <table class="table striped" data-role="table" data-rows-steps="5, 10" data-rows="5">
             <thead>
                 <tr>
-                    <th  class="sortable-column sort-asc">Activity Status</th>
-                    <th  class="sortable-column sort-asc">Access Rights</th>
+                    <th  class="sortable-column sort-asc">Department</th>
                     <th class="sortable-column sort-asc">Name</th>
                     <th  class="sortable-column sort-asc">Email</th>
                     <th class="sortable-column sort-asc">Contact No.</th>
@@ -72,7 +71,6 @@
                 <!-- <div class="account_data_modal"> -->
                     {% for user in user_data %}
                     <tr>
-                        <td>{{user.active_status}}<s/td>
                         <td class="info">{{user.access_rights}}</td>
                         <td>{{user.firstname}} {{user.middlename}} {{user.lastname}}</td>
                         <td>{{user.email}}</td>
@@ -146,7 +144,7 @@
             <label for="first name">First Name:</label>
             <input type="text" data-role="input" name="edit_firstname" id="edit_firstname" required>
             <label for="first name">Middle Name:</label>
-            <input type="text" data-role="input" name="edit_middlename" id="edit_middlename" required>
+            <input type="text" data-role="input" name="edit_middlename" id="edit_middlename">
             <label for="first name">Last Name:</label>
             <input type="text" data-role="input" name="edit_lastname" id="edit_lastname" required>
             <label for="first name">Email:</label>

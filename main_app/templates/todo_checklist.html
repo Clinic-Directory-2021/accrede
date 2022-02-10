@@ -34,10 +34,10 @@
                     <tr>
                         {% if data.status == 'undone' %}
                         <td class="yellow">{{data.task_title}}</td>
-                        <td><button class="button success w-25" style="margin: 10px;" onclick="Metro.dialog.open('#finish_task'), finish_task('{{data.status}}','{{data.todo_id}}')">Mark as Done</button><button class="button primary w-25" style="margin: 10px;" onclick="Metro.dialog.open('#edit_task'), edit_task('{{data.task_title}}')">Edit</button><button class="button alert w-25" onclick="Metro.dialog.open('#delete_task'), get_id('{{data.todo_id}}')">Delete</button></td>
+                        <td><button class="button success w-25" style="margin: 10px;" onclick="Metro.dialog.open('#finish_task'), finish_task('{{data.status}}','{{data.todo_id}}')">Mark as Done</button><button class="button primary w-25" style="margin: 10px;" onclick="Metro.dialog.open('#edit_task'), get_task_title('{{data.task_title}}','{{data.todo_id}}')">Edit</button><button class="button alert w-25" onclick="Metro.dialog.open('#delete_task'), get_id('{{data.todo_id}}')">Delete</button></td>
                         {% else %}
                         <td class="success">{{data.task_title}}</td>
-                        <td><button class="button warning w-25" style="margin: 10px;" onclick="Metro.dialog.open('#finish_task'), finish_task('{{data.status}}','{{data.todo_id}}')">Mark as Undone</button><button class="button primary w-25" style="margin: 10px;" onclick="Metro.dialog.open('#edit_task'), edit_task('{{data.task_title}}')">Edit</button><button class="button alert w-25" onclick="Metro.dialog.open('#delete_task'), get_id('{{data.todo_id}}')">Delete</button></td>
+                        <td><button class="button warning w-25" style="margin: 10px;" onclick="Metro.dialog.open('#finish_task'), finish_task('{{data.status}}','{{data.todo_id}}')">Mark as Undone</button><button class="button primary w-25" style="margin: 10px;" onclick="Metro.dialog.open('#edit_task'), get_task_title('{{data.task_title}}','{{data.todo_id}}')">Edit</button><button class="button alert w-25" onclick="Metro.dialog.open('#delete_task'), get_id('{{data.todo_id}}')">Delete</button></td>
                         {% endif %}
                         
                     </tr>
@@ -72,7 +72,7 @@
         </div>
         <div class="dialog-actions">
             <button type="button" class="button js-dialog-close">Cancel</button>
-            <button type="submit" class="button primary js-dialog-close" >Save</button>
+            <button type="submit" class="button primary js-dialog-close" onclick="edit_title()">Save</button>
         </div>
 </div>
 
@@ -90,12 +90,18 @@
 
 <script>
     var todo_id;
+    var task_title;
     function add_task(){
         var task_title = $('#task_title').val();
         window.location.href = "../add_task?task_title="+ task_title;
     }
-    function edit_task(task_title){
+    function get_task_title(task_title,todo_id){
         $('#edit_task_title').val(task_title);
+        this.task_title = task_title
+        this.todo_id = todo_id
+    }
+    function edit_title(){
+        window.location.href = "../edit_title?task_title="+ $('#edit_task_title').val() +"&todo_id=" + todo_id;
     }
     function finish_task(status,todo_id){
         window.location.href = "../finish_task?status="+ status +"&todo_id=" + todo_id;
