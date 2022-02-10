@@ -30,7 +30,7 @@
             <div class="avatar">
                 <img src="{% static 'images/logo.png' %}">
             </div>
-            <span class="title">Hello, {{ request.session.firstname }} {{ request.session.middlename }} {{ request.session.lastname }}</span>
+            <span class="title">{{ request.session.firstname }} {{ request.session.middlename }} {{ request.session.lastname }}</span>
         </div>
         <li class="active"><a href="{%  url 'homepage' %}"><span class="mif-home icon"></span>Home</a></li>
         <li class="active"><a href="{%  url 'homepage' %}"><span class="mif-folder icon"></span>File Manager</a></li>

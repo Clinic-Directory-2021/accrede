@@ -128,6 +128,7 @@ $('#edit_addAccountForm').on('submit', function(e){
                   })
             }else if (data == 'Success!'){
                 $('#addAccountBtn').prop('disabled', false);
+                alert('hello');
                 location.reload();
             }
         },

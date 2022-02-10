@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css">
     <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
     <script src="https://cdn.metroui.org.ua/v4.3.2/js/metro.min.js"></script>
-    <title>Document</title>
+    <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+    <title>AMSysHCt</title>
     
     <script src="{% static 'js/storage_drive.js'%}" defer></script>
 
@@ -30,7 +31,7 @@
             <div class="avatar">
                 <img src="{% static 'images/logo.png' %}">
             </div>
-            <span class="title">Hello, {{ request.session.firstname }} {{ request.session.middlename }} {{ request.session.lastname }}</span>
+            <span class="title">{{ request.session.firstname }} {{ request.session.middlename }} {{ request.session.lastname }}</span>
         </div>
         <li class="active"><a href="{%  url 'homepage' %}"><span class="mif-home icon"></span>Home</a></li>
         <li class="stick-left">
@@ -38,7 +39,7 @@
             <ul class="d-menu" data-role="dropdown" style="display: none; background-color: #ADCE74;">
                 <li><a href="{%  url 'storage_drive' %}"><span class="mif-folder icon"></span> Storage Drive</a></li>
                 <li><a href="{%  url 'activity_logs' %}"><span class="mif-document-file-doc icon"></span> Activity Logs</a></li>
-                <li><a href="{%  url 'recycle_bin' %}"><span class="mif-bin icon"></span> Recycle Bin</a></li>
+                <li><a href="{%  url 'recycle_bin' %}"><span class="mif-bin icon"></span> Recently Deleted</a></li>
             </ul>
         </li>
         <li class="active"><a href="{% url 'todo_checklist' %}"><span class="mif-pencil icon"></span>TODO CHecklist</a></li>

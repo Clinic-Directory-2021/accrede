@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css">
     <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
     <script src="https://cdn.metroui.org.ua/v4.3.2/js/metro.min.js"></script>
-    <title>Document</title>
+    <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+    <title>AMSysHC</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -30,7 +31,7 @@
     <ul class="sidenav-m3">
         <div class="sidebar-header" style="background-color: #ADCE74; height: 200px;">
             <div class="avatar">
-                <img  src="../static/images/logo.jpg">
+                <img  src="{% static 'images/logo.png' %}">
             </div>
             <span class="title">Hello, {{ request.session.firstname }} {{ request.session.middlename }} {{ request.session.lastname }}</span>
         </div>
