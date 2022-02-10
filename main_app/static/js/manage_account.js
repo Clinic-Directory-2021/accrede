@@ -57,7 +57,7 @@ $('#addAccountForm').on('submit', function(e){
    e.preventDefault();
    console.log("1");
 
-
+   $('#middlename').val(" ")
    $.ajax({
        type: 'post',
        url: "/addAccount/",
