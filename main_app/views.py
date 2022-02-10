@@ -86,17 +86,17 @@ def login_validation(request):
                 hrm_department_accounts = firestoreDB.collection(u'hrm_department_accounts').document(str(user['localId']))
                 education_department_accounts = firestoreDB.collection(u'education_department_accounts').document(str(user['localId']))
                 industrial_department_accounts = firestoreDB.collection(u'industrial_department_accounts').document(str(user['localId']))
-
                 it_department_doc = it_department_accounts.get()
                 hrm_department_doc = hrm_department_accounts.get()
-                education_department_doc = hrm_department_accounts.get()
-                industrial_department_doc = hrm_department_accounts.get()
+                education_department_doc = education_department_accounts.get()
+                industrial_department_doc = industrial_department_accounts.get()
                 if it_department_doc.exists:
+                    # request.session['list'] = [it_department_doc.to_dict()['user_level'],it_department_doc.to_dict()['middlename'],it_department_doc.to_dict()['firstname'],it_department_doc.to_dict()['lastname'],it_department_doc.to_dict()['access_right']]
                     request.session['user_level'] = it_department_doc.to_dict()['user_level']
                     request.session['middlename'] = it_department_doc.to_dict()['middlename']
                     request.session['firstname'] = it_department_doc.to_dict()['firstname']
                     request.session['lastname'] = it_department_doc.to_dict()['lastname']
-                    request.session['access_right'] = it_department_doc.to_dict()['access_right']
+                    request.session['access_right'] = it_department_doc.to_dict()['access_rights']
                     request.session['account_type'] = 'it_department_accounts'
                 else:
                     if hrm_department_doc.exists:
@@ -104,7 +104,7 @@ def login_validation(request):
                         request.session['middlename'] = hrm_department_doc.to_dict()['middlename']
                         request.session['firstname'] = hrm_department_doc.to_dict()['firstname']
                         request.session['lastname'] = hrm_department_doc.to_dict()['lastname']
-                        request.session['access_right'] = it_department_doc.to_dict()['access_right']
+                        request.session['access_right'] = hrm_department_doc.to_dict()['access_rights']
                         request.session['account_type'] = 'hrm_department_accounts'
                     else:
                         if education_department_doc.exists:
@@ -112,7 +112,7 @@ def login_validation(request):
                             request.session['middlename'] = education_department_doc.to_dict()['middlename']
                             request.session['firstname'] = education_department_doc.to_dict()['firstname']
                             request.session['lastname'] = education_department_doc.to_dict()['lastname']
-                            request.session['access_right'] = it_department_doc.to_dict()['access_right']
+                            request.session['access_right'] = education_department_doc.to_dict()['access_rights']
                             request.session['account_type'] = 'education_department_accounts'
                         else:
                             if industrial_department_doc.exists:
@@ -120,7 +120,7 @@ def login_validation(request):
                                 request.session['middlename'] = industrial_department_doc.to_dict()['middlename']
                                 request.session['firstname'] = industrial_department_doc.to_dict()['firstname']
                                 request.session['lastname'] = industrial_department_doc.to_dict()['lastname']
-                                request.session['access_right'] = it_department_doc.to_dict()['access_right']
+                                request.session['access_right'] = industrial_department_doc.to_dict()['access_rights']
                                 request.session['account_type'] = 'industrial_department_accounts'
                         print('no document like this')
                 return HttpResponse('Success!')
