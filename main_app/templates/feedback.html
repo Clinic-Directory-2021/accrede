@@ -1,4 +1,8 @@
+{% if request.session.user_level == 'Superadmin' %}
 {% include 'superadmin_base.html' %}
+{% elif request.session.user_level == 'Admin' %}
+{% include 'admin_base.html' %}
+{% endif %}
 {% block content %}
 <div  class="content" style="background-color: gainsboro;">
     <header class="h-20" style="width: 90vw; height: 67px; text-align: center; background-color: #61B15A;">
@@ -7,13 +11,14 @@
     <h1 class="m-5">Feedbacks</h1>
     <div class="p-20">
         <br>
-        <table class="table striped" data-role="table" data-rows-steps="5, 10" data-rows="5">
+        <table class="table striped bg-white" data-role="table" data-rows-steps="5, 10" data-rows="5">
             <thead>
                 <tr>
                     <th  class="sortable-column sort-asc">#</th>
                     <th  class="sortable-column sort-asc">Name</th>
                     <th class="sortable-column sort-asc">Feedback Content</th>
                     <th  class="sortable-column sort-asc">Date</th>
+                    <td>Action</td>
                 </tr>
                 </thead>
                 <tbody>
@@ -23,6 +28,7 @@
                             <td class="info" >{{doc.accreditor_name}}</td>
                             <td>{{doc.content}}</td>
                             <td>{{doc.date_created}}</td>
+                            <td><button class="button alert" onclick="Metro.dialog.open('#delete_feedback'), get_feedback_id('{{doc.feedback_id}}')">Delete</button></td>
                         </tr>
                         {% endfor %}
                     
@@ -33,4 +39,25 @@
     </div>
 </div>
 
+<div class="dialog" data-role="dialog" id="delete_feedback">
+    {% csrf_token %}
+       <div class="dialog-title">Delete this task?</div>
+       <div class="dialog-content">
+           Delete this feedback?
+       </div>
+       <div class="dialog-actions">
+           <button type="button" class="button js-dialog-close">Cancel</button>
+           <button type="submit" class="button alert js-dialog-close" onclick="delete_task()">Delete</button>
+       </div>
+    </div>
+
+    <script>
+        var feedback_id = "";
+        function get_feedback_id(feedback_id){
+            this.feedback_id = feedback_id
+        }
+        function delete_task(){
+            window.location.href = "{% url 'delete_feedback' %}" + "?feedback_id=" + feedback_id
+        }
+    </script>
 {% endblock %}

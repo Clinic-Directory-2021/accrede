@@ -12281,3 +12281,8 @@ def delete_user(request):
     firestoreDB.collection(request.session['account_type']).document(user_id).delete()
     auth.delete_user(user_id)
     return redirect(request.META['HTTP_REFERER'])
+
+def delete_feedback(request):
+    feedback_id = request.GET.get('feedback_id')
+    firestoreDB.collection('feedbacks').document(feedback_id).delete()
+    return redirect(request.META['HTTP_REFERER'])

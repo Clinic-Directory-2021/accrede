@@ -140,6 +140,7 @@ urlpatterns = [
 
     path('editAccount/', views.editAccount, name="editAccount"),
     path('delete_user/', views.delete_user, name="delete_user"),
+    path('delete_feedback/', views.delete_feedback, name="delete_feedback"),
     
 
     # generate PPT

@@ -17,7 +17,7 @@
     <h1 class="m-5">Storage Drive</h1>
     <div class="p-10">
         <button class="mif-sort-asc icon" style="width: 50px; height: 50px;"></button>
-        <button class="button primary" style="float: right; height: 50px; width: 200px;"  onclick="Metro.dialog.open('#demoDialog1')">Upload</button>
+        <button class="button primary" style="float: right; height: 50px; width: 200px;"  onclick="Metro.dialog.open('#upload_file')">Upload</button>
     </div>
 <div class="folders p-5">
     
@@ -35,7 +35,7 @@
 </div>
 
 <!--Modal for upload-->
-<div class="dialog w-25" data-role="dialog" id="demoDialog1">
+<div class="dialog w-25" data-role="dialog" id="upload_file" style="overflow-y: auto;">
     <form action="/upload_storage_drive/" method="post" enctype="multipart/form-data" id="drive_form">
         {% csrf_token %}
     <div class="dialog-title">UPLOAD FILE</div>
@@ -111,7 +111,7 @@
     </div>
     <div class="dialog-actions">
         <button class="button js-dialog-close">Cancel</button>
-        <button type="submit" id="uploadBtn">Upload</button>
+        <button type="submit" class="button primary" id="uploadBtn">Upload</button>
     </div>
 </form>
 </div>
