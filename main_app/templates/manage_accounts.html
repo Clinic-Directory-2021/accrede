@@ -140,6 +140,10 @@
             <input type="radio" data-role="radio" name="edit_access_rights" id="edit_admin" value="Admin"> Admin
             <input type="radio" data-role="radio" name="edit_access_rights" id="edit_user" value="User"> User
             {% endif %}
+            {% if request.session.user_level == 'Admin' %}
+            <input type="radio"  name="edit_access_rights" id="edit_admin" value="Admin" style="opacity: 0;"> 
+            <input type="radio"  name="edit_access_rights" id="edit_user" value="User" style="opacity: 0;"> 
+            {% endif %}
             <br>
             <label for="first name">First Name:</label>
             <input type="text" data-role="input" name="edit_firstname" id="edit_firstname" required>

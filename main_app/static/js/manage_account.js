@@ -34,6 +34,7 @@ $( ".department_result" ).remove();
 function editModal(user_id, fname, mname, lname, email, contact, address,birthdate,user_level,userlevel_account){
     $('#edit_user_id').val(user_id);
     if(userlevel_account == 'Admin'){
+        $('input[name="access_rights"]:checked').val(user_level),
         $('#edit_firstname').val(fname);
         $('#edit_middlename').val(mname);
         $('#edit_lastname').val(lname),

@@ -19,7 +19,6 @@
         <table class="table bg-white" data-role="table">
             <thead>
             <tr>
-                <th>#</th>
                 <th class="sortable-column sort-asc">Date and Time</th>
                 <th >Email</th>
                 <th>Activity</th>
@@ -29,7 +28,6 @@
                 
             {% for log in logs_data %}                  
             <tr>
-                <td>{{ forloop.counter }}</td>
                 <td>{{log.date}}</td>
                 <td>{{log.user_email}}</td>
                 <td>{{log.info}}</td>
