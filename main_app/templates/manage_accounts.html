@@ -83,7 +83,7 @@
                             <button class="button success" style="cursor: not-allowed;" disabled>Edit</button>
                             <button class="button alert" style="cursor: not-allowed;" disabled> Delete</button>
                             {% else %}
-                            <button class="button success" onclick="Metro.dialog.open('#edit_account'), editModal('{{user.user_id}}','{{user.firstname}}','{{user.middlename}}','{{user.lastname}}','{{user.email}}','{{user.contact}}','{{user.address}}','{{user.birthdate}}','{{user.user_level}}')">Edit</button>
+                            <button class="button success" onclick="Metro.dialog.open('#edit_account'), editModal('{{user.user_id}}','{{user.firstname}}','{{user.middlename}}','{{user.lastname}}','{{user.email}}','{{user.contact}}','{{user.address}}','{{user.birthdate}}','{{user.user_level}}','{{ request.session.user_level }}')">Edit</button>
                             <button class="button alert" onclick="Metro.dialog.open('#delete_dialog'), get_user_id('{{user.user_id}}')"> Delete</button>
                             {% endif %}
                         </td>
