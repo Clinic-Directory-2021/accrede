@@ -34,7 +34,14 @@ $( ".department_result" ).remove();
 function editModal(user_id, fname, mname, lname, email, contact, address,birthdate,user_level,userlevel_account){
     $('#edit_user_id').val(user_id);
     if(userlevel_account == 'Admin'){
-        $('input[name="access_rights"]:checked').val(user_level),
+        if(user_level == 'Admin'){
+            document.querySelector('#edit_admin').checked = true;
+            document.querySelector('#edit_user').checked = false;
+        }
+        else{
+            document.querySelector('#edit_admin').checked = false;
+            document.querySelector('#edit_user').checked = true;
+        }
         $('#edit_firstname').val(fname);
         $('#edit_middlename').val(mname);
         $('#edit_lastname').val(lname),
@@ -43,7 +50,8 @@ function editModal(user_id, fname, mname, lname, email, contact, address,birthda
         $('#edit_address').val(address);
         $('#edit_birthdate').val(birthdate);
     }
-    else{
+    else
+    {
         if(user_level == 'Admin'){
             document.querySelector('#edit_admin').checked = true;
             document.querySelector('#edit_user').checked = false;
