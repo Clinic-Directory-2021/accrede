@@ -1283,6 +1283,7 @@ else if(levelValue == 'Level 1' && areaValue == 'Area 1' && parameterValue == 'P
   '<select data-role="select" name="uploadIn" id="uploadIn" form="drive_form" required>'+
   '<option value="O.1">O.1. There is full  awareness and  acceptance of the  VMGO by the  administrators,  faculty, staff,  students and  other  stakeholders.</option>' +
   '<option value="O.2.1">O.2.1 Vision and Mission of the SUC/s</option>' +
+  '<option value="O.2.2">O.2.2. Goals of the College / Academic Unit; and</option>' +
   '<option value="O.2.3">O.2.3. Objectives of the Program</option>' +
   '<option value="O.3">O.3. The goals and Objectives are being Achieved</option>' +
   '</select>'+
