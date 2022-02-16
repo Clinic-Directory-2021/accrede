@@ -26,6 +26,8 @@ urlpatterns = [
     path('feedbacks/', views.feedbacks, name = "feedbacks"),
     path('todo_checklist/', views.todo_checklist, name = "todo_checklist"),
 
+    path('forgot_password/', views.forgot_password, name='forgot_password'),
+
     path('send_feedback/', views.send_feedback, name = "send_feedback"),
     path('add_task/', views.add_task, name = "add_task"),
     path('finish_task/', views.finish_task, name = "finish_task"),

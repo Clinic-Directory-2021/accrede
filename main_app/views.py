@@ -60,6 +60,25 @@ def login(request):
         return redirect('/homepage')
     else:
         return render(request,'login.html')
+
+def forgot_password(request):
+    try:
+        if request.method == 'POST':
+            forgot_pass_email = request.POST.get('forgot_pass_email')
+            auth_pyrebase.send_password_reset_email(forgot_pass_email)
+            data = {
+                'success': "Successfully Sent To Your Email",
+            }
+        else:
+            data = {
+                'success': "",
+            }
+    except:
+        data = {
+                'success': "Email Not Found!",
+            }
+
+    return render(request,'forgot_password.html', data)
     
 
 def login_validation(request):
